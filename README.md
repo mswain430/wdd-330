@@ -1,2 +1,2 @@
-# wdd330
-web design and development 330 BYUI
+# wdd-330
+Portfolio Site - web design and development 330 BYUI
