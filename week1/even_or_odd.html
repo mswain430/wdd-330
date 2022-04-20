@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd???</title>
+    <script>
+       function checkNumber(){
+         let numberAsText = document.getElementById("number_input").value;
+         let aNumber = parseInt(numberAsText);
+         if (numberAsText != '' && !isNaN(aNumber)){
+            let remainder = aNumber % 2;
+            if(aNumber != 0 && remainder == 0){
+                document.getElementById("result_display").innerHTML =
+                    aNumber + " is even.";
+            }
+            else if(aNumber != 0 && remainder >= 1){
+                document.getElementById('result_display').innerHTML =
+                aNumber + " is odd.";
+            }
+            else{
+                document.getElementById('result_display').innerHTML =
+                `0 is neither even nor odd.`;
+                }
+        }
+       else{
+         document.getElementById('result_display').innerHTML =
+         `Please enter a number.`
+         }
+       }
+     </script>
+     <style>
+ body{
+ background-color: LightGrey;
+ }
+ input{
+ border: none;
+ border-radius: 5px;
+ box-shadow: 0px 0px 5px #666666 inset;
+ height: 25px;
+ width: 200px;
+ text-indent: 5px;
+ }
+ </style>
+</head>
+<body>
+<h1>Even or Odd???</h1>
+Enter a Number: <input id="number_input"></input>
+<button onclick="checkNumber()">Check it!</button>
+<section id="result_display"></section>
+</body>
+</html>

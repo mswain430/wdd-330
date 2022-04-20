@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code example story_editor</title>
+<script>
+function loadStory(){
+    let storyName = document.querySelector('name_input').value
+    let storyHTML = localStorage.getItem(storyName)
+    document.querySelector('#story_editor').value = storyHTML
+}
+function saveStory(){
+    let storyName = document.querySelector('name_input').value
+    let storyHTML = document.querySelector('#story_editor').value
+    localStorage.setItem(storyName, storyHTML)
+}
+function displayStory(){
+    let storyHTML = document.querySelector('#story_editor').value
+    document.querySelector('#story_display').innerHTML = storyHTML
+}
+</script>
+<style>
+    body { padding: 25px;}
+ textarea{
+   width: 80%;
+   height: 250px;
+   background-color: lightyellow;
+}
+</style>
+</head>
+<body>
+<h1>Story Editor</h1>
+Story Name: <input id="name_input"></input>
+<br/><br/>
+<button onclick="loadStory()">Find and Edit it</button>
+&nbsp;
+<button onclick="saveStory()">Save it</button>
+&nbsp;
+<button onclick="displayStory()">Display it</button>
+<br/><br/>
+<textarea id="story_editor" placeholder="Write a totally awesome store here"></textarea>
+<section id="story_display"></section>
+</body>
+</html>

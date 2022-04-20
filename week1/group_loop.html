@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groups-Arrays</title>
+    <script>
+        function checkNumbers(){
+            let someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10]
+            for(let i = 0; i < 7; i++){
+                let numberAsText = someNumbers[i]
+                let aNumber = parseInt(numberAsText)
+                if(numberAsText != '' && !isNaN(aNumber)){
+                    let remainder = aNumber % 2;
+                    if(aNumber != 0 && remainder == 0){
+                        document.getElementById("result_display").innerHTML +=
+                            `<p>${aNumber} is even.</p>`;
+                    }
+                    else if(aNumber != 0 && remainder == 1){
+                        document.getElementById('result_display').innerHTML +=
+                        `<p>${aNumber} is odd.</p>`;
+                    }
+                    else{
+                        document.getElementById('result_display').innerHTML +=
+                        `<p>0 is neither even nor odd.</p>`;
+                        }
+                }
+            else{
+                document.getElementById('result_display').innerHTML +=
+                `<p>Please enter a number.</p>`
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+   <!-- // The type of loop specifically designed to work with arrays is called
+//a 'for' loop.
+//1. the for keyword,
+//2. a variable to keep track of the location you are at in the array,
+//3. a check to see if the loop should continue,
+//4. an update that increases the location tracking variable by one,
+//and //5. the lines of code to execute every time you go around the loop -->
+<h1>Arrays</h1>
+<h2>Even or Odd???</h2>
+<button onclick="checkNumbers()">Check It!</button>
+<section id="result_display"></section>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick event</title>
+    <script>
+        function showMessaging(thebtnClicked){
+            document.querySelector("#message").innerHTML = `<p>Hello out there you got the page to update!</p>`
+            thebtnClicked.innerHTML = "Click Me Again!";
+        }
+    </script>
+</head>
+<body>
+<button onclick="showMessaging(this)">ON CLICK BUTTON</button>
+<section id="message"></section>
+</body>
+</html>
