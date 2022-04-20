@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse numbers</title>
+    <script>
+        function reverse_number(n){
+            //Convert number to a string 4 different ways: 
+              // 1.String literal -> str = "" + num + "";
+              // 2.String constructor -> str = String(num);
+              // 3. toString -> str = num.toString();
+              // 4.String Literal simple -> str = "" + num;
+            n = n + "";
+            /* The split() method is used to split a String object into an array of strings by separating the string into substrings.
+             Code : console.log('1000'.split(""));
+              Output : ["1", "0", "0", "0"] */
+
+            /* The reverse() method is used to reverse an array in place. The first array element becomes the last and the last becomes the first.
+               Code : console.log(["1", "0", "0", "0"].reverse());
+               Output : ["0", "0", "0", "1"] */
+
+            /* The join() method is used to join all elements of an array into a string.
+               Code : console.log(["1", "0", "0", "0"].reverse().join(""));
+               The Number constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the Number() function.
+               Output : 1 */
+            return n.split("").reverse().join("");
+        }
+        console.log(Number(reverse_number(32243)))
+    </script>
+</head>
+<body>
+    <h1>View the Console for reverse number example</h1>
+</body>
+</html>

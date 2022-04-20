@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note it App</title>
+    <script>
+        function saveNote(){
+            let currentDateAndTime = new Date();
+            let aNoteDescription = document.getElementById("description_input").value;
+            let aNoteText = document.getElementById("note_editor").value; 
+            let aCompleteNote = currentDateAndTime.toLocaleDateString() + "--" + aNoteDescription;
+            aCompleteNote += `<p> ${aNoteText}</p>`;
+            let storedNotesString = localStorage.getItem("all_notes");
+            let allNotes = JSON.parse(storedNotesString);
+            if(allNotes == null){
+                allNotes = []
+            }
+            allNotes.push(aCompleteNote);
+            let allNotesString = JSON.stringify(allNotes);
+            localStorage.setItem("all_notes", allNotesString)
+        }
+        function showAllNotes(){
+            let storedNotesString = localStorage.getItem("all_notes")
+            let allNotes = JSON.parse(storedNotesString);
+            if(allNotes != null){
+                let noteDisplayer = document.querySelector("all_notes_display");
+                noteDisplayer.innerHTML = null 
+                let numberOfNotes = allNotes.length 
+                for (let i = 0; i < numberOfNotes; i++) {
+                    let aNote = allNotes[i]
+                    noteDisplayer.innerHTML += `<hr><p> ${aNote}</p>`
+                }
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <section id="note_enry_area">
+        <h1>Note It!</h1> 
+        Description: <input id="description_input"></input>
+        <textarea id="note_editor" placeholder="Note it down. Don't forget"></textarea>
+        <button onclick="saveNote()">Save</button>
+        <button onclick="showAllNotes()">Show Notes</button>
+    </section>
+    <section id="all_notes_display"></section>
+</body>
+</html>
