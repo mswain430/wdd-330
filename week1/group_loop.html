@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>groups-Arrays</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"/>
     <script>
         function checkNumbers(){
-            let someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10]
+            let someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10];
             for(let i = 0; i < 7; i++){
                 let numberAsText = someNumbers[i]
                 let aNumber = parseInt(numberAsText)
@@ -33,6 +37,11 @@
             }
         }
     </script>
+       <style>
+        body{
+        background-color: rgb(247, 196, 162);
+        }
+        </style>
 </head>
 <body>
    <!-- // The type of loop specifically designed to work with arrays is called
@@ -42,9 +51,22 @@
 //3. a check to see if the loop should continue - sometimes this can be .length,
 //4. an update that increases the location tracking variable by one 'i++ or i--',
 //and //5. the lines of code to execute every time you go around the loop -->
-<h1>Arrays</h1>
-<h2>Even or Odd???</h2>
-<button onclick="checkNumbers()">Check It!</button>
-<section id="result_display"></section>
+<header>
+    <h1 class="title">WDD 330 Front-end Web Development II </h1>
+    <h2>Millie's Portfolio Site</h2>  
+  </header>
+      <main class="maingrid">
+        <p><a href="../index.html" class="backto"><< Back</a></p>
+          <h3 class="heading_title">Week 1 - Practice Exercises</h3>
+          <h2>Groups and Arrays</h2>
+          Our array: someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10]
+          <button onclick="checkNumbers()">Check It!</button>
+          <section id="result_display"></section>
+    <h3 class="details">Study Materials</h3>
+    <p>more here</p>
+    <h3  class="details">Questions or Notes </h3>
+    <p>more questions and notes here</p>
+    </main>
+<footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
 </body>
 </html>

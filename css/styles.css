@@ -1,0 +1,17 @@
+body {font-family: 'Roboto', sans-serif;font-size: 1.2rem;margin: auto;background-color:rgb(225, 229, 250)}
+header {background-color:rgb(29, 107, 223); border-radius: 0px;position:fixed; top: 0;width: 100%;text-align:center;margin:auto; padding: 5px 50px}
+main {margin: 25px;margin-top: 150px;border:2px solid #fbfafa;padding: 25px 100px;}
+main .maingrid{ display: grid; grid-template-columns: 1fr;grid-template-rows: 1fr 1fr 1fr ;justify-content: center;text-align: center;margin:auto}
+
+header h1, header h2 {color: aliceblue;padding: 5px;max-width: fit-content;font-family: 'Bitter', serif;margin:5px auto; text-align: center}
+h2, h3 {font-family: 'Bitter', serif;}
+p a.backto {font-size: .8em; padding: 5px; background-color:rgb(29, 107, 223); color: aliceblue; border-radius: 4px; border:2px solid #fbfafa; max-width: 100px; text-decoration: none;}
+
+ul {max-width: 500px;border-radius:4px;border:1px solid #bbb;list-style-type: none;}
+ol {max-width: 500px;border-radius:4px;border:1px solid #bbb;list-style-type: none;}
+ul li, ol li{padding: 8px 10px;margin-left: -40px;}
+ul li:nth-child(even), ol li:nth-child(even){background-color: #fbfafa;color: black}
+ul li:nth-child(odd), ol li:nth-child(odd){background-color: #9ab6f3;}
+ul li a:link, a:visited, ol li a:link, a:visited{color: rgb(29, 107, 223);color: black; text-decoration: none;text-transform:capitalize;padding: 5px;}
+ul li a:hover, ol li a:hover, a:hover.backto {color: green; background-color: rgb(190, 230, 248);}
+footer {background-color:rgb(29, 107, 223);color: aliceblue;padding: 20px;position:fixed; bottom: 0;width: 100%;text-align: center;margin:auto;}
