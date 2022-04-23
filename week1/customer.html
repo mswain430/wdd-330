@@ -9,75 +9,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css"/>
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="../css/styles.css"/>
     <script>
         function addAndSaveCustomer(){
-  		const aName = document.getElementById("name_input").value
-  		const anAge = document.getElementById("age_input").value * 1
-  		const anInseam = document.getElementById("inseam_input").value * 1
-  		let aClothingCustomer = {
-  			"name":aName,
-  			"age":anAge,
-  			"inseam":anInseam
-  		}
-  		let allCustomers = null
-		let storedCustomersString = localStorage["all_customers"]
-		if(storedCustomersString == null){
-			allCustomers = []
-		}
-		else{
-			allCustomers = JSON.parse(storedCustomersString)
-		}
-		allCustomers.push(aClothingCustomer)
-		let allCusomersString = JSON.stringify(allCustomers)
-		localStorage["all_customers"] = allCusomersString
-		showAllCustomers()
+            const aName = document.getElementById("name_input").value;
+            const anAge = document.getElementById("age_input").value * 1;
+            const anInseam = document.getElementById("inseam_input").value * 1;
+            let aClothingCustomer = {
+                "name":aName,
+                "age":anAge,
+                "inseam":anInseam
+            }
+            let allCustomers = null;
+            let storedCustomersString = localStorage["all_customers"];
+            if(storedCustomersString == null){
+                allCustomers = []
+            }
+            else{
+                allCustomers = JSON.parse(storedCustomersString);
+            }
+            allCustomers.push(aClothingCustomer);
+            let allCusomersString = JSON.stringify(allCustomers);
+            localStorage["all_customers"] = allCusomersString;
+            showAllCustomers()
 
-		document.getElementById("name_input").value = null
-		document.getElementById("age_input").value  = null
-		document.getElementById("inseam_input").value = null
-  	}
-  	function showAllCustomers(){
-  		let storedCustomersString = localStorage["all_customers"]
-		if(storedCustomersString != null){
-			let allCustomers = JSON.parse(storedCustomersString)
-			let customerDisplayer = document.getElementsByClassName("all_customers_display")
-	  		customerDisplayer.innerHTML = null
-	  		let numberOfCustomers = allCustomers.length
-	  		for (let i = 0; i < allCustomers.length; i++) {
-	  			let aClothingCustomer = allCustomers[i]
-	  			customerDisplayer.innerHTML += "<hr><p>Customer: "+ aClothingCustomer["name"] +"</p>"+"<p>Age: "+ aClothingCustomer["age"] +"</p>"+"<p>Inseam: "+ aClothingCustomer["inseam"] +"</p>"
-	  		}
-		}
-  	}
+            document.getElementById("name_input").value = null;
+            document.getElementById("age_input").value  = null;
+            document.getElementById("inseam_input").value = null;
+  	    }
+        function showAllCustomers(){
+            let storedCustomersString = localStorage["all_customers"];
+            if(storedCustomersString != null){
+                 let allCustomers = JSON.parse(storedCustomersString);
+                 let customerDisplayer = document.getElementsByClassName("all_customers_display");
+                 customerDisplayer.innerHTML = null;
+                 let numberOfCustomers = allCustomers.length;
+                 for (let i = 0; i < allCustomers.length; i++) {
+                        let aClothingCustomer = allCustomers[i]
+                        customerDisplayer.innerHTML += `<hr><p>Customer: ${aClothingCustomer["name"]}</p>
+                        <p>Age:${aClothingCustomer["age"]}</p>
+                        <p>Inseam: ${aClothingCustomer["inseam"]}</p>`;
+	  		    }
+		    }
+  	    }
 
     </script>
 </head>
 <body onload="showAllCustomers()">
-  <header>
-    <h1 class="title">WDD 330 Front-end Web Development II </h1>
-    <h2>Millie's Portfolio Site</h2>
-  </header>
-      <main class="maingrid">
-        <p><a href="../index.html" class="backto"><< Back</a></p>
-          <h3 class="heading_title">Week 1 - Practice Exercises</h3>
-  <section class="customer_entry_area"><h3>Our Clothing Customers</h3>
-<label>
-<input id="name_input" placeholder="Name"></input></label>
-<br/><label>
-<input id="age_input" placeholder="Age"></input></label>
-<br/><label>
-<input id="inseam_input" placeholder="Inseam"></input></label>
-<br/><button class="cus" onclick="addAndSaveCustomer()">Add Customer</button>
-</section>
-<section class="all_customers_display"></section>
-<hr>
-    <h3 class="details">Study Materials</h3>
-    <p>more here</p>
-    <h3  class="details">Questions or Notes </h3>
-    <p>more questions and notes here</p>
-    </main>
-<footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
+        <header>
+            <h1 class="title">WDD 330 Front-end Web Development II </h1>
+            <h2>Millie's Portfolio Site</h2>
+        </header>
+        <main class="maingrid">
+            <p><a href="../index.html" class="backto"><< Back</a></p>
+            <h3 class="heading_title">Week 1 - Associative Arrays</h3>
+            <section class="customer_entry_area"><h3>Our Clothing Customers</h3>
+                <label for="name_input"><input id="name_input" placeholder="Name"></input></label>
+                <br/>
+                <label for="age_input"><input id="age_input" placeholder="Age"></input></label>
+                <br/>
+                <label for="inseam_input"><input id="inseam_input" placeholder="Inseam"></input></label>
+                <br/><button class="cus" onclick="addAndSaveCustomer()">Add Customer</button>
+            </section>
+            <section class="all_customers_display"></section>
+        </main>
+        <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
 </body>
 </html>
