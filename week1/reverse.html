@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/styles.css"/>
     <script>
         function reverse_number(n){
-            //Convert number to a string 4 different ways: 
+            //Convert number to a string 4 different ways:
               // 1.String literal -> str = "" + num + "";
               // 2.String constructor -> str = String(num);
               // 3. toString -> str = num.toString();
@@ -31,18 +31,25 @@
                Output : 1 */
             return n.split("").reverse().join("");
         }
+        document.querySelector("#message").innerHTML =
         console.log(Number(reverse_number(32243)))
     </script>
+        <style>
+        body{
+        background-color: rgb(247, 196, 162);
+ }
+    </style>
 </head>
 <body>
     <header>
         <h1 class="title">WDD 330 Front-end Web Development II </h1>
-        <h2>Millie's Portfolio Site</h2>  
+        <h2>Millie's Portfolio Site</h2>
       </header>
           <main class="maingrid">
             <p><a href="../index.html" class="backto"><< Back</a></p>
               <h3 class="heading_title">Week 1 - Practice Exercises</h3>
               <h4>View the Console for reverse number example</h4>
+
         <h3 class="details">Study Materials</h3>
         <p>more here</p>
         <h3  class="details">Questions or Notes </h3>
