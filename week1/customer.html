@@ -23,10 +23,10 @@
             let allCustomers = null;
             let storedCustomersString = localStorage["all_customers"];
             if(storedCustomersString == null){
-                allCustomers = []
+                 allCustomers = []
             }
             else{
-                allCustomers = JSON.parse(storedCustomersString);
+                 allCustomers = JSON.parse(storedCustomersString);
             }
             allCustomers.push(aClothingCustomer);
             let allCusomersString = JSON.stringify(allCustomers);
