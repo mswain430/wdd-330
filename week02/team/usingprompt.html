@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> <script>
+    // program to display the sum of natural numbers
+
+// take input from the user
+const number = parseInt(prompt('Enter a positive integer: '));
+
+let sum = 0;
+
+// looping from i = 1 to number
+// in each iteration, i is increased by 1
+for (let i = 1; i <= number; i++) {
+    sum += i;
+    
+}
+document.querySelector('.result').innerHTML = sum;
+console.log('The sum of natural numbers:', sum);
+</script>
+<body>
+   <div class="result"></div>
+</body>
+</html>
