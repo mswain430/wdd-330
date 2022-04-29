@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM W02 project</title>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script defer src="js/scripts.js"></script>
+    <script>
+        // DOM SELECTION
+        const input1 = document.querySelector('#input1');
+        const output1 = document.querySelector('.output1');
+        
+        // Get input from user, convert to number test in console
+        const num = parseInt(input1);
+        console.log(`${num}: which is a ${typeof(num)}`);
+       let numTotal = 0;
+        function getTotal() {
+            let numTotal = 0;
+            let i;
+            for (i = 1; i <= num ;i++) {
+                numTotal += num.elements[i].value;
+  }
+            return numTotal 
+            numTotal = document.querySelector('.output1').innerHTML
+}  
+    </script>
+</head>
+<body>
+    <h1>TEAM 2 - Week 2 </h1>
+    <p>Input a number and see what the sum of all its numbers equal:</p>
+ <form action=""> <label for="input1">Input a number:
+	<input type="text" id="input1" name="input1" required pattern="[0-9]+" oninvalid="this.setCustomValidity('☝🏼 Please enter only numbers.')" onvalid="this.setCustomValidity('')"></label>
+    <p><span class="colplace"></span><button onclick="getTotal()">Calculate Total</button></p>
+ </form>   <div class="output1"></div>
+</body>
+</html>
