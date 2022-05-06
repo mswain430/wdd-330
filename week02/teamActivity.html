@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible" data-js-focus-visible>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Brandi Glover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio for WDD330 course by Brandi Glover">
+    <link href="../css/small.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <title>Week 2 | Brandi Glover Portfolio</title>
+    <script>
+        function totalNum() {
+            let sum = 0;
+            let inputNum = document.querySelector("#inputNum").value
+            let num = parseInt(inputNum)
+            for (let i=1; i <= num; i++) {
+                sum += i;
+            }
+        document.getElementById('result').innerHTML = sum;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Brandi Glover</h1>
+    </header>
+<main>
+    <h1>WDD 330 Week 2:</h1>
+    <h2>Team Activity</h2>
+    <p>Enter a Number: <input id='inputNum' type="text" pattern="[0-9]+" required placeholder="Pick a number..."></input></p>
+        <button onclick="totalNum()">Calculate</button>
+    <div id="result"></div>
+
+    <p><a class="activityLink" href="https://brandi-galvan.github.io/wdd330/">Back to Portfolio</a></p>
+</main>
+<footer>
+        &copy; <span id="currentYear"></span> | Brandi Glover | Gilbert, AZ
+</footer>
+<script src="../js/footer.js"></script>
+</body>
+</html>
