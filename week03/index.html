@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Team Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <scripts>
+
+    </scripts>
+</head>
+<body>
+        <header>
+        <h1 class="title">WDD 330 Front-end Web Development II </h1> <h2>Millie's Portfolio Site</h2>
+      </header>
+          <main class="maingrid"><p><a href="../index.html" class="backto"><< Back to main</a></p>
+        <h2>Week 3 Activities, Practice and Notes</h2>
+     <ul>
+                <li><a href="practice.html">practice.html</a></li>
+                <li><a href="practice_p2.html">practice_p2.html</a></li>
+                <li><a href="team/">Team Activity</a></li>
+                <li><a href="#">another</a></li>
+            </ul>
+<div class="results">&nbsp;</div>
+<h3>Notes from Week 3</h3>
+
+
+<p>Functions declaration:</p>
+
+<p>function logMessage(){<br>
+	console.log('in a function');<br>
+}</p>
+
+<p>logMessage();  //calls the function</p>
+
+<p>function expression:</p>
+
+<p>let fn = function loggingFunction() {<br>
+     console.log('here is a message')<br>
+}</p>
+
+fn(); //calls the function<br>
+
+
+PASSING INFORMATION<br>
+
+function showMessage(message, anotherMessage) {<br>
+console.log(message, anotherMessage);<br>
+}<br>
+
+showMessage('first message', 'second Message');<br>
+
+
+
+let myFunction = function loggingFunction(message, firstName) {<br>
+	console.log(message);<br>
+	console.log(firstName);<br>
+}
+
+myFunction('hello')  // undefined<br>
+myFunction(); //undefined<br>
+
+FUNCTION RETURN VALUE<br>
+
+function getSecretCode(value) {<br>
+	let code = value * 42;<br>
+	return code;<br>
+}
+
+showMessage(getSecretCode(2));  OR<br>
+let secretCode = getSecretCode(2);<br>
+console.log(getSecretCode(2) ); //84<br>
+<br>
+FUNCTION SCOPE<br>
+<br>
+let key = 42;<br>
+function getSecretCode(value) {<br>
+	let keyGenerator = function keygen() {<br>
+		let key = 12;<br>
+		console.log('in keyGenerator: ', key);<br>
+		return key;<br>
+	}<br>
+
+	let code = value * keyGenerator();           // 12 <br>
+	console.log(' in getSecretCode: ', key);<br>
+	return code;<br>
+<br>
+let secretCode = getSecretCode(2);                // 42<br>
+showMessage( secretCode);<br>
+
+<br>
+function showMessage(message) {<br>
+	document.getElementById('message').textContent = message;<br>
+}<br>
+<br>
+SUMMARY:<br>
+FUNCTIONS<br>
+function name(){...}<br>
+let fn = function() {...}<br>
+<br>
+PASSING INFORMATION TO FUNCTIONS<br>
+myFunction(a,b,c);<br>
+FUNCTION RETURN VALUES<br>
+return value;<br>
+<br>
+FUNCTION SCOPE<br>
+<br>
+OBJECTS AND THE DOM<br>
+
+Object Properties, object methods<br>
+let person = {};    //empty object<br>
+let person = {<br>
+	name: "john",<br>
+	age: 32,<br>
+	partTime: false;<br>
+};<br>
+<br>
+person.age = 33;<br>
+or person['age'] = 44;<br>
+<br>
+showMessage(person.name);<br>
+showMessage(person.age);<br>
+<br>
+SYMBOLS<br>
+let mySymbol = Symbol();<br>
+let person = {<br>
+	name: 'John',<br>
+	age: 32,<br>
+	partTime: false,<br>
+	[mySymbol]: 'secretInformation'<br>
+};<br>
+
+<br>
+METHODS<br>
+let person = {<br>
+	name: 'John',<br>
+	age: 32,<br>
+	partTime: false,<br>
+	[mySymbol]: 'secretInformation'<br>
+	showInfo: function(realAge){<br>
+		showMessage('this.name + 'is ' + realAge');<br>
+	}<br>
+};<br>
+person.showInfo(); OR<br>
+showMessage(typeof person.showInfo);<br>
+<br>
+Passing Objects to Functions<br>
+let person = {<br>
+	name: 'John',<br>
+	age: 32,<br>
+	partTime: false<br>
+};<br>
+<br>
+function incrementAge(person) {<br>
+	person.age++;<br>
+}<br>
+incrementAge(person);  //32<br>
+showMessage(person.age);  //33<br>
+<br>
+When we pass values in an object these can be modified<br>
+When we pass data by values in a primitive objects like string, boolean -- modifications lost<br>
+<br>
+Standard Built-in Objects<br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number<br>
+Built in objects<br>
+date objects<br>
+<br>
+new Date();<br>
+new Date(value);<br>
+Date.prototype.getMinutes();<br>
+<br>
+let now = new Date();<br>
+showMessage(now.toDateString());<b<br>
+
+Math.PI<br>
+Math.random();<br>
+MATH.round();<br>
+<br>
+showMessage(Math.abs(-42);<br>
+showMessage(Math.random());<br>
+<br>
+STRING<br>
+.length()<br>
+let s='Hello';<br>
+showMessage( s.charAt(0) );  //H<br>
+showMessage( s.charAt(1) );  //E<br>
+<br>
+NUMBER<br>
+.NaN<br>
+.isNaN()<br>
+.parseInt()<br>
+.parseFloat()<br>
+.toPrecision()<br>
+.toString()<br>
+.toFixed()<br>
+<br>
+DOM<br>
+Styling DOM elements<br>
+element.style.cssProp = 'value'   // css property has a hyphen, eliminate this  - Use camelcase<br>
+overwriting css properties<br>
+const header = document.getElementById('message');<br>
+header.style.fontWeight = '800';<br>
+<br>
+<br>
+Detecting Button Clicks<br>
+element.addEventListener(event,fn)<br>
+HTML <a id="see-review"class='btn btn-default'>See Review</a><br>
+JS  const button = document.getElementById('see-review');<br>
+<br>
+button.addEventListener('click', function() {<br>
+	console.log('click');<br>
+       // call functions or
+{ );
+
+Showing and hiding DOM elements
+element.classList.add(className)
+element.classList.remove(className)
+element.classList.contains(className)
+
+//toggle button
+HTML <a id="see-review"class='btn btn-default'>See Review</a>
+HTML <div id="review" class="container d-none">
+	<h4> Review Title </h4>
+	<p> Review text ... </p>
+	</div>
+JS<br>
+const button = document.getElementById('see-review');<br>
+button.addEventListener('click', function() {<br>
+	const review = document.getElementById('review')<br>
+        if (review.classList.contains('d-none')) {<br>
+	    review.classList.remove('d-none');<br>
+            button.textContent = "CLOSE REVIEW";<br>
+	}<br>
+	else {<br>
+	   review.classList.add('d-none');<br>
+           button.textContent = "SEE REVIEW";<br>
+	}<br>
+<br>
+} );<br>
+<br>
+Element<br>
+
+<br>
+ARRAYS<br>
+See array built in functions on mdn... <br>
+</main>
+</body>
+</html>
