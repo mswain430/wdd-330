@@ -9,25 +9,51 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <script defer src="js/scripts.js"></script>
     <script>
-        function getTotal() {
+        function getSum() {
+           // DOM SELECTION
+           let inputNum = document.querySelector('#inputNum').value;
+           let sum = 0;
+           let num = parseInt(inputNum);
+           let i;
+            for (i = 1; i <= num; i++) {
+            sum += i;
+            }
+          // return sum;
+           document.querySelector('#output1').innerHTML = `You entered: ${inputNum}, the Sum of all numbers is ${sum}`;
+        }
+    /*     function getMultiply() {
+           // DOM SELECTION
+         let sum = 0;
+         let inputNum = document.querySelector('#inputNum').value;
+        let num = parseInt(inputNum);
+          let i;
+            for (i = 1; i <= num; i++) {
+              sum *= num[i];
+             }
+             //return sum;
+         document.querySelector('#output1').innerHTML = `multiply: ${sum}`;
+        } */
+  /*      function getSubtract() {
            // DOM SELECTION
           let inputNum = document.querySelector('#inputNum').value;
-          let sum = 0;
           let num = parseInt(inputNum);
           let i;
             for (i = 1; i <= num; i++) {
-                sum += i;
+              subtract -= i;
             }
-        document.querySelector('#output1').innerHTML = sum
-        }
+        document.querySelector('#output1').innerHTML = `Subtraction: ${subtract}`;
+              }*/
     </script>
 </head>
 <body>
     <h1>TEAM 2 - Week 2 </h1>
-    <p>Input a number and see what the sum of all its numbers equal:</p>
- <label for="input1">Input a number:
-	<input type="text" id="inputNum" name="inputNum" required pattern="[0-9]+" oninvalid="this.setCustomValidity('☝🏼 Please enter only numbers.')" onvalid="this.setCustomValidity('')"></label>
-    <p><button onclick="getTotal()">Calculate Total</button></p>
+    <p>Input a number and see what the sum, multiplication or Substraction of all its numbers equal:</p>
+   <form action="#"> <label for="inputNum">Input a number:</label>
+	<input type="text" id="inputNum" name="inputNum" required pattern="^[0-9]+$" oninvalid="this.setCustomValidity('☝🏼 Please enter only numbers.')" onvalid="this.setCustomValidity()">
+    <p><button onclick="getSum()" id="Total_Sum">Calculate Total Sum</button>
+  <!--   &nbsp;<input type="button" onclick="getMultiply()" value="Calculate Total by Multiply">
+    &nbsp;<input type="button" onclick="getSubtract()" value="Calculate Total by Subtraction"> -->
+    </p></form>
    <div id="output1"></div>
 </body>
 </html>
