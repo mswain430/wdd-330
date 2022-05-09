@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/array.js"></script>
+</head>
+<body>
+    <h1>NOTES on Arrays</h1>
+    <h2>Arrays</h2>
+ <h3> Creating and Initializing Arrays</h3>  
+
+<p>// Create 
+let values = " [1,2,3];   // three elements<br/>
+console.log(values);<br/>
+console.log(Array.isArray(values)); // is this object an array<br/>
+</p>
+<p>let values = Array.of(1,2,3);</p>
+
+<h3>Accessing Array Items</h3>
+ <p> let values = ['a', 'b', 'c'];<br/>
+console.log(values[0]);<br/>
+values[0] = 'aaa';  //changing the value <br>
+</p>
+<h3>Manipulating Arrays</h3>
+<h4>//push   //adds to the array at the end</h4>
+<p> const values = ['a', 'b', 'c'];<br/>
+   
+values.push('d');  //adds to the array at the end<br>
+values.push ('e','f', 'g'); //add multiple elements <br>
+console.log(values); //a b c d
+    </p>
+    <h4>pop()  //takes an element off the end</h4>
+        <p>const last = values.pop();<br>console.log(last); //pops off the last value</p>
+    <h4>shift()  //moves the entire array</h4>
+    <p>const first = values.shift(); <br>console.log(first); // a</p>
+    <h4>unshift()  // adds the value to the beginning of the array</h4>
+    <p>values.unshift('a'); //adds a to beginning</p> 
+    <p>values.unshift('hello');  //adds hello to beginning</p>
+    <p>values.unshift('hello', 'world');  //adds hello world to beginning</p>
+<h3>slice() and splice()</h3>
+<h4>slice() //creates a brand new array </h4>
+<p> const values = ['a', 'b', 'c'];<br/>
+    const newValues = values.slice(1,2)    //start (1), ending element(2)  // new array -- makes a copy <br>
+    console.log(newValues);  // b</p>
+    <h4>splice()  //inserting or deleting items within the array </h4>
+    <p> const values = ['a', 'b', 'c'];<br/>
+        const newValues = values.splice(1,1)    //index (1), number of items to delete(1)    <br>
+        console.log(newValues) //a, c <br>
+        const newValues = values.splice(1, 0, 'foo')    //index (1), number of items to delete(0), item to insert 'foo'    <br>
+        console.log(newValues);  // a foo b c</p>
+<h3>Array Searching and looping</h3>
+<h4>indexOf()   //Allows us to get the index of a value of an array</h4>
+<p> const values = ['a', 'b', 'c'];<br/>
+console.log(values.indexOf('c')); // 2  We know the value within the array<br>
+console.log(values.indexOf('d')); // -1  'd' doesn't exist</p>
+<h4>filter()</h4>
+<p><p> const values = ['a', 'b', 'c'];<br/>
+const set = values.filter(function(item){
+    return item > 'b';
+{);</p>
+</body>
+</html>
