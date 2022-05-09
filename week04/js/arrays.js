@@ -12,7 +12,7 @@ console.log(Array.isArray(values1)); // is this object an array
 //Accessing Array Items 
  let values3 = ['a', 'b', 'c'];
 console.log(values3[0]);
-values[0] = 'aaa';  //changing the value
+values3[0] = 'aaa';  //changing the value
 
 //Manipulating Arrays
 ////push   //adds to the array at the end
@@ -37,7 +37,7 @@ console.log(values4); //a b c d
     console.log(newValues5);  // b
    //splice()  //inserting or deleting items within the array/
      const values6 = ['a', 'b', 'c'];
-        const newValues6 = values.splice(1,1)    //index (1), number of items to delete(1)    
+        const newValues6 = values6.splice(1,1)    //index (1), number of items to delete(1)    
         console.log(newValues6) //a, c 
         const newValues7 = values6.splice(1, 0, 'foo')    //index (1), number of items to delete(0), item to insert 'foo'    
         console.log(newValues7);  // a foo b c
@@ -46,8 +46,29 @@ console.log(values4); //a b c d
  const values7 = ['a', 'b', 'c'];
 console.log(values7.indexOf('c')); // 2  We know the value within the array
 console.log(values7.indexOf('d')); // -1  'd' doesn't exist
-//filter()/
+ 
+//filter() 
  const values8 = ['a', 'b', 'c'];
 const set = values8.filter (function(item) {
     return item > 'b';
 } );
+console.log(set); //c     creates a new array
+
+
+//find()
+const values9 = ['a', 'bbb', 'c'];
+const found = values9.find(function(item) {
+    return item.length > 1;  //length greater than 1   This only finds the first item that fills this criteria
+});
+console.log(found) ; //bbb
+
+//forEach()
+values9.forEach(function(item) {
+    console.log(item) //a b c
+});
+
+//Arrays in the DOM
+const containers = document.getElementsByClassName('container');  // HTML Collection  - array
+containers[2].classList.add('d-none')  //hides the item  display attribute - none
+console.log(containers);
+

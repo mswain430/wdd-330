@@ -9,6 +9,23 @@
 </head>
 <body>
     <h1>NOTES on Arrays</h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+    <p>
+        SUMMARY:
+        <br>Creating and Initializing Arrays: 
+        <br> const arr = [1,2,3]  or const arr = ['a', 'b' 'c']
+        <br>  const arr = Array.of(1,2,3)
+        Accessing Array Items:<br>
+        arr[index] - zero based starts at 0<br>
+        Manipulating Arrays: <br>
+        push(), pop(), shift(), unshift(), slice() //creates a new array, splice(idx, deleteCount, new items)<br>
+        Array Searching and Looping:<br>
+        indexOf() and find()<br>
+        filter()<br>
+        forEach()<br>
+        Arrays in the DOM<br>
+        document.getElementByClassName();
+    </p>
     <h2>Arrays</h2>
  <h3> Creating and Initializing Arrays</h3>  
 
@@ -57,9 +74,24 @@ console.log(values); //a b c d
 console.log(values.indexOf('c')); // 2  We know the value within the array<br>
 console.log(values.indexOf('d')); // -1  'd' doesn't exist</p>
 <h4>filter()</h4>
-<p><p> const values = ['a', 'b', 'c'];<br/>
+<p> const values = ['a', 'b', 'c'];<br/>
 const set = values.filter(function(item){
-    return item > 'b';
-{);</p>
+    return item > 'b';<br/>
+{);<br/>
+    console.log(set); //c     creates a new array</p>
+
+
+<h4>//find()</h4>
+const values9 = ['a', 'bbb', 'c'];<br/>
+const found = values9.find(function(item) {<br/>
+    return item.length > 1;  //length greater than 1   This only finds the first item that fills this criteria<br/>
+});<br/>
+console.log(found) ; //bbb<br/>
+
+<h4>//forEach()</h4>
+values9.forEach(function(item) {<br/>
+    console.log(item) //a b c<br/>
+});
+
 </body>
 </html>
