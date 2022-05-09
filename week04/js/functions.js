@@ -15,7 +15,7 @@ logMessage();
 
 // function declaration
 function showMessage() {
-
+    //more here
 }
 //function Expressions 
 let fn = function() {
