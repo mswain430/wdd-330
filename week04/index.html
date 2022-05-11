@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/arrays.js"></script>
+    <script src="js/scope-hoisting.js"></script>
+    <style>
+        body {
+            margin: 20px 100px;
+        }
+        
+        main {
+            padding: 50px;
+        }
+        
+        h2 {
+            background-color: cornflowerblue;
+            color: aliceblue;
+            padding: 5px;
+            width: 80%;
+        }
+        
+        h3 {
+            background-color: rgb(136, 73, 196);
+            color: aliceblue;
+            padding: 10px;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>NOTES on Arrays</h1>
+        <br> <a href="https://app.pluralsight.com/course-player?clipId=68edc0a2-c9c2-4398-9f96-ee006e729943">JavaScript: Getting Started Mark Zamoyta - Beginner</a>
+        <br> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+        <p>
+            <b>SUMMARY:</b>
+            <br><b>Creating and Initializing Arrays:</b>
+            <br> const arr = [1,2,3] or const arr = ['a', 'b' 'c']
+            <br> const arr = Array.of(1,2,3) Accessing Array Items:<br> arr[index] - zero based starts at 0<br> Manipulating Arrays: <br> push(), pop(), shift(), unshift(), slice() //creates a new array, splice(idx, deleteCount, new items)<br> Array Searching
+            and Looping:<br> indexOf() and find()<br> filter()
+            <br> forEach()
+            <br> Arrays in the DOM<br> document.getElementByClassName();
+        </p>
+        <h2>Arrays</h2>
+        <h3> Creating and Initializing Arrays</h3>
+
+        <p>// Create let values = [1,2,3]; // three elements<br/> console.log(values);
+            <br/> console.log(Array.isArray(values)); // is this object an array<br/>
+        </p>
+        <p>let values = Array.of(1,2,3);</p>
+
+        <h3>Accessing Array Items</h3>
+        <p> let values = ['a', 'b', 'c'];<br/> console.log(values[0]);
+            <br/> values[0] = 'aaa'; //changing the value <br>
+        </p>
+        <h3>Manipulating Arrays</h3>
+        <h4>//push //adds to the array at the end</h4>
+        <p> const values = ['a', 'b', 'c'];<br/> values.push('d'); //adds to the array at the end<br> values.push ('e','f', 'g'); //add multiple elements <br> console.log(values); //a b c d
+        </p>
+        <h4>pop() //takes an element off the end</h4>
+        <p>const last = values.pop();<br>console.log(last); //pops off the last value</p>
+        <h4>shift() //moves the entire array</h4>
+        <p>const first = values.shift(); <br>console.log(first); // a</p>
+        <h4>unshift() // adds the value to the beginning of the array</h4>
+        <p>values.unshift('a'); //adds a to beginning</p>
+        <p>values.unshift('hello'); //adds hello to beginning</p>
+        <p>values.unshift('hello', 'world'); //adds hello world to beginning</p>
+        <h3>slice() and splice()</h3>
+        <h4>slice() //creates a brand new array </h4>
+        <p> const values = ['a', 'b', 'c'];<br/> const newValues = values.slice(1,2) //start (1), ending element(2) // new array -- makes a copy <br> console.log(newValues); // b</p>
+        <h4>splice() //inserting or deleting items within the array </h4>
+        <p> const values = ['a', 'b', 'c'];<br/> const newValues = values.splice(1,1) //index (1), number of items to delete(1) <br> console.log(newValues) //a, c <br> const newValues = values.splice(1, 0, 'foo') //index (1), number of items to delete(0),
+            item to insert 'foo' <br> console.log(newValues); // a foo b c</p>
+        <h3>Array Searching and looping</h3>
+        <h4>indexOf() //Allows us to get the index of a value of an array</h4>
+        <p> const values = ['a', 'b', 'c'];<br/> console.log(values.indexOf('c')); // 2 We know the value within the array<br> console.log(values.indexOf('d')); // -1 'd' doesn't exist</p>
+        <h4>filter()</h4>
+        <p> const values = ['a', 'b', 'c'];<br/> const set = values.filter(function(item){ return item > 'b';<br/> {);
+            <br/> console.log(set); //c creates a new array</p>
+
+
+        <h4>//find()</h4>
+        const values9 = ['a', 'bbb', 'c'];<br/> const found = values9.find(function(item) {<br/> return item.length > 1; //length greater than 1 This only finds the first item that fills this criteria<br/> });
+        <br/> console.log(found) ; //bbb<br/>
+
+        <h4>//forEach()</h4>
+        values9.forEach(function(item) {<br/> console.log(item) //a b c<br/> });
+
+        <h2>Scope and Hoisting</h2>
+        <h3>Global Scope </h3>
+        <p>All functions can access items</p>
+        <h3>Function Scope</h3>
+        <p>Resolves names by looking at function, then surrounding functions, then global scope</p>
+        <h4>var and hoisting</h4>
+        <p>Use let and const Function declarations are fine<br>
+        </p>
+        <h4>Undeclared variable and strict mode</h4>
+        <p>'use strict'; Errors show up if issues</p>
+    </main>
+</body>
+
+</html>
