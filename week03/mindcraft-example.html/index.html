@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            background-color: #80BA5A;
+        }
+
+        #backButton {
+            position: absolute;
+            top: 15px;
+            left: 5px;
+            font-size: 2rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+        }
+
+        #app {
+            position: absolute;
+            top: 77px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            overflow-y: scroll;
+        }
+
+        .mob {
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px 0px;
+            margin: 0;
+        }
+
+        img {
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script src="data.js"></script>
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <button id="backButton" onclick="loadData()">←</button>
+        <h1 id="pageTitle">Minecraft Mobs</h1>
+    </header>
+    <div id="app"></div>
+
+</body>
+</html>
