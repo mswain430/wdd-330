@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+ <p>Form controls</p>
+ <form name='search' action='/search'>
+        <input name='searchInput'>
+        <button type='submit'>Search</button>
+        <button type='reset'>Reset</button>
+         <input type='text' name='search-box' placeholder='Search Here'>
+    </form>
+<p>Accessing form elements</p>
+
+<p>Form properties and methods</p>
+
+<p>Form events</p>
+
+<p>Submitting a form</p>
+
+<p>Retrieving and changing values from a form</p>
+
+<p>Form validation</p>
+
+<p>Our project ― add a form for answering the questions.</p>
+<script>
+//const form = document.getElementsByTagname('form')[0];
+//const form = document.forms.search;
+//const form = document.forms['search'];
+//const [input,button] = form.elements;
+//const input = form.searchInput;
+//const input = form['searchInput']
+//<button type='submit'>Submit</button>
+//<input type='submit' value='Submit'>
+//<input type='image' src='button.png'>
+form.action = '/an/other.url';
+const input = form.elements.searchInput;
+input.addEventListener('focus', () => alert('focused'), false);
+input.addEventListener('blur', () => alert('blurred'), false);
+input.addEventListener('change', () => alert('changed'), false);
+const form = document.forms['search'];
+form.addEventListener ('submit', search, false);
+
+function search() {
+    alert(' Form Submitted');
+}
+function search(event) {
+    alert('Form Submitted');
+    event.preventDefault();
+}
+function search(event) {
+    alert(`You Searched for: ${input.value}`);
+    event.preventDefault();
+}
+input.value = 'Search Here';
+input.addEventListener('focus', function(){
+    if (input.value==='Search Here') {
+        input.value = ''
+    }
+}, false);
+
+input.addEventListener('blur', function(){
+    if(input.value === '') {
+        input.value = 'Search Here';
+    } }, false);
+
+
+</script>
+</body>
+</html>

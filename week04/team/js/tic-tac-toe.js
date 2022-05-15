@@ -34,57 +34,56 @@ function startGame() {
     winningMessageElement.classList.remove('show');
 };
 
-function handleCellClick(e) {
-    const cell = e.target
-    const currentClass = isPlayer_o_turn ? player_o_class : player_x_class
-    placeMark(cell, currentClass);
-    if (checkWin(currentClass)) {
-        endGame(false) {
-            else if (isDraw()) {
-                endGame(true)
-            } else {
-                swapTurns()
-                setBoardHoverClass()
-            }
-        }
+function handleClick(e) {
+	const cell = e.target
+	const currentClass = circleTurn ? player_o_class : player_x_class
+	placeMark(cell, currentClass)
+	if (checkWin(currentClass)) {
+		endGame(false)
+	} else if (isDraw()) {
+		endGame(true)
+	} else {
+		swapTurns()
+	}
+}
 
-        function endGame(draw) {
-            if (draw) {
-                winningMessageTextElement.innerText = "It's a draw!"
-            } else {
-                winningMessageTextElement.innerText = `Player with ${isPlayer_o_turn ? "0's": "X's"} wins!`
-            }
-            winningMessageElement.classList.add('show')
-        }
+function endGame(draw) {
+    if (draw) {
+        winningMessageTextElement.innerText = "It's a draw!"
+    } else {
+        winningMessageTextElement.innerText = `Player with ${isPlayer_o_turn ? "0's": "X's"} wins!`
+    }
+    winningMessageElement.classList.add('show')
+}
 
-        function isDraw() {
-            return [...cellElements].every(cell => {
-                return cell.classList.contains(player_x_class) || cell.classList.contains(player_o_class)
-            })
-        }
+function isDraw() {
+    return [...cellElements].every(cell => {
+        return cell.classList.contains(player_x_class) || cell.classList.contains(player_o_class)
+    })
+}
 
-        function placeMark(cell, currentClass) {
-            cell.classList.add(currentClass)
-        }
+function placeMark(cell, currentClass) {
+    cell.classList.add(currentClass)
+}
 
-        function swapTurns() {
-            isPlayer_o_turn = !isPlayer_o_turn
-        }
+function swapTurns() {
+    isPlayer_o_turn = !isPlayer_o_turn
+}
 
-        function setBoardHoverClass() {
-            boardElement.classList.remove(player_x_class);
-            boardElement.classList.remove(player_o_class);
-            if (isPlayer_o_turn) {
-                boardElement.classList.add(player_o_class)
-            } else {
-                boardElement.classList.add(player_x_class)
-            }
-        }
+function setBoardHoverClass() {
+    boardElement.classList.remove(player_x_class);
+    boardElement.classList.remove(player_o_class);
+    if (isPlayer_o_turn) {
+        boardElement.classList.add(player_o_class)
+    } else {
+        boardElement.classList.add(player_x_class)
+    }
+}
 
-        function checkWin(currentClass) {
-            return winning_combinations.some(combination => {
-                return combination.every(index => {
-                    return cellElements[index].classList.contains(currentClass)
-                })
-            })
-        }
+function checkWin(currentClass) {
+    return winning_combinations.some(combination => {
+        return combination.every(index => {
+            return cellElements[index].classList.contains(currentClass)
+        })
+    })
+}
