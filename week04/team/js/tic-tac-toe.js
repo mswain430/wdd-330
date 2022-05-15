@@ -19,24 +19,23 @@ let isPlayer_o_turn = false;
 
 startGame()
 
-restartButton.addEventListener('click', startGame)
+restartButton.addEventListener('click', startGame);
 
 function startGame() {
-    isPlayer_o_turn = false
+    isPlayer_o_turn = false;
     cellElements.forEach(cell => {
         cell.classList.remove(player_x_class);
         cell.classList.remove(player_o_class);
         cell.removeEventListener('click', handleCellClick);
         cell.addEventListener('click', handleCellClick, { once: true });
-
     });
-    setBoardHoverClass()
+    setBoardHoverClass();
     winningMessageElement.classList.remove('show');
 };
 
-function handleClick(e) {
+function handleCellClick(e) {
 	const cell = e.target
-	const currentClass = circleTurn ? player_o_class : player_x_class
+	const currentClass = isPlayer_o_turn ? player_o_class : player_x_class
 	placeMark(cell, currentClass)
 	if (checkWin(currentClass)) {
 		endGame(false)
@@ -44,6 +43,7 @@ function handleClick(e) {
 		endGame(true)
 	} else {
 		swapTurns()
+        setBoardHoverClass()
 	}
 }
 
