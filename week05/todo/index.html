@@ -5,9 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
+    <style>
+        body { margin: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.em;
+            font-family: 'Roboto Flex', sans-serif;
+        }
+        h2 {
+            background-color: cornflowerblue;
+            font-size: 18px;
+            color: white;
+            padding: 5px;
+        }
+        .todoBoard  {
+            display:grid;
+            grid-template-columns: 1;
+            grid-template-rows: auto;
+            border: 1px solid #333;
+            justify-items: left;
+            width: 500px;
+            max-width: 100%;
+            margin: 20px;
+        }
+        .todoBoard div {
+            display:grid;
+            grid-template-columns: 1;
+            grid-template-rows: auto;
+            height: 40px;
+            min-width: 460px;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            margin: 10px;
+            justify-content: left;
+            align-items: left;
+
+        }
+        form.todo-form {
+            display: flex;
+            width: 500px;
+            max-width: 80%;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+        button {
+            height: 40px;
+            justify-content: left;
+            align-items: top;
+            margin: 20px 10px 10px 0;
+        }
+        textarea {
+            width: 400px;
+            height: 40px;
+            max-width: 440px;
+            justify-content: left;
+            align-items: top;
+            margin: 20px;
+        }
+        .todo-menu {
+            display: flex;
+            flex: auto ;
+        }
+    </style>
 </head>
 <body>
- ToDo List Project
+ <h2>To Do List Project</h2>
  <div class="todoBoard">
      <div>task one</div>
       <div>task one</div>
@@ -16,9 +82,12 @@
            <div>task one</div>
             <div>task one</div>
              <div>task one</div>
-               <div>task one</div>
+               <div class="todo-menu">
+                   <span id="tasks-left">tasks left</span>
+                filter: all, active, completed,
+               </div>
     </div>
-    <form action="" id="todo" class="todo-form">
+    <form action='#' id="todo" class="todo-form">
         <label><textarea></textarea></label>
         <button class="add-todo">add</button>
     </form>
