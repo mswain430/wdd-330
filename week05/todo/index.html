@@ -21,30 +21,23 @@
             color: white;
             padding: 5px;
         }
+        container {text-align: center; margin: auto; max-width: 50%;border:1px solid red}
         .todo-wrapper  {
             display:grid;
             grid-template-columns: 1;
-            grid-template-rows: auto;
+            grid-template-rows: repeat(10, 40px);
             border: 1px solid #333;
             justify-items: left;
             width: 500px;
             max-width: 100%;
             margin: 20px;
         }
-        .todos div {
-            display:grid;
-            grid-template-columns: 1;
-            grid-template-rows: auto;
+        .todo-wrapper div {
+            border:1px solid #ddd;
             height: 40px;
-            min-width: 320px;
-            border: 1px solid #ddd;
-            padding: 5px 10px;
-            margin: 10px;
-            justify-content: left;
-            align-items: left;
+            padding: 5px;
 
         }
-
         button {
             height: 40px;
             justify-content: left;
@@ -54,10 +47,10 @@
         input {
             width: 400px;
             height: 40px;
-            max-width: 320px;
+            min-width: 320px;
             justify-content: left;
             align-items: top;
-            margin: 20px;
+            margin: 10px;
         }
         .todo-filters {
             display: flex;
@@ -72,7 +65,7 @@
                <div id="todos">todos</div>
                <div class="todo-filters"></div>
          </div>
-         <div class="add-todo-wrapper">
+        <div class="add-todo-wrapper">
              <input id="todoInput" type="text">
              <button id="addBtn"></button>
          </div>
