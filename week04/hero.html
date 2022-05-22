@@ -3,18 +3,30 @@
 <head>
     <meta charset='utf-8'>
     <title>Hero Form</title>
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        main {justify-content: center;margin: auto}
+    form {display:flex;flex-direction: column;}
+    div.container { max-width: 500px;margin: auto;padding: 10px;border:1px dotted #000}
+    </style>
 </head>
 <body>
+    <main>
+        <div class="container">
     <form id='hero'>
         <label for='heroName'>Name:
             <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32>
         </label>
+        <br/>
         <button type='submit'>Submit</button>
+        <br/>
         <label for='donation-amount'>Enter amount to donate:
     <input type='text' id ='donation-amount' name='donationAmount' value='10'>
-    <label for='realName'>Real Name:
+    <br/><label for='realName'>Real Name:
 <input type='password' name='realName' id='realName'></label>
 </label>
+<br/>
 <p>Super Powers:</p>
 <label for='flight'>Flight:
     <input type='checkbox' id='flight' value='Flight' name='powers'>
@@ -62,6 +74,8 @@
 <button type='reset'>Reset</button>
 <button type='button'>Click Me</button>
     </form>
+    </div>
+    </main>
 <script src='main.js'></script>
 </body>
 </html>
