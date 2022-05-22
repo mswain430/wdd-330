@@ -57,7 +57,7 @@ while (i < 5) {
     i++;
 }
 
-// do... while  tests after execution. 
+// do... while  tests after execution.
 let count = 1;
 do {
     console.log(count);
