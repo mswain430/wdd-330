@@ -11,7 +11,7 @@
     <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../css/styles.css"/>
     <style>
-
+     ul li.tdd a {background-color: none;}
     </style>
 </head>
 <body>
@@ -29,11 +29,40 @@
             </ul>
 <p class="para">more here</p><p>another paragraph</p>
 <h2>Notes on testing and debugging</h2>
+<p>System error ― there’s a problem with the system or external devices with which the program is interacting.</p>
+<p>Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</p>
+<p>User error ― the user has entered data incorrectly, which the program is unable to handle.</p>
+<h3>Exceptions </h3><p>An exception is an error that produces a return value that can then be used by the program to deal with the error.</p></p>
 <p>Strict mode simply requires the following string to be added to the first line of a JavaScript file:
-
-Copy
+<br>Copy<br>
 'use strict';</p>
-</main>
+<h4>Linting</h4>
+<p>Linting Tools</p>
+<p>Linting tools such as JS Lint,JS Hint, and ES Lint can be used to test the quality of JavaScript code, beyond simply using strict mode. They are designed to highlight any sloppy programming practices or syntax errors, and will complain if certain style conventions are not followed, such as how code is indented. </p>
+<h4>Feature Detection</h4>
+<p>The recommended way to determine browser support for a feature is to use feature detection. </p>
+<a href="https://caniuse.com/">Can I use?</a>
+<h4>Debugging in the Browser</h4>
+<p>Debugging is the process of finding out where bugs occur in the code and then dealing with them. In many cases, the point at which an error occurs is not always where it originated, so you’ll need to run through the program to see what’s happening at different stages of its execution.</p>
+<h4>The Alert</h4><p>The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code. </p>
+<h4>Using the Console, console.log()</h4>
+<p>Most modern JavaScript environments have a console object that provides a number of methods for logging information and debugging.</p>
+The console.trace() method will log an interactive stack trace in the console. <p></p>
+<h4>Exception Handling</h4>
+<p>If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block. </p>
+<a href="https://www.sitepoint.com/proper-error-handling-javascript/">Proper error handling -JavaScript</a>
+<h3>Test-driven Development</h3>
+<p>Test-driven development (TDD) is the process of writing tests before any actual code. Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass. After this, the code is refactored to make it faster, more readable, and remove any repetition. The code is continually tested at each stage to make sure it continues to work. This process should be followed in small piecemeal chunks every time a new feature is implemented, resulting in the following workflow:
+</p>
+<ul class="tdd"><li>Write tests (that initially fail)</li>
+<li>Write code to pass the tests</li>
+<li>Refactor the code</li>
+<li>Test refactored code</li>
+<li>Write more tests for new features</li>
+</ul>
+<p>
+This is often referred to as the “red-green-refactor” cycle of TDD, as failing tests usually show up as red, and tests that pass show as green.</p>
+</p><p>Test-driven development is considered to be best practice, but in reality you'll find most developers tend to be more pragmatic when it comes to writing tests. </p></main>
     <script>
         $(para).addClass('important').append('<p>Another Paragraph</p>');
         para.classList.add('important');
