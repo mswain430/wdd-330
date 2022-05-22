@@ -16,7 +16,7 @@
       }
       main > h1 {
         text-align: center;
-        background-color: indianred;
+        background-color: rgb(92, 92, 205);
         padding: 1em;
         margin-top: 0;
         margin-bottom: -0.5em;
@@ -31,15 +31,20 @@
         padding: 0;
         margin: 1em 0;
         list-style-type: none;
+        display: flex;
+        flex-direction: column;
       }
       .hikeStyles div {
         padding: 0 0.5em;
       }
       .hikeStyles li > h2 {
         text-align: center;
-        background-color: burlywood;
+        background-color: rgb(179, 222, 135);
+        padding: 1em;
         margin-bottom: 0.5em;
       }
+      div.image {width: 50%}
+      div.details{width: 50%}
       img {max-width: 320px;}
       .light {
         display: flex;
@@ -64,13 +69,13 @@
 
   <body>
     <main>
-      <h1>Great hikes</h1>
+      <h1>Great Hikes</h1>
       <ul id="hikes" class="hikeStyles">
         <!-- your hike list should be build here. -->
       </ul>
     </main>
-
     <script src="hikes.js"></script>
     <script src="main.js" type="module"></script>
+    <script src="utils.js" type="module"></script>
   </body>
 </html>
