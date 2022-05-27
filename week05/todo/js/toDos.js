@@ -1,9 +1,15 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-// onclick handler for button
-document.querySelector('#addBtn').onclick = addNewTodo;
+//load the list
+loadTodos();
 
+// onclick handler for button // Add event listeners
+document.querySelector('#addBtn').onclick = addNewTodo;
+document.querySelector('#deleteBtn').onclick = deleteTodo;
+document.querySelector('#addFilter').onclick = applyFilter;
+document.querySelector('#activeFilter').onclick = applyFilter;
+document.querySelector('#completedFilter').onclick = applyFilter;
 //get input
 const input = document.querySelector('#todoInput');
 
@@ -12,13 +18,14 @@ input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
 
-loadTodos();
+
+// step 1
+//function newTodo() { }
 
 function addNewTodo(e) {
     const todo = { id: Date.now(), content: input.value, completed: false};
-
     //reset the input field
-    input.value;
+    input.value = "";
 
     //add the Ul
     const todoItem = createTodoItem(todo);
@@ -28,6 +35,11 @@ function addNewTodo(e) {
 
     loadTodos();
 }
+// step 2
+//function createTodo() { }
+
+// step 3 same as 44?
+// function createTodoElement(todo) {}
 
 function createTodoItem(todo) {
     //todo div
@@ -58,11 +70,13 @@ function createTodoItem(todo) {
     return todoDiv;
 }
 
+// step 4
 function addToList(todoDiv) {
     //add to the document
     document.querySelector('#todos').appendChild(todoDiv);
 }
 
+// step 0
 function loadTodos() {
     document.querySelector('#todos').innerHTML = " ";
     const todoList = ls.getTodoList();
@@ -76,4 +90,36 @@ function loadTodos() {
     });
 }
 
-function deleteTodo(e) {}
+//Events
+function deleteTodo(e) {
+    const btn = e.currentTarget;
+    ls.deleteTodo(btn.getAttribut('data-id'));
+    document.querySelector('#todos').innerHTML = '';
+
+    loadTodos();
+}
+
+function toggleComplete(e) {
+
+}
+
+function applyFilter(e){
+    //clear the list
+    document.querySelector('#todos').innerHTML = '';
+
+    // declare the variables
+    let filteredTodos = [];
+    const allTodos = ls.getTodoList();
+
+    //check which filter to apply
+    if (e.currentTarget.id == 'activeFilter') {
+        //apply active
+        filteredTodos = utils.activeFilter(allTodos)
+    }
+
+    //draw the list
+    filteredTodos.forEach(todo => {
+        const el = createTodoElement(todo)
+        addToList(el)
+    })
+}
