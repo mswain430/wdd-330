@@ -9,7 +9,71 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
     <style>
-
+        body { margin: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.em;
+            font-family: 'Roboto Flex', sans-serif;
+        }
+        h1 {
+            background-color: cornflowerblue;
+            font-size: 18px;
+            color: white;
+            padding: 5px;
+        }
+        .container {text-align: center;
+            margin: auto;
+            padding: 5px;
+            min-width: 320px;
+            /*max-width: 500px;
+            border:1px solid red*/
+        }
+        .todos-wrapper  {
+            display:grid;
+            grid-template-columns: 1;
+            grid-template-rows: repeat(10, 40px);
+            /*border: 1px solid #333; */
+            justify-items: center;
+            max-width: 100%;
+        }
+        .todos-wrapper div {
+            display:flex;
+            flex-direction: horizontal;
+            border:1px solid #ddd;
+            justify-content: left;
+            height: 40px;
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            height: 40px;
+            justify-content: center;
+            align-items: top;
+            margin: 5px 0 5px 10px;
+            padding: 5px;
+        }
+        .todo-delete-btn {
+            height: 40px;
+            width: 40px;
+            background-color: gray;
+            justify-content: center;
+            align-items: top;
+            margin: 5px 0 5px 10px;
+            padding: 5px;
+            color: red;
+        }
+        input {
+            width: 400px;
+            height: 40px;
+            min-width: 320px;
+            justify-content: center;
+            align-items: top;
+            margin: 10px;
+        }
+        .todo-filters {
+            display: flex;
+            flex: auto ;
+        }
     </style>
     <script type="module" src="js/todos.js"></script>
 </head>
