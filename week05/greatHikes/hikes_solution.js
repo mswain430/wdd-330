@@ -140,7 +140,6 @@ function renderOneHikeFull(hike) {
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
         </div>
-
     `;
   return item;
 }

@@ -1,5 +1,5 @@
 const TODO_LIST = "todoList";
-
+// show a list of tasks
 function getTodoList() {
     let todoListString = localStorage.getItem(TODO_LIST);
 

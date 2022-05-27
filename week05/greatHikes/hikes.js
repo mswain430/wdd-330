@@ -38,7 +38,6 @@ const hikeList = [
 
 const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 //on load grab the array and insert it into the page on load
-
 export default class Hikes {
   constructor(elementId) {
     this.parentElement = document.getElementById(elementId);
@@ -101,17 +100,21 @@ function renderHikeList(parent, hikes) {
 }
 function renderOneHikeLight(hike) {
   const item = document.createElement("li");
+    item.classList.add('light');
+  // setting this to make getting the details for a specific hike easier later.
+    item.setAttribute('data-name', hike.name);
   item.innerHTML = ` <h2>${hike.name}</h2>
-  <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+  <div class="image">
+    <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
   <div class="details">
-          <div>
-              <h3>Distance</h3>
-              <p>${hike.distance}</p>
-          </div>
-          <div>
-              <h3>Difficulty</h3>
-              <p>${hike.difficulty}</p>
-          </div>
+  <div>
+        <h3>Distance</h3>
+        <p>${hike.distance}</p>
+    </div>
+    <div>
+        <h3>Difficulty</h3>
+        <p>${hike.difficulty}</p>
+    </div>
   </div>`;
   return item;
 }
@@ -138,7 +141,6 @@ function renderOneHikeFull(hike) {
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
         </div>
-
     `;
   return item;
 }
