@@ -3,14 +3,14 @@ const TODO_LIST = "todoList";
 function getTodoList() {
     let todoListString = localStorage.getItem(TODO_LIST);
 
-    let todoList = []
+    let todoList = [];
 
-    if(todoListString) {
-        if(todoListString) {
-            todoList = JSON.parse(todoListString);
-        }
-    return todoList;
+    if (todoListString) {
+        todoList = JSON.parse(todoListString);
     }
+
+    return todoList;
+
 }
 
 function saveTodo(todo) {
