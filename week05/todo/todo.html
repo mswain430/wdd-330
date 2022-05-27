@@ -31,7 +31,7 @@
         .todos-wrapper  {
             display:grid;
             grid-template-columns: 1;
-            grid-template-rows: repeat(10, 40px);
+            grid-template-rows: repeat(auto, 40px);
             /*border: 1px solid #333; */
             justify-items: center;
             max-width: 100%;
@@ -60,15 +60,15 @@
             align-items: top;
             margin: 5px 0 5px 10px;
             padding: 5px;
-            color: red;
         }
+
         input {
             width: 400px;
             height: 40px;
             min-width: 320px;
             justify-content: center;
             align-items: top;
-            margin: 10px;
+            margin: 10px 5px;
         }
         .todo-filters {
             display: flex;
@@ -83,7 +83,6 @@
 
          <div class="todos-wrapper">
                <div id="todos">
-
                </div>
                <div class="todo-filters">
                   <button id="allFilter">All</button>
