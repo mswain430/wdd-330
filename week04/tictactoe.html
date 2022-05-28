@@ -224,7 +224,7 @@ function endGame(draw) {
 	} else {
       	winningMessageTextElement.innerText = `Player with ${circleTurn ? "0's" : "X's"} wins!`
 	}
-	winningMessageElement.classList.add('Show')
+	winningMessageElement.classList.add('show')
 }
 function isDraw() {
   return [...cellElements].every(cell => {
