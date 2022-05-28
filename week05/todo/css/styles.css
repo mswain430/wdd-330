@@ -1,56 +1,60 @@
-        body { margin: auto;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.em;
-            font-family: 'Roboto Flex', sans-serif;
-        }
-        h1 {
-            background-color: cornflowerblue;
-            font-size: 18px;
-            color: white;
-            padding: 5px;
-        }
-        .container {text-align: center; margin: auto; padding: 5px; min-width: 320px; max-width: 500px;border:1px solid red}
-        .todo-wrapper  {
-            display:grid;
-            grid-template-columns: 1;
-            grid-template-rows: repeat(10, 40px);
-            border: 1px solid #333;
-            justify-items: center;
-            max-width: 100%;
-        }
-        .todo-wrapper div {
-            display:flex;
-            flex-direction: horizontal;
-            border:1px solid #ddd;
-            justify-content: left;
-            height: 40px;
-            padding: 5px;
-            width: 100%;
-        }
-        button {
-            height: 40px;
-            justify-content: center;
-            align-items: top;
-            margin: 5px 0 5px 10px;
-            padding: 5px;
-        }
-        .todo-delete-btn {
-            height: 40px;
-            justify-content: center;
-            align-items: top;
-            margin: 5px 0 5px 10px;
-            padding: 5px;
-        }
-        input {
-            width: 400px;
-            height: 40px;
-            min-width: 320px;
-            justify-content: center;
-            align-items: top;
-            margin: 10px;
-        }
-        .todo-filters {
-            display: flex;
-            flex: auto ;
-        }
+body { margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.em;
+    font-family: 'Roboto Flex', sans-serif;
+}
+        /* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+h1 {
+    background-color: cornflowerblue;
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+}
+.container {text-align: center; margin: auto; padding: 5px; min-width: 320px; max-width: 500px;border:1px solid red}
+.todo-wrapper  {
+    display:grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(10, 40px);
+    border: 1px solid #333;
+    justify-items: center;
+    max-width: 100%;
+}
+.todo-wrapper div {
+    display:flex;
+    flex-direction: horizontal;
+    border:1px solid #ddd;
+    justify-content: left;
+    height: 40px;
+    padding: 5px;
+    width: 100%;
+}
+button {
+    height: 40px;
+    justify-content: center;
+    align-items: top;
+    margin: 5px 0 5px 10px;
+    padding: 5px;
+}
+.todo-delete-btn {
+    height: 40px;
+    justify-content: center;
+    align-items: top;
+    margin: 5px 0 5px 10px;
+    padding: 5px;
+}
+input {
+    width: 200px;
+    height: 40px;
+    min-width: 200px;
+    justify-content: center;
+    align-items: top;
+    margin: 10px;
+}
+.todo-filters {
+    display: flex;
+    flex: auto ;
+}
