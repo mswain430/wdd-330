@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
 /* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
@@ -14,6 +19,7 @@ ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
+  list-style-type: none;
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
