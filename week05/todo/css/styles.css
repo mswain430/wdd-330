@@ -12,24 +12,34 @@ h1 {
     background-color: cornflowerblue;
     font-size: 18px;
     color: white;
-    padding: 5px;
+    padding: 10px;
+    margin: 0;
+}
+main { padding: 20px;margin:auto}
+.add-todo-wrapper {height: 60px;padding: 10px; }
+footer {background-color: cornflowerblue;
+    font-size: 13px;
+    color: white;
+    padding: 10px;
 }
 .container {
     text-align: center;
-    margin: auto;
+    margin: 0;
     padding: 0;
-    min-width: 320px;
+   /* min-width: 320px; */
     max-width: 100%;
-    border:1px solid red
+    border: 3px solid rgb(103, 131, 184)
+
 }
 
 .todos-wrapper  {
     display:grid;
     grid-template-columns: 1;
     grid-template-rows: repeat(auto, 40px);
-    border: 1px solid #333;
+    border: 0px solid rgb(54, 29, 218);
     justify-items: center;
-    max-width: 100%;
+    width: 100%;
+    /* min-width: 320px; */
 }
 div.todo {
   grid-column: 1;
@@ -43,6 +53,7 @@ div.todo {
   font-size: 18px;
   transition: 0.2s;
   width: 100%;
+  min-width: 320px;
   border:1px solid rgb(8, 8, 8);
 
   /* make the list items unselectable */
@@ -66,7 +77,7 @@ div.todo {
 div:nth-child(odd) {
   background: #f9f9f9;
 }
-    .todo-delete-btn { color: red}
+.todo-delete-btn { color: red; }
 /* Darker background-color on hover */
 div:hover {
   background: #ddd;
@@ -114,15 +125,17 @@ button {
 }
 .todo-delete-btn {
     height: 30px;
-    justify-content: center;
+    justify-self: end;
+    align-self:flex-end;
     align-items: top;
-    margin: 5px 0 5px 10px;
-    padding: 5px;
 }
+
+.complete-btn { width: 30px;height: 30px; padding-right: 5px; align-self: flex-start;}
+.todoContent {width: 75%;padding: 5px; text-align: left; }
 /* Style the "Add" button */
 #addBtn {
-  padding: 10px;
-  width: 25%;
+  padding: 5px;
+  width: 20%;
   background: #d9d9d9;
   color: #555;
   float: left;
@@ -136,19 +149,25 @@ button {
   background-color: #bbb;
 }
 /* Style the input */
-input #todoInput {
+input#todoInput {
   margin: 0;
   border: 1px solid #ccc;
   border-radius: 0;
   width: 75%;
-  padding: 10px;
+  min-width: 320px;
+  height: 40px;
+  padding: 5px;
   float: left;
   font-size: 16px;
 }
 .todo-filters {
     display: flex;
     flex: auto ;
+    background-color:rgb(103, 131, 184);
+}
+.todo-filters::after{
+    clear: both;
 }
 footer::before {
-    clear:both;
+    clear: both;
 }
