@@ -36,7 +36,8 @@ div.todo {
   grid-row: 40px;
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   background: #fff;
   font-size: 18px;
