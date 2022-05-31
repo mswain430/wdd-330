@@ -65,7 +65,7 @@ div.todo {
 div:nth-child(odd) {
   background: #f9f9f9;
 }
-
+    .todo-delete-btn { color: red}
 /* Darker background-color on hover */
 div:hover {
   background: #ddd;
