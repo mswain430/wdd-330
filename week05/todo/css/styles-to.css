@@ -86,18 +86,19 @@ footer {
 #addFilter, #activeFilter,#completedFilter {
   background: rgb(123, 185, 29);
   color: aliceblue;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
-#addFilter,, #activeFilter:hover,#completedFilter:hover {
+#addFilter:hover, #activeFilter:hover,#completedFilter:hover {
   background: rgb(216, 234, 157);
   color: #333;
 }
 
 #addbtn {
-    padding: 20px;
+    padding: 10px 20px;
     min-width: 100px;
     width:20%;
+    font-size: 1.2em;
     background-color:burlywood;
     color: rgb(245, 138, 62);
     float: left;
@@ -109,7 +110,7 @@ footer {
 }
 
 #addbtn:hover {
-    background-color: bisque;
+    background-color: rgb(245, 138, 62);
     color: black;
 }
 input#todoInput {
