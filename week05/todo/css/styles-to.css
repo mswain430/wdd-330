@@ -84,8 +84,9 @@ footer {
 }
 
 #addFilter, #activeFilter,#completedFilter {
-  background: rgb(111, 114, 117);
-  color: #333;
+  background: rgb(123, 185, 29);
+  color: aliceblue;
+  padding: 20px;
 }
 
 #addFilter,, #activeFilter:hover,#completedFilter:hover {
@@ -95,15 +96,16 @@ footer {
 
 #addbtn {
     padding: 5px;
+    min-width: 100px;
     width:20%;
     background-color:burlywood;
-    color: #333;
+    color: rgb(245, 138, 62);
     float: left;
     text-align: center;
     cursor: pointer;
     transition: .3s;
     border-radius: 0;
-    border:1px solid #777;
+    border:1px solid #999;
 }
 
 #addbtn:hover {
