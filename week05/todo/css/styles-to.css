@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    text-align:center;
+    font-size: 1em;
+    font-family: 'Roboto Flex', sans-serif;
+}
+h1 {
+    background-color: cornflowerblue;
+    font-size: 1.3em;
+    color: white;
+    padding: 10px;
+}
+main {
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+}
+.container {
+    justify-content: center;
+    max-width: 80%;
+}
+
+footer {
+    background-color: cornflowerblue;
+    font-size: 1.3em;
+    color: white;
+    padding: 10px;
+}
+
+.todos-wrapper {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(auto, 40px);
+}
+#todos div {
+   grid-column: auto;
+   grid-row: auto;
+   cursor: pointer;
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+   transition: .2s;
+   min-width: 320px;
+   border:1px solid #333;
+}
+#todos div:hover {
+   background: rgb(216, 234, 157);
+   color: #333;
+}
+
+
+.add-todo-wrapper {
+    height: 40px;
+    padding: 10px;
+}
+
+.todo-delete-btn {
+    color: #333;
+
+}
+.complete-btn {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+    align-self: flex-start;
+}
+.completed {
+    text-decoration: line-through;
+}
+
+.todoContent {
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+}
+.todo-delete-btn:hover {
+   background: rgb(216, 234, 157);
+   color: #333;
+}
+
+#addFilter, #activeFilter,#completedFilter {
+  background: rgb(111, 114, 117);
+  color: #333;
+}
+
+#addFilter,, #activeFilter:hover,#completedFilter:hover {
+  background: rgb(216, 234, 157);
+  color: #333;
+}
+
+#addbtn {
+    padding: 5px;
+    width:20%;
+    background-color:burlywood;
+    color: #333;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 0;
+    border:1px solid #777;
+}
+
+#addbtn:hover {
+    background-color: bisque;
+    color: black;
+}
+input#todoInput {
+    padding: 5px;
+    width: 75%;
+    min-width: 250px;
+    height: 40px;
+    float: left;
+}
+.todo-filters::after{
+    clear:both;
+}
+footer:before {
+    clear:both;
+}
