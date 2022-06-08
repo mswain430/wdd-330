@@ -13,6 +13,7 @@ h1 {
     font-size: 1.3em;
     color: white;
     padding: 10px;
+    width: 100%;
 }
 main {
     padding: 20px;
@@ -34,7 +35,8 @@ footer {
 .todos-wrapper {
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: repeat(auto, 40px);
+    grid-template-rows: repeat(auto, 50px);
+    margin: 10px;
 }
 #todos div {
    grid-column: auto;
@@ -46,7 +48,7 @@ footer {
    list-style-type: none;
    transition: .2s;
    min-width: 320px;
-   border:1px solid #333;
+   border:1px solid #ccc;
 }
 #todos div:hover {
    background: rgb(216, 234, 157);
@@ -55,17 +57,18 @@ footer {
 
 
 .add-todo-wrapper {
-    height: 40px;
+    height: 50px;
     padding: 10px;
 }
 
 .todo-delete-btn {
-    color: #333;
+    color: rgb(246, 113, 73);
+    font-weight: 600;
 
 }
 .complete-btn {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding-right: 5px;
     align-self: flex-start;
 }
@@ -83,30 +86,32 @@ footer {
    color: #333;
 }
 
-#addFilter, #activeFilter,#completedFilter {
+#allFilter, #activeFilter,#completedFilter {
   background: rgb(123, 185, 29);
   color: aliceblue;
   padding: 10px 20px;
+  font-size: 1.2em;
+  height: 50px;
 }
 
-#addFilter:hover, #activeFilter:hover,#completedFilter:hover {
+#allFilter:hover, #activeFilter:hover,#completedFilter:hover {
   background: rgb(216, 234, 157);
   color: #333;
 }
 
-#addbtn {
+#addBtn {
     padding: 10px 20px;
     min-width: 100px;
-    width:20%;
     font-size: 1.2em;
-    background-color:burlywood;
-    color: rgb(245, 138, 62);
+    background-color: rgb(245, 138, 62);
+    color: black;
     float: left;
     text-align: center;
     cursor: pointer;
     transition: .3s;
     border-radius: 0;
-    border:1px solid #999;
+    border:1px solid #333;
+    height: 50px;
 }
 
 #addbtn:hover {
@@ -117,7 +122,7 @@ input#todoInput {
     padding: 5px;
     width: 75%;
     min-width: 250px;
-    height: 40px;
+    height: 50px;
     float: left;
 }
 .todo-filters::after{
