@@ -63,9 +63,9 @@ function createTodoItem(todo) {
     deleteBtn.innerText = "X";
     deleteBtn.onclick = deleteTodo;
 
-    todoDiv.appendChild('completeBtn');
-    todoDiv.appendChild('todoContent');
-    todoDiv.appendChild('deleteBtn');
+    todoDiv.appendChild(completeBtn);
+    todoDiv.appendChild(todoContent);
+    todoDiv.appendChild(deleteBtn);
 
     return todoDiv;
 }
