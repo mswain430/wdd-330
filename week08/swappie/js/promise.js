@@ -8,15 +8,15 @@ function getJSON(apiURL) {
         }
     })
     .catch(function(error){
-    console.log(error);
+       console.log(error);
     });
 }
 
-// get the Ships url from promise
+// Model code - get the Ships url from promise
 function getShips(apiURL) {
     return getJSON(apiURL);
 }
-// view code
+// View code
 function renderShipList(ships, shipListElement) {
     const list = shipListElement.children[1];
     list.innerHTML = "";
@@ -25,8 +25,11 @@ function renderShipList(ships, shipListElement) {
         console.log(ship);
     // create elements for list
     let listItem = document.createElement("tr");
-    listItem.innerHTML=`<td><a href=${ship.url}">${ship.name}</a></td>
-    <td>${ship.length}</td><td>${ship.crew}</td>`;
+    listItem.innerHTML=`
+    <td><a href=${ship.url}">${ship.name}</a></td>
+    <td>${ship.length}</td>
+    <td>${ship.crew}</td>
+    `;
 
     listItem.addEventListener("click", function(event){
         // when clicked the default link behavior should be stopped and the details function should execute
