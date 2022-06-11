@@ -5,14 +5,16 @@ const apiButton = document.getElementById('starships');
 const outputDiv = document.getElementById('#output');
 
 const textURL = 'https://swapi.dev/api/starships/9/';
-const apiURL = 'https://swapi.dev/api/starships';
+const apiURL = 'https://swapi.dev/api/starships/';
 
 textButton.addEventListener('click', () => {
     fetch(textURL)
     .then( response => {
         outputDiv.innerHTML = 'Waiting for response...';
     if(response.ok) {
+        console.log('response okay')
         return response;
+
     }
         throw Error(response.statusText);
     })

@@ -1,0 +1,41 @@
+main {
+  display: flex;
+  flex-flow: column wrap
+}
+.hidden {
+    display:none;
+}
+
+#shiplist td {
+    cursor: pointer;
+}
+
+#detailsbox {
+    flex: 1 0 15em;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #333;
+}
+#detailsbox dt{
+    text-align: left;
+    font-weight: bold;
+}
+#detailsbox dl{
+  border: 1px solid #ccc;
+  text-align: left;
+}
+#shiplist thead{
+    background-color: aliceblue;
+}
+#shiplist tr {
+    border: 1px solid #ccc;
+    padding: .5em;
+    height: 44px;
+}
+#shiplist tr:nth-child(even){
+    background-color: azure;
+}
+#shiplist tr:hover {
+    background-color: bisque;
+    text-decoration: underline;
+}

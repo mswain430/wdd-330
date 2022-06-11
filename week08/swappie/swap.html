@@ -5,12 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="js/swap.js"></script>
+  <!--  <script defer src="js/swap.js"></script>-->
+    <script defer src="js/promise.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <main>
    <h3>API</h3>
+   <div class="listbox">
+    <table id="shiplist">
+        <thead><tr><th>Name</th><th>Length</th><th>Crew</th></tr></thead>
+        <tbody></tbody>
+    </table>
+   </div>
+   <div id="detailsbox" class="hidden">
+    <dl>
+        <dt>Name:</dt>
+        <dd class="name"></dd>
+        <dt>Model:</dt>
+        <dd class="model"></dd>
+        <dt>Class:</dt>
+        <dd class="class"></dd>
+        <dt>*Movies:</dt>
+        <dd class="movies"></dd>
+     </dl>
+   </div>
    <button id="number">Number</button>
    <button id="starships">Starships</button>
-<div id="divOutput"></div>
+<div id="outputDiv">Output here</div>
+<div id="details">Details here</div>
+</main>
 </body>
 </html>

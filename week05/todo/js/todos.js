@@ -102,7 +102,12 @@ function deleteTodo(e) {
 function toggleComplete(e) {
 
 }
-
+// checkAll.on('click', function() {
+ //   $('input[type="checkbox"], todos.each(function() {
+ //       let current = $(this);
+  //      current.prop('checked', !current.is(':checked'));
+  //      });
+  //  });
 function applyFilter(e){
     //clear the list
     document.querySelector('#todos').innerHTML = '';
