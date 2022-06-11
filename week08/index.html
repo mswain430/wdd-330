@@ -20,12 +20,225 @@
       <main class="maingrid">
         <p><a href="../index.html" class="backto"><< Back</a></p>
           <h3 class="heading_title">Week 8 - Practice Exercises</h3>
-
+             <ul>
+                 <li><a href="swappie/swappie.html">swap.html</a></li>
+                 <li><a href="swappie/js/swap.js">swap.js</a></li>
+            </ul>
     <h3 class="details">Study Materials</h3>
-    <p>more here</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Mozilla Developer Network’s Drag and Drop documentation</a></p>
+    <p><a href="https://www.w3schools.com/html/html5_draganddrop.asp">W3C’s Drag and Drop specification</a></p>
+    <p>IMAGE EDITOR FOR SVG: <a href="http://inkscape.org/">http://inkscape.org/</a> </p>
     <h3  class="details">Questions or Notes </h3>
-    <p>more questions and notes here</p>
-    </main>
+    <h3>Transitions and Transforms</h3>
+    <h4>Transforms allow rotate, scale, or skew any element</h4>
+<p>Translation functions allow you to move elements<br>
+transform: translate(45px, -45px);<br>
+transform: translateX(45px); // X horizontally<br>
+transform: translateY(-30px);  // Y vertically<br>
+Scaling (scale(x,y))<br>
+transform: scale(1.5, 0.25);<br>
+Rotation rotate()<br>
+transform: rotate(10deg) translateX(40px) scale(1.5);<br>
+Skew: transform: skew(15deg, 4deg);<br>
+Also use: transform-origin, background-position.<br>
+Choose your ordering carefully. <br>
+transform: translateX(200px) rotate(135deg);<br>
+transform: rotate(135deg) translateX(200px);.<br>
+<h3>Transitions</h3>
+transition-property: transform, color;<br>
+transition-duration: .2s;<br>
+transition-timing-function:<br>
+ease, linear, ease-in, ease-out, ease-in-out. <br>
+cubic-bezier(0,0,1,1) = linear<br>
+steps(5,start) or steps(n, end)<br>
+transition-timing-function: ease-out;<br>
+-webkit-transition-delay: 50ms;<br>
+transition-delay: 50ms;<br>
+</p>
+<p>transition-property: transform, color; <br>
+transition-duration: 0.2s;  <br>
+transition-timing-function: ease-out;<br>
+transition-delay: 50ms;</p>
+<p>
+transition-property: transform, color; <br>
+transition-duration: 0.2s, 0.1s;  <br>
+transition-timing-function: <br>
+transition: ease-out, linear;<br>
+transition-delay: 50ms;</p>
+
+<p>SHORTHAND: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;</p>
+
+<h4>Animations</h4>
+<p>keyframe is a snapshot that defines a starting or end point<br>
+@keyframes @-webkit-keyframes<br>
+<br>
+@-webkit-keyframes myAnimation { <br>
+    /* put animation keyframes here */<br>
+}<br>
+@keyframes myAnimation { <br>
+    /* put animation keyframes here */<br>
+}<br>
+@keyframes moveRight { <br>
+    from {<br>
+    transform: translateX(-50%);<br>
+    }<br>
+    to {<br>
+    transform: translateX(50%);<br>
+    }<br>
+}<br>
+<br>
+@keyframes appearDisappear { <br>
+    0%, 100% {<br>
+    opacity: 0;<br>
+    }<br>
+    20%, 80% {<br>
+    opacity: 1;<br>
+    }<br>
+}<br>
+<br>
+@keyframes bgMove {<br>
+    100% {<br>
+    background-position: 120% 0;<br>
+    }<br>
+}</p>
+// bike<br>
+.ad-ad3 :after {<br>
+    content: '';<br>
+    width: 90px;<br>
+    height: 92px;<br>
+    background-image: url(../images/bike_sprite.png);<br>
+    display: block;<br>
+    margin: auto;<br>
+}<br>
+
+@keyframes bike {<br>
+    0% {<br>
+    background-position: 0 0;<br>
+    }<br>
+    100% {<br>
+        background-position: -360px 0;<br>
+    }<br>
+}
+
+<h4>Animation:</h4>
+.verbose {<br>
+    animation-name: appearDisappear; <br>
+    animation-duration: 300ms; <br>
+    animation-timing-function: ease-in;<br>
+    animation-iteration-count: 1;<br>
+    animation-direction: alternate;<br>
+    animation-delay: 5s;<br>
+    animation-fill-mode: backwards;<br>
+    animation-play-state: running;<br>
+}<br>
+<br>
+/* shorthand */<br>
+.concise {<br>
+    animation: 300ms ease-in alternate 5s backwards appearDisappear;<br>
+}<br>
+
+h1:after {<br>
+    content: '';<br>
+    width: 90px;<br>
+    height: 92px;<br>
+    background-image: url(../images/bike_sprite.png);<br>
+    display: block;<br>
+    margin: auto;<br>
+    animation: <br>
+        0.4s steps(4, end) infinite 50ms bike,<br>
+        8s linear infinite 50ms move;<br>
+    animation-play-state: paused;<br>
+}<br>
+h1:hover:after {<br>
+    animation-play-state: running;<br>
+}<br>
+
+<h3>Canvas, SVG, drag & drop</h3>
+<br>
+var canvas = document.getElementById("myCanvas");<br>
+var context = canvas.getContext("2d");<br>
+context.strokeStyle = "red";<br>
+context.fillStyle = "rgba(0, 0, 255, 0.5)";<br>
+context.fillRect(10, 10, 100, 100);   <br>
+context.strokeRect(10, 10, 100, 100);<br>
+
+<h4>GRADIENTS:</h4>
+function drawGradient() {<br>
+    <br>
+    var gradient = context.createLinearGradient(0, 0, 0, 200);<br>
+    gradient.addColorStop(0, "blue"); <br>
+    gradient.addColorStop(1, "white"); <br>
+    context.fillStyle = gradient; <br>
+    context.fillRect(10, 10, 100, 100); <br>
+    context.strokeRect(10, 10, 100, 100); <br>
+}<br>
+<br>
+function drawCircle(canvas) {<br>
+    var context = canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.arc(100, 100, 50, 0, Math.PI*2, true);<br>
+    context.closePath();<br>
+    context.strokeStyle = "red";<br>
+    context.fillStyle = "blue";<br>
+    context.lineWidth = 3;<br>
+    context.fill(); <br>
+    context.stroke(); <br>
+}<br>
+
+function manipulateImage() {
+<br>
+    for (var i = 0; i < imageData.data.length; i += 4) {<br>
+    var red = imageData.data[i];<br>
+    var green = imageData.data[i + 1];<br>
+    var blue = imageData.data[i + 2];<br>
+<br>
+    var grayscale = red * 0.3 + green * 0.59 + blue * 0.11;<br>
+<br>
+    imageData.data[i] = grayscale; <br>
+    imageData.data[i + 1] = grayscale;  <br>
+    imageData.data[i + 2] = grayscale;  <br>
+    }<br>
+}<br>
+<h3>Scalable Vector Graphics SVG</h3>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <circle cx="50" cy="50" r="25" fill="red"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+    <desc>Drawing a rectangle</desc>
+        <rect x="10" y="10" width="100" height="100"
+            fill="blue" stroke="red" stroke-width="3"  />
+</svg>
+IMAGE EDITOR:  http://inkscape.org/
+Canvas allows for pixel manipulation<br>
+canvas is much faster than SVG<br>
+what you draw to SVG is accessible via the DOM<br>
+
+<h3>Drag & drop</h3>
+
+<br>3 steps:
+There are several steps to adding drag and drop to your page:<br>
+<br>
+1. Set the draggable attribute on any HTML elements you’d like to be draggable.<br>
+
+2. Add an event listener for the dragstart event on any draggable HTML elements.<br>
+
+3. Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items.<br>
+<br>
+draggable="true"<br>
+
+var mouse = null;<br>
+for (var i=0; i < mice.length; i++) {<br>
+    mouse = mice[i];<br>
+    mouse.addEventListener('dragstart', function (event) {<br>
+    // handle the dragstart event<br>
+    });<br>
+}<br>
+
+Mozilla Developer Network’s Drag and Drop documentation<br>
+
+W3C’s Drag and Drop specification</p>
+</main>
 <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
 </body>
 </html>
