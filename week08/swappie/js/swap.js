@@ -1,7 +1,5 @@
-const prevButton = document.getElementById('#prevBtn');
-const nextButton = document.getElementById('#nextBtn');
-const textButton = document.getElementById('number');
-const apiButton = document.getElementById('starships');
+const prevButton = document.getElementById('#prev');
+const nextButton = document.getElementById('#next');
 const outputDiv = document.getElementById('#output');
 
 const textURL = 'https://swapi.dev/api/starships/9/';
