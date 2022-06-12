@@ -129,11 +129,12 @@ main h2 {
     color: rgb(227, 229, 245);
 }
 
-@media only screen and (max-width: 5rem){
+@media only screen and (max-width: 5rem) {
   .wrapper {
     display:flex;
     flex-flow: column;
     padding: 5px;
     margin: auto;
     justify-content: center;
+  }
 }
