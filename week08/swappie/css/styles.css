@@ -1,10 +1,14 @@
-body {font-family: 'Roboto', sans-serif;font-size: 1.2rem;margin: auto;background-color:rgb(227, 229, 245)}
+body {font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: auto;
+    background-color:rgb(227, 229, 245)
+}
 main {
   display: flex;
   flex-flow: column wrap;
 }
 main h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 5px;
     justify-content: center;
     margin: auto;
@@ -29,42 +33,77 @@ main h2 {
 .hidden {
     display:none;
 }
+.wrapper {
+    display:flex;
+    flex-flow: row;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+
+}
+
 #shiplist {
-    min-width: 320px;
-    max-width: 600px;
+    flex: auto;
+    width: 320px;
     margin:auto;
     justify-content: center;
 }
+
+#displaybox h2 {
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 5px 10px;
+    text-decoration-line: none;
+    background-color:rgb(95, 111, 137);
+    color: rgb(227, 229, 245);
+    }
+
 #shiplist table {
     border:2px solid #333;
-    min-width: 320px;
-    max-width: 600px;
+    width: 320px;
     border-collapse: collapse;
 }
 #shiplist th {
     text-align: left;
     font-weight: bolder;
     padding: 5px 10px;
+    text-decoration: none;
 }
 #shiplist td {
     cursor: pointer;
     padding: 5px 10px;
-
+    font-size: .9em;
 }
 
 #detailsbox {
     flex: 1 0 15em;
-    padding: 1em;
+    padding: 5px;
     text-align: center;
-    border: 1px solid #333;
-}
-#detailsbox dt{
-    text-align: left;
-    font-weight: bold;
+    width: 320px;
+    font-size: 1em;
+
 }
 #detailsbox dl{
-  border: 1px solid #ccc;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: aliceblue;
+}
+#detailsbox dt{
+    flex: auto;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgb(203, 204, 205);
+    color: black;
+}
+
+#detailsbox dd{
+    flex: auto;
   text-align: left;
+  font-size: 1em;
+  padding: 5px 10px;
+  background-color: aliceblue;
 }
 #shiplist thead{
     background-color: aliceblue;
@@ -88,4 +127,15 @@ main h2 {
 #shiplist tr th {
     background-color:rgb(95, 111, 137);
     color: rgb(227, 229, 245);
+}
+
+@media only screen and (max-width: 5rem){
+  .wrapper {
+    display:flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto;
+    justify-content: center;
+
+}
 }

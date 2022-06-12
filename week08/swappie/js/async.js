@@ -43,24 +43,27 @@ function renderShipList(ships, shipListElement) {
         list.appendChild(listItem);
     });
 }
-// ****** CHeck todo - code to write the code to render the details to html dl, dd
+// ****** Check todo - code to write the code to render the details to html dl, dd
 function renderShipDetails(shipData) {
-    console.log(shipData);
+    //console.log(shipData);
+    const detail = document.querySelector('#detailsbox');
+    detail.innerHTML = "";
+    detail.classList.remove('hidden');
+    const h2 = document.createElement('h2');
+    h2.innerText = `Starship Details`;
     const dl = document.createElement("dl");
-    item.innerHTML = `
+    dl.innerHTML = `
         <dt>Name:</dt>
-        <dd class="name">${ship.name}</dd>
+        <dd class="name">${shipData.name}</dd>
         <dt>Model:</dt>
-        <dd class="model">${ship.model}</dd>
-        <dt>Class:</dt>
-        <dd class="class">${ship.class}</dd>
-        <dt>*Movies:</dt>
-        <dd class="movies">${ship.movies}</dd>
-
+        <dd class="model">${shipData.model}</dd>
+        <dt>Length</dt>
+        <dd class="class">${shipData.length}</dd>
+        <dt>Manufacturer</dt>
+        <dd class="movies">${shipData.manufacturer}</dd>
     `
-    dl.lastElementChild.remove(dl)
-    dd.appendChild(dd);
-    dl.appendChild(dl);
+    detail.appendChild(h2);
+    detail.appendChild(dl);
 }
 
 // controller code
