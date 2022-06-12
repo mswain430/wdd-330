@@ -1,5 +1,5 @@
-function getJSON(apiURL) {
-    return fetch(apiURL)
+function getJSON(url) {
+    return fetch(url)
     .then(function(response){
         if (!response.ok) {
             throw Error(response.statusText);
@@ -13,8 +13,8 @@ function getJSON(apiURL) {
 }
 
 // Model code - get the Ships url from promise
-function getShips(apiURL) {
-    return getJSON(apiURL);
+function getShips(url) {
+    return getJSON(url);
 }
 // View code
 function renderShipList(ships, shipListElement) {
@@ -22,7 +22,7 @@ function renderShipList(ships, shipListElement) {
     list.innerHTML = "";
     //loop through ships
     ships.forEach(function(ship){
-        console.log(ship);
+        //console.log(ship);
     // create elements for list
     let listItem = document.createElement("tr");
     listItem.innerHTML=`
@@ -34,7 +34,7 @@ function renderShipList(ships, shipListElement) {
     listItem.addEventListener("click", function(event){
         // when clicked the default link behavior should be stopped and the details function should execute
         event.preventDefault();
-        getShipDetails(ship.apiURL);
+        getShipDetails(ship.url);
         });
 
         // add the list item to the list
@@ -47,8 +47,8 @@ function renderShipDetails(shipData) {
     console.log(shipData);
 }
 // controller code
-function showShips(apiURL = "https://swapi.dev/api/starships/") {
-    getShips(apiURL).then(function(data){
+function showShips(url = "https://swapi.dev/api/starships/") {
+    getShips(url).then(function(data){
         console.log(data);
         const results = data.results;
 
@@ -57,7 +57,7 @@ function showShips(apiURL = "https://swapi.dev/api/starships/") {
     renderShipList(results, shipListElement);
 
     // enable the next and prev buttons
-    if (data.next) {
+    if (results.next) {
         const next = document.getElementById("next");
 
     /*normally we would prefer the addEventListener method of adding a listener.
@@ -67,25 +67,24 @@ function showShips(apiURL = "https://swapi.dev/api/starships/") {
      with several listeners attached to each button by the last page.
      We won't have that issue here */
      //ontouchend
-     next.click = () => {
+     next.onclick = () => {
        //to show the next page we just re-call the showShips function with a new URL
        showShips(data.next);
      };
     }
-
-    if (data.previous) {
+    if (results.previous) {
         const prev = document.getElementById("prev");
        // ontouchend for
-        prev.click = () => {
+        prev.onclick = () => {
             showShips(data.previous);
         };
     }
-    });
+   });
 }
 
-function getShipDetails(apiURL) {
+function getShipDetails(url) {
     //call getJSON function
-    getShips(apiURL).then (function(data) {
+    getShips(url).then (function(data) {
       renderShipDetails(data);
       //with the results populate the elements in the #detailsbox
     });

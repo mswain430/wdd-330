@@ -33,9 +33,10 @@ function renderShipList(ships, shipListElement) {
         `;
 
         listItem.addEventListener("click", function(event){
-            // when clicked the default link behavior should stop
+            // when clicked the default link behavior should stop the #url
             event.preventDefault();
             getShipDetails(ship.url);
+
         });
 
         // add the list items to the list
@@ -45,6 +46,21 @@ function renderShipList(ships, shipListElement) {
 // ****** CHeck todo - code to write the code to render the details to html dl, dd
 function renderShipDetails(shipData) {
     console.log(shipData);
+    const dl = document.createElement("dl");
+    item.innerHTML = `
+        <dt>Name:</dt>
+        <dd class="name">${ship.name}</dd>
+        <dt>Model:</dt>
+        <dd class="model">${ship.model}</dd>
+        <dt>Class:</dt>
+        <dd class="class">${ship.class}</dd>
+        <dt>*Movies:</dt>
+        <dd class="movies">${ship.movies}</dd>
+
+    `
+    dl.lastElementChild.remove(dl)
+    dd.appendChild(dd);
+    dl.appendChild(dl);
 }
 
 // controller code

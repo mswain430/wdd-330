@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <!--  <script defer src="js/swap.js"></script>-->
-    <script defer src="js/promise.js"></script>
- <!--   <script defer src="js/async.js"></script> -->
+  <!--  <script defer src="js/promise.js"></script> -->
+    <script defer src="js/async.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <main>
-   <h3>API</h3>
-   <a id="prev" href="#">PREVIOUS</a><a id="next" href="#">NEXT</a>
+   <h2><a href="https://swapi.dev/" target="_blank" rel="noreferrer">SWAPI
+      Exercise</a></h2>
+   <div class="btn-wrapper"><a id="prev" class="btn" href="#">PREVIOUS</a><a id="next" class="btn" href="#">NEXT</a></div>
    <div class="listbox">
     <table id="shiplist">
         <thead><tr><th>Name</th><th>Length</th><th>Crew</th></tr></thead>
@@ -32,10 +36,6 @@
         <dd class="movies"></dd>
      </dl>
    </div>
- <!--  <button id="prev">Previous</button>
-   <button id="next">Next</button>
-  <div id="outputDiv">Output here</div> -->
-<!-- <div id="details">Details here</div>  -->
 </main>
 </body>
 </html>

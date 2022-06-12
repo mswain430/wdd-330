@@ -1,13 +1,55 @@
+body {font-family: 'Roboto', sans-serif;font-size: 1.2rem;margin: auto;background-color:rgb(227, 229, 245)}
 main {
   display: flex;
-  flex-flow: column wrap
+  flex-flow: column wrap;
+}
+main h2 {
+    font-size: 1.4em;
+    padding: 5px;
+    justify-content: center;
+    margin: auto;
+}
+.btn-wrapper {
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.btn-wrapper a.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(57, 73, 140);
+    color:rgb(234, 237, 242);
+    border-radius: 4px;
+    border: 1px solid rgb(81, 88, 234);
+}
+.btn-wrapper a.btn:hover {
+    background-color:cornflowerblue;
 }
 .hidden {
     display:none;
 }
-
+#shiplist {
+    min-width: 320px;
+    max-width: 600px;
+    margin:auto;
+    justify-content: center;
+}
+#shiplist table {
+    border:2px solid #333;
+    min-width: 320px;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+#shiplist th {
+    text-align: left;
+    font-weight: bolder;
+    padding: 5px 10px;
+}
 #shiplist td {
     cursor: pointer;
+    padding: 5px 10px;
+
 }
 
 #detailsbox {
@@ -26,6 +68,7 @@ main {
 }
 #shiplist thead{
     background-color: aliceblue;
+    padding: 5px 10px;
 }
 #shiplist tr {
     border: 1px solid #ccc;
@@ -35,7 +78,14 @@ main {
 #shiplist tr:nth-child(even){
     background-color: azure;
 }
+#shiplist tr:nth-child(odd){
+    background-color: rgb(154, 204, 243);
+}
 #shiplist tr:hover {
     background-color: bisque;
     text-decoration: underline;
+}
+#shiplist tr th {
+    background-color:rgb(95, 111, 137);
+    color: rgb(227, 229, 245);
 }
