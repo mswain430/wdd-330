@@ -32,7 +32,7 @@ const links = [
     url: "week08/index.html",
 },
 {
-    label: "Week09 - Window Object, HTML5 APIs",
+    label: "Week9 - Window Object, HTML5 APIs",
     url: "week09/index.html",
 },
 {
