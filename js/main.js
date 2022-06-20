@@ -4,39 +4,39 @@ const links = [
     url: "week1/index.html",
 },
 {
-    label: "Week2 notes",
+    label: "Week2 - Programming basics, Arrays, Logic, Loops, functions",
     url: "week02/index.html",
 },
 {
-    label: "Week3 notes",
+    label: "Week3 - Object Methods: this, Objects, DOM, Events",
     url: "week03/index.html",
 },
 {
-    label: "Week4 notes",
+    label: "Week4 - Forms, OOP, Modern Javascript",
     url: "week04/index.html",
 },
 {
-    label: "Week5 notes",
+    label: "Week5 - Testing, Debugging",
     url: "week05/index.html",
 },
 {
-    label: "Week6 notes",
+    label: "Week6 - Midterm Checkin",
     url: "week06/index.html",
 },
 {
-    label: "Week7 notes",
+    label: "Week7 - More Functions, AJAX",
     url: "week07/index.html",
 },
 {
-    label: "Week8 notes",
+    label: "Week8 - Transforms, transitions, Canvas, SVG, Drag And Drop",
     url: "week08/index.html",
 },
 {
-    label: "Week09 notes",
-    url: "week9/index.html",
+    label: "Week09 - Window Object, HTML5 APIs",
+    url: "week09/index.html",
 },
 {
-    label: "Week10 notes",
+    label: "Week10 - Validating Forms, Using Fetch",
     url: "week10/index.html",
 },
 {
