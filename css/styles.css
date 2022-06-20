@@ -13,10 +13,10 @@ ol {max-width: 90%;border-radius:4px;border:1px solid #bbb;list-style-type: none
 ul li, ol li{padding: 8px 20px;margin-left: -40px;}
 ul li:nth-child(even), ol li:nth-child(even){background-color: #fbfafa;color: black}
 ul li:nth-child(odd), ol li:nth-child(odd){background-color: #e3e8f1;}
-ul li a:link, a:visited, ol li a:link {color: black; text-decoration: none; text-transform: capitalize;}
-ol li:hover, a.backto:hover, a:visited:hover {color: green; background-color: rgb(163, 202, 188);}
-ol li:hover, a.backto:hover {color: rgb(117, 237, 117); background-color: rgb(163, 202, 188);}
-ul li a:link:hover, ol li a:link:hover, {color: rgb(29, 107, 223); }
+li a:link, a:visited, li a:link {color: black; text-decoration: none; text-transform: capitalize;}
+ul li:hover, a.backto:hover, a:visited:hover {color: green; background-color: rgb(163, 202, 188);}
+ul li:hover, ol li:hover, a.backto:hover {color: rgb(28, 51, 28); background-color: rgb(163, 202, 188);}
+ul li a:link:hover, ol li a:link:hover {color: rgb(29, 107, 223); }
 footer {background-color:rgb(29, 107, 223);color: aliceblue;padding: 20px;position:fixed; bottom: 0;width: 100%;text-align: center;margin:auto;}
 
 @media screen and (max-width: 5em) {
