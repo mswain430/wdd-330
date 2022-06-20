@@ -13,3 +13,4 @@ function rotate() {
 }
 
 const id = requestAnimationFrame(rotate);
+cancelAnimationFrame(id);
