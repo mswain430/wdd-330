@@ -1,0 +1,94 @@
+The Window Object
+
+The Browser Object Model (BOM)
+
+The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.
+
+These properties and methods are made available through the window object.  Every browser window, tab, popup, frame, and iframe has a window object. Use only when application or webpage being viewed in a browser.  Node.js does not have a window.object. Node.js has global object instead. Global object can be referred to like this: const global = this;
+
+Global variables can be accessed from all parts of the program and are properties of the global object.  x=6 , window.x  
+
+Use number.parseInt(4.2) or window.parseInt(4.2)  
+ALSO: reload(),toString(), replace(), assign()
+
+Alert(), confirm(), prompt()
+
+The window.alert()
+The window.alert() method will pause the execution of the program and display a message in a dialog box.
+window.alert('Hello');
+<< undefined
+
+The window.confirm() 
+method will stop the execution of the program and display a confirmation dialog that shows the message provided as an argument, and giving the options of OK or Cancel. It returns the boolean values of true if the user clicks OK, and false if the user clicks Cancel.
+
+The window.prompt() 
+method will stop the execution of the program. It displays a dialog that shows a message provided as an argument, as well as an input field that allows the user to enter text. This text is then returned as a string when the user clicks OK. If the user clicks Cancel, null is returned:
+window.prompt('Please enter your name:');
+
+It’s worth reiterating again that these methods will stop the execution of a program in its tracks. This means that everything will stop processing at the point the method is called, until the user clicks OK or Cancel. This can cause problems if the program needs to process something else at the same time or the program is waiting for a callback function.
+
+There are some occasions when this functionality can be used as an advantage, for example, a window.confirm() dialog can be used as a final check to see if a user wants to delete a resource. This will stop the program from going ahead and deleting the resource while the user decides what to do.
+
+Finding out browser information
+
+The window object has a navigator property that returns a reference to the Navigator object. The Navigator object contains information about the browser being used. 
+DEPRECATED- DON’T USE: Its userAgent property will return information about the browser and operating system being used. For example, if I run the following line of code, it shows that I am using Safari version 10 on Mac OS
+
+Location, location, location
+
+The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.
+Window.location.href provides the full URL as a string of the current page
+
+Protocol (http,https etc)
+
+Host, pathname, port, hash, origin, search returns a string that starts with ?
+
+Browser history
+
+The window.history property can be used to access information about any previously visited pages in the current browser session. Avoid confusing this with the new HTML5 History API.
+
+Window.history.length how many pages have been visited before the current page.
+Window.history.go() where 0 is the current page. 
+window.history.go(1); // goes forward 1 page
+window.history.go(0); // reloads the current page
+window.history.go(-1); // goes back 1 page
+ALSO: forward(), back()
+
+Controlling windows
+
+Window.open() 
+A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its first parameter, the window title as its second parameter, and a list of attributes as the third parameter. This can also be assigned to a variable, so the window can then be referenced later in the code.
+EXAMPLE: 
+const popup = window.open('https://sitepoint.com','
+SitePoint','width=400,height=400,resizable=yes');
+Close() like popup.close();
+Window.resizeTo().
+
+Many browsers block pop-up windows and disallow some of these methods to be called in certain cases. For example, you can’t resize a window if more than one tab is open. You also can’t move or resize a window that wasn’t created using window.open().
+
+Screen Information – more useful on mobile devices.
+Window.screen.height, window.screen.width
+colorDepth() color bit depth 
+
+The Document Object
+
+Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.
+
+Document.write() Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.
+Cookies text files, list of name/value pairs use; to separate
+
+Cookies are small files that are saved locally on a user’s computer. Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users. The use of cookies for tracking purposes has been much maligned in recent years. Their use for data storage is starting to be replaced in many cases by the new HTML5 localStorage API as it allows more data to be stored. "name=Superman; hero=true; city=Metropolis"
+
+Timing functions
+
+setTimeout()
+The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.
+The window.setTimeout() method accepts a callback to a function as its first parameter and a number of milliseconds as its second parameter. Try entering the following example into a console. It should show an alert dialog after three seconds (that’s 3000 milliseconds):
+EXAMPLE: window.setTimeout( () => alert("Time's Up!"), 3000);
+clearInterval(), setInterval();repeat;
+<< 4
+
+Animation
+
+Window.requestAnimationFrame(), rotate(), requestAnimationFrame()
+cancelAnimationFrame(id);
