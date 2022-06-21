@@ -6,8 +6,8 @@ main .maingrid{ display: grid; grid-template-columns: 1fr;grid-template-rows: 1f
 header h1, header h2 {color: aliceblue;padding: 5px;max-width: fit-content;font-family: 'Bitter', serif;margin:10px auto; text-align: center}
 h2, h3 {font-family: 'Bitter', serif;}
 p a.backto {font-size: .8em; padding: 5px; background-color:rgb(29, 107, 223); color: aliceblue; border-radius: 4px; border:2px solid #fbfafa; max-width: 100px; text-decoration: none;}
-main h3 {position:relative; margin: 20px 20px; font-size: 1.4em}
-main .notes {padding: 20px}
+main h3 {position:relative; margin: 20px 10px; font-size: 1.4em}
+main .notes {padding: 30px}
 ul {max-width: 90%;border-radius:4px;border:1px solid #bbb;list-style-type: none;margin: 20px;}
 ol {max-width: 90%;border-radius:4px;border:1px solid #bbb;list-style-type: none;margin: 20px}
 ul li, ol li{padding: 8px 20px;margin-left: -40px;}
