@@ -1,0 +1,151 @@
+HTML5 API NOTES from NOVICE TO NINJA, 2nd Edition
+The development of HTML5 and the JavaScript APIs
+
+The data- attribute
+
+HTML5 APIs―local storage, geolocation, web workers, and multimedia
+
+Drawing shapes with canvas
+
+Shims and polyfills ― how to make the most of HTML5 APIs, even when they’re without browser support
+
+Data- 
+
+data-powers = 'flight superSpeed'
+data-rating = '5' 
+data-dropdown 
+data-user = 'DAZ' 
+data-max-length = '32'
+
+The restriction of only using a string value can be overcome by encoding any JavaScript object or value as a JSON string, then performing type-conversion later, as required. For example, the value of data-max-length will return a string, but can easily be converted into a number using the following code:
+const maxLength = Number(element.dataset.maxLength);
+
+Data attributes provide a convenient way of adding data directly into the HTML markup, enabling a richer user experience.
+
+HTML5 Web Storage
+
+The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use. This makes it perfect for storing information about users, as well as storing application-specific information that can then be used during future sessions.
+
+The Web Storage API has some crucial differences with cookies:
+
+Information stored is not shared with the server on every request.
+
+Information is available in multiple windows of the browser (but only if the domain is the same).
+
+Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.).
+
+Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.
+
+If a browser supports the Web Storage API, the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data. The information is saved in the form of key-value pairs, and the values can only be strings. There is also a sessionStorage object that works in the same way, although the data is only saved for the current session.
+EXAMPLE: localStorage.setItem('name', 'Walter White');
+localStorage.getItem('name'); 
+<< "Walter White"
+
+localStorage.name = 'Heisenberg'; 
+
+console.log(localStorage.name); 
+<< "Heisenberg";
+
+localStorage.removeItem('name');
+delete localStorage.name;
+
+To completely remove everything stored in local storage, use the clear() method:localStorage.clear();
+
+addEventListener('storage', (event) => {
+console.log(`The ${event.key} was updated from ${event.oldValue} to ${event.newValue} and saved in 
+${event.storageArea}`) }, false);
+
+localStorage.setItem('superman', JSON.stringify(hero);
+superman = JSON.parse(localStorage.getItem('superman'));
+
+Geolocation
+The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. This information can then be used to filter data based on the user's location or speed and direction of travel. 
+
+If geolocation is available, it will be a property of the navigator object that we met in Chapter 9. This property has a method called getCurrentPosition() that will return a position object to a specified callback function, called youAreHere() in the example:
+navigator.geolocation.getCurrentPosition(youAreHere);
+
+The position object passed to the youAreHere() function has a coords property with a latitude and longitude property, which together give the coordinates of the device. These coordinates can then be used in conjunction with other applications or web services (such as a mapping service) to obtain the user’s exact location. 
+
+function youAreHere(position) {
+    console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`); 
+}
+
+The position object has several other properties that can be used to find out information about the location and movement of the device:
+
+position.speed property returns the ground speed of the device in meters per second.
+
+position.altitude property returns an estimate of the device’s altitude in meters above the WGS84 ellipsoid, which is a standard measurement for the center of the Earth.
+
+position.heading property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North.
+
+position.timestamp property returns the time that the position information was recorded.
+
+The position object also has properties that calculate the accuracy of the measurements. These can be useful, as sometimes you only need to know the town or city users are in, while at other times you may need their exact position. position.accuracy property returns the accuracy of the latitude and longitude properties in meters. The lower the returned value, the more accurate the measurements are, as is the case for the position.altitudeAccuracy property, which returns the accuracy of the altitude property in meters.
+
+In addition, the geolocation object has a watchPosition() method that will call a callback function every time the position of the device is updated. This method returns an ID that can be used to reference the position being watched:
+
+const id = navigator.geolocation.watchPosition(youAreHere);
+
+navigator.geolocation.clearWatch(id);
+
+function factorize(event) {
+    // prevent the form from being submitted
+    event.preventDefault();   
+    document.getElementById('output').innerHTML = '<p>This could take a while ...</p>';
+    const number = Number(form.number.value);
+
+    if(window.Worker) {
+        const worker = new Worker('factors.js');
+        worker.postMessage(number);
+        worker.addEventListener('message', (event) => {
+        document.getElementById('output').innerHTML = event.data;
+        }, false);
+    }
+}
+
+self.addEventListener('message', (event) => {
+
+    const factors = String(factorsOf(Number(event.data)));
+    self.postMessage(factors);
+    self.close();
+
+}, false);
+
+MULTIMEDIA
+
+<audio src='/song.mp3' controls>
+Your browser does not support the audio element.
+</audio>
+
+<video src='http://movie.mp4' controls>
+    Your browser does not support the video element.
+</video>
+
+const video = document.getElementsByTagName('video')[0];
+<audio src='/song.mp3' controls>
+Your browser does not support the audio element.
+</audio>
+
+video.play();
+video.pause();
+video.volume = 0.9;
+video.muted = true;
+video.currentTime += 10; // jumps forward 10 seconds
+video.playbackRate = 8; // fast-forward at 8 times as fast
+video.loop = true;
+video.duration;
+<< 52.209
+
+video.addEventListener('loadedmetadata', () => { console.log(video.duration); });
+Audio and video clips also have a number of events that will fire when they occur, including:
+
+The play event, which fires when the clip starts and when it resumes after a pause.
+
+The pause event, which fires when the clip is paused.
+
+The volumechange event, which fires when the volume is changed.
+
+The loadedmetadata event, which we saw in the note above, and which fires when all the video's metadata has loaded.
+
+video.addEventListener('pause', () => {
+console.log('The video has been paused'); }, false)
