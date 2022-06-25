@@ -1,6 +1,6 @@
 import { getLocation } from './utilities.js';
 import Quake from './quake.js';
-import QuakesView from './QuakesView.js';
+import QuakesView from './quakesView.js';
 
 // Quake controller
 export default class QuakesController {
@@ -61,3 +61,18 @@ export default class QuakesController {
     this.quakesView.renderQuake(quake,this.parentElement);
   }
 }
+
+function getQuakesForLocation(location) {
+  let locResp = await getLocation();
+  // take a look at where the information we need is in the returned object
+  console.log(locResp);
+
+  // we really only need the coords portion
+  const location = locResp.coords;
+  // build out the url with the location
+  const radius = 100;
+  const query =
+    baseUrl +
+    `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
+  console.log(query);
+  }
