@@ -9,7 +9,7 @@ export default class Quake {
     async getEarthQuakesByRadius(position, radius = 100) {
         this._quakes = await getJSON(
             this.baseUrl +
-            `&starttime=2022-05-01&endtime=2022-06-23&latitude=${position.lat}&longitude=${position.lon}&maxradiuskm=${radius}`
+            `&starttime=2022-06-01&endtime=2022-06-23&latitude=${position.lat}&longitude=${position.lon}&maxradiuskm=${radius}`
         );
         return this._quakes;
     }
