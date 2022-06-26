@@ -36,3 +36,7 @@ abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so
 There are many more possibilities that we don't cover here. For a complete list and many examples, consult our Regular expressions documentation.
 
 Let's implement an example. Update your HTML to add a pattern attribute like this:
+
+
+
+<input type="email" id="email" name="email">
