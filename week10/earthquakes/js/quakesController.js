@@ -62,7 +62,7 @@ export default class QuakesController {
   }
 }
 
-function getQuakesForLocation(location) {
+/*function getQuakesForLocation(location) {
   let locResp = await getLocation();
   // take a look at where the information we need is in the returned object
   console.log(locResp);
@@ -75,4 +75,4 @@ function getQuakesForLocation(location) {
     baseUrl +
     `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
   console.log(query);
-  }
+  } */
