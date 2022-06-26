@@ -76,3 +76,12 @@ export default class QuakesController {
     `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
   console.log(query);
   } */
+
+  /*const sdLocation = sdResp.coords;
+  const radius = 100;
+  location.latitude = 32.715736;
+  location.longitude = -117.161087;
+  const query =
+    baseUrl +  `&latitude=${location.latitude}&longitude=${location.longitude}&maxradiuskm=${radius}`;
+
+    */
