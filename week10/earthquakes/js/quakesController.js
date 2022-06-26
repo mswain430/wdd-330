@@ -77,7 +77,10 @@ export default class QuakesController {
   console.log(query);
   } */
 
-  /*const sdLocation = sdResp.coords;
+
+/*
+let sdResp = await getLocation();
+const sdLocation = sdResp.coords;
   const radius = 100;
   location.latitude = 32.715736;
   location.longitude = -117.161087;
