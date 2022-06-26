@@ -17,7 +17,7 @@ li a:link, a:visited, li a:link {color: black; text-decoration: none; text-trans
 ul li:hover, a.backto:hover, a:visited:hover {color: green; background-color: rgb(163, 202, 188);}
 ul li:hover, ol li:hover, a.backto:hover {color: rgb(28, 51, 28); background-color: rgb(163, 202, 188);}
 ul li a:link:hover, ol li a:link:hover {color: rgb(29, 107, 223); }
-footer {background-color:rgb(29, 107, 223);color: aliceblue;padding: 20px;position:fixed; bottom: 0;width: 100%;text-align: center;margin:auto;}
+footer {background-color:rgb(29, 107, 223);color: aliceblue;padding: 20px;position:fixed; bottom: 0;width: 100%;text-align: center;margin:40px auto 0 auto;}
 
 @media screen and (max-width: 5em) {
     header h1 {font-size: 1.3em}
