@@ -1,0 +1,18 @@
+Drag & drop
+
+3 steps: There are several steps to adding drag and drop to your page:
+
+1. Set the draggable attribute on any HTML elements you’d like to be draggable.
+2. Add an event listener for the dragstart event on any draggable HTML elements.
+3. Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items.
+
+draggable="true"
+var mouse = null;
+for (var i=0; i < mice.length; i++) {
+mouse = mice[i];
+mouse.addEventListener('dragstart', function (event) {
+// handle the dragstart event
+});
+}
+Mozilla Developer Network’s Drag and Drop documentation
+W3C’s Drag and Drop specification

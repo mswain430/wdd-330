@@ -1,0 +1,47 @@
+Canvas, SVG, drag & drop
+
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+context.strokeStyle = "red";
+context.fillStyle = "rgba(0, 0, 255, 0.5)";
+context.fillRect(10, 10, 100, 100);
+context.strokeRect(10, 10, 100, 100);
+GRADIENTS:
+function drawGradient() {
+
+var gradient = context.createLinearGradient(0, 0, 0, 200);
+gradient.addColorStop(0, "blue");
+gradient.addColorStop(1, "white");
+context.fillStyle = gradient;
+context.fillRect(10, 10, 100, 100);
+context.strokeRect(10, 10, 100, 100);
+}
+
+function drawCircle(canvas) {
+var context = canvas.getContext("2d");
+context.beginPath();
+context.arc(100, 100, 50, 0, Math.PI*2, true);
+context.closePath();
+context.strokeStyle = "red";
+context.fillStyle = "blue";
+context.lineWidth = 3;
+context.fill();
+context.stroke();
+}
+function manipulateImage() {
+for (var i = 0; i < imageData.data.length; i += 4) {
+var red = imageData.data[i];
+var green = imageData.data[i + 1];
+var blue = imageData.data[i + 2];
+
+var grayscale = red * 0.3 + green * 0.59 + blue * 0.11;
+
+imageData.data[i] = grayscale;
+imageData.data[i + 1] = grayscale;
+imageData.data[i + 2] = grayscale;
+}
+}
+Scalable Vector Graphics SVG
+  IMAGE EDITOR: http://inkscape.org/ Canvas allows for pixel manipulation
+canvas is much faster than SVG
+what you draw to SVG is accessible via the DOM

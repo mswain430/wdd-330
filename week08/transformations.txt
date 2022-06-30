@@ -1,0 +1,122 @@
+Transitions and Transforms
+
+Transforms allow rotate, scale, or skew any element
+Translation functions allow you to move elements
+transform: translate(45px, -45px);
+transform: translateX(45px); // X horizontally
+transform: translateY(-30px); // Y vertically
+Scaling (scale(x,y))
+transform: scale(1.5, 0.25);
+Rotation rotate()
+transform: rotate(10deg) translateX(40px) scale(1.5);
+Skew: transform: skew(15deg, 4deg);
+Also use: transform-origin, background-position.
+Choose your ordering carefully.
+transform: translateX(200px) rotate(135deg);
+transform: rotate(135deg) translateX(200px);.
+Transitions
+transition-property: transform, color;
+transition-duration: .2s;
+transition-timing-function:
+ease, linear, ease-in, ease-out, ease-in-out.
+cubic-bezier(0,0,1,1) = linear
+steps(5,start) or steps(n, end)
+transition-timing-function: ease-out;
+-webkit-transition-delay: 50ms;
+transition-delay: 50ms;
+transition-property: transform, color;
+transition-duration: 0.2s;
+transition-timing-function: ease-out;
+transition-delay: 50ms;
+
+transition-property: transform, color;
+transition-duration: 0.2s, 0.1s;
+transition-timing-function:
+transition: ease-out, linear;
+transition-delay: 50ms;
+
+SHORTHAND: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+
+Animations
+
+keyframe is a snapshot that defines a starting or end point
+@keyframes @-webkit-keyframes
+
+@-webkit-keyframes myAnimation {
+/* put animation keyframes here */
+}
+@keyframes myAnimation {
+/* put animation keyframes here */
+}
+@keyframes moveRight {
+from {
+transform: translateX(-50%);
+}
+to {
+transform: translateX(50%);
+}
+}
+
+@keyframes appearDisappear {
+0%, 100% {
+opacity: 0;
+}
+20%, 80% {
+opacity: 1;
+}
+}
+
+@keyframes bgMove {
+100% {
+background-position: 120% 0;
+}
+}
+
+// bike
+.ad-ad3 :after {
+content: '';
+width: 90px;
+height: 92px;
+background-image: url(../images/bike_sprite.png);
+display: block;
+margin: auto;
+}
+@keyframes bike {
+0% {
+background-position: 0 0;
+}
+100% {
+background-position: -360px 0;
+}
+}
+Animation:
+.verbose {
+animation-name: appearDisappear;
+animation-duration: 300ms;
+animation-timing-function: ease-in;
+animation-iteration-count: 1;
+animation-direction: alternate;
+animation-delay: 5s;
+animation-fill-mode: backwards;
+animation-play-state: running;
+}
+
+/* shorthand */
+.concise {
+animation: 300ms ease-in alternate 5s backwards appearDisappear;
+}
+h1:after {
+content: '';
+width: 90px;
+height: 92px;
+background-image: url(img/bike.png);
+display: block;
+margin: auto;
+animation:
+0.4s steps(4, end) infinite 50ms bike,
+8s linear infinite 50ms move;
+animation-play-state: paused;
+}
+h1:hover:after {
+animation-play-state: running;
+}
