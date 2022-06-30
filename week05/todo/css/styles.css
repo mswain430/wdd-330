@@ -92,7 +92,7 @@ div.checked {
 
 /* Add a "checked" mark when clicked on */
 div.checked::before {
-  content: '';
+  content: '✓';
   position: absolute;
   border-color: #fff;
   border-style: solid;

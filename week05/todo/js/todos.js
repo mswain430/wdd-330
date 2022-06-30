@@ -6,10 +6,10 @@ loadTodos();
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
-document.querySelector('#deleteBtn').onclick = deleteTodo;
-document.querySelector('#addFilter').onclick = applyFilter;
-document.querySelector('#activeFilter').onclick = applyFilter;
-document.querySelector('#completedFilter').onclick = applyFilter;
+//document.querySelector('#deleteBtn').onclick = deleteTodo;
+//document.querySelector('#add').onclick = applyFilter;
+//document.querySelector('#active').onclick = applyFilter;
+//document.querySelector('#completed').onclick = applyFilter;
 //get input
 const input = document.querySelector('#todoInput');
 
@@ -39,7 +39,6 @@ function addNewTodo(e) {
 //function createTodo() { }
 
 // step 3 same as 44?
-// function createTodoElement(todo) {}
 
 function createTodoItem(todo) {
     //todo div
@@ -50,6 +49,9 @@ function createTodoItem(todo) {
     const completeBtn = document.createElement('button')
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
+    completeBtn.innerText = "✓"
+    completeBtn.onclick = toggleComplete;
+
 
     //todo content
     const todoContent = document.createElement('div');
@@ -93,21 +95,28 @@ function loadTodos() {
 //Events
 function deleteTodo(e) {
     const btn = e.currentTarget;
-    ls.deleteTodo(btn.getAttribut('data-id'));
-    document.querySelector('#todos').innerHTML = '';
+    ls.deleteTodo(btn.getAttribute('data-id'));
+    document.querySelector('#todos').innerHTML = '✓';
 
     loadTodos();
 }
 
 function toggleComplete(e) {
+  div.todoContent.classList.add('.completed');
+}
+
+function addFilter(add) {
 
 }
-// checkAll.on('click', function() {
- //   $('input[type="checkbox"], todos.each(function() {
- //       let current = $(this);
-  //      current.prop('checked', !current.is(':checked'));
-  //      });
-  //  });
+
+function activeFilter(active) {
+
+}
+
+function completedFilter() {
+
+}
+
 function applyFilter(e){
     //clear the list
     document.querySelector('#todos').innerHTML = '';
@@ -128,3 +137,18 @@ function applyFilter(e){
         addToList(el)
     })
 }
+
+/* filterBtnCollection.forEach(filterBtn => {
+    filterBtn.addEventListener('click', (event) => {
+     const filter = event.target.dataset.filter || 'all';
+
+     removeAllChildNodesFrom(todoList);
+     switch(filter) {
+       case 'completed': filteredToDos(todos, todoItem, (todo) => todo.complete);
+         break;
+       case 'active': filteredToDos(todos, todoItem, (todo) => !todo.complete);
+         break;
+       default: filteredToDos(todos, todoItem, (todo) => todo);
+       }
+    });
+}); */
