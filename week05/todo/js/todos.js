@@ -102,7 +102,7 @@ function deleteTodo(e) {
 }
 
 function toggleComplete(e) {
-  div.todoContent.classList.add('.completed');
+ // div.todoContent.classList.add('.completed');
 }
 
 function addFilter(add) {
