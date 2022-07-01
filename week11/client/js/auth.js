@@ -1,10 +1,12 @@
 // Auth class which provides basic JWT based authentication
 // Requires: access to the makeRequest function
 import { makeRequest } from './authHelpers.js';
+
 export default class Auth {
     constructor() {
         this.jwtToken = '';
         this.user = {};
+        this.errors;
     }
 
     async login(callback) {
@@ -41,15 +43,15 @@ export default class Auth {
     async getCurrentUser(email){
         try {
             // 3. add the code here to make a request for the user identified by email...don't forget to send the token!
-        } catch(error) {
+        } catch (error) {
             // if there were errors display
             console.log(error);
         }
     }
-    set token(value){
+    set token(value) {
         // we need this for the getter to work
     }
-    get token(value){
+    get token() {
         return this.jwtToken;
     }
 } // end auth class

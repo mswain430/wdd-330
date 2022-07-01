@@ -13,11 +13,11 @@ function getJSON(url) {
 }
 
 //Server address
-const baseURL = 'http://127.0.0.1:3000/';
+const baseURL = 'http://127.0.0.1:5500/';
 //helper function to make an https request with fetch
 // returns a json object
 
-async function makeRequest(url, method = 'Get', body = null) {
+async function makeRequest(url, method = 'Get', body = null, token = null) {
     //we will need to set some custom options for the fetch call
     let options = {
         method: method,
@@ -28,6 +28,10 @@ async function makeRequest(url, method = 'Get', body = null) {
     // if we are sending any data with the request add it here
     if (method == 'Post' || method == 'PUT') {
         options.body = JSON.stringify(body);
+    }
+    //if a token was passed in send it
+    if(token){
+        options.headers.Authorization = `Bearer ${token}`;
     }
     const response = await fetch(baseURL + url, options);
     // in this case we are processing the response as JSON before we check the status.
@@ -45,5 +49,11 @@ async function makeRequest(url, method = 'Get', body = null) {
     } else return data;
 
     // not catching the error here... so need to catch it later
+}
+
+export class Errors {
+    constructor(errorElementId) {
+        this.errorElement = document.getElementById(errorElementId);
+    }
 }
 export {getJSON, makeRequest}

@@ -8,18 +8,24 @@
      <script type="module" src="js/week11.js"></script>
 </head>
 <body>
+    <div id="errors" class="errors hidden"></div>
  <h1>Authentication Example app</h1>
  <div class="container">
-    <label for="uname" placeholder="enter your email for your username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit">Login</button>
+    <form id="login">
+ <label for="uname" placeholder="enter your email for your username"><b>Username</b></label><br/>
+    <input type="text" placeholder="Enter Username" name="uname" required><br/>
+    <br/>
+    <label for="password"><b>Password</b></label><br/>
+    <input type="password" placeholder="Enter Password" name="psw" required><br/>
+    <button type="submit">Login</button><br/>
+    <br/>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
+    </form>
+    <form id="posts" action="post">
+
+    </form>
   </div>
 </body>
 </html>
