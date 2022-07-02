@@ -33,10 +33,11 @@ async function getPosts(){
         //if there were any errors display them
         myErrors.handleError(error);
     }
-}
-document.getElementById('createSubmit').addEventListener('click', () =>{
+    document.getElementById('createSubmit').addEventListener('click', () =>{
     createPost();
   });
+}
+
 async function createPost(){
    const form = document.forms.postForm;
    console.dir(form);

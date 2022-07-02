@@ -11,8 +11,9 @@ export default class Auth {
 
     async login(callback) {
         // replace the ids below with whatever you would like
-        const password = document.getElementById('password');
         const username = document.getElementById('username');
+        const password = document.getElementById('password');
+
         const postData = {
             email: username.value,
             password: password.value
