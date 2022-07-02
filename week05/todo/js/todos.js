@@ -1,23 +1,23 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
+//load the list
+loadTodos();
+
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
 //get input
 const input = document.querySelector('#todoInput');
+document.querySelector('#allFilter').onclick = applyFilter;
+document.querySelector('#activeFilter').onclick = applyFilter;
+document.querySelector('#completedFilter').onclick = applyFilter;
 
 //add on enter
 input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
 
-document.querySelector('#deleteBtn').onclick = deleteTodo;
-document.querySelector('#allFilter').onclick = applyFilter;
-document.querySelector('#activeFilter').onclick = applyFilter;
-document.querySelector('#completedFilter').onclick = applyFilter;
-
-//load the list
-loadTodos();
+//document.querySelector('#deleteBtn').onclick = deleteTodo;
 
 // step 1
 //function newTodo() { }
@@ -93,9 +93,8 @@ function loadTodos() {
 //Events
 function deleteTodo(e) {
     const btn = e.currentTarget;
-    ls.deleteTodo(btn.getAttribute('id'));
-   // document.querySelector('#todos').innerHTML = '✓';
-
+    ls.deleteTodo(btn.getAttribute('data-id'));
+    document.querySelector('#todos').innerHTML = '';
     loadTodos();
 }
 
@@ -111,6 +110,8 @@ function applyFilter(e){
     if (e.currentTarget.id == 'activeFilter') {
         //apply active
         filteredTodos = utils.activeFilter(allTodos)
+    } else if (e.currentTarget.id == 'allFilter'){
+        filterdTodallTodos = allTodos
     }
 
     //draw the list

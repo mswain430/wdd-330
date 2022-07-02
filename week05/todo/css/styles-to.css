@@ -87,7 +87,7 @@ footer {
     background-color: #333;
     color: aliceblue;
 }
-.completed {
+.completed .todoContent {
     text-decoration: line-through;
     color: rgb(235, 104, 104);
 }
