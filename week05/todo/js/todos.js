@@ -37,8 +37,10 @@ function createTodoItem(todo) {
 
     //completeBtn
     const completeBtn = document.createElement('button')
+    completeBtn.innerHTML = `✓`
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
+
    // completeBtn.clicked.classList.add('completed')
 
     //todo content
@@ -46,10 +48,10 @@ function createTodoItem(todo) {
     todoContent.innerText = todo.content
     todoContent.classList.add('todo-content');
 
-  //if (todo.completed){
-  //      todoContent.classList.add('completed');
-  //      completeBtn.innerText = "✓";
- //   }
+  if (todo.completed){
+     todoContent.classList.add('completed');
+     completeBtn.innerText = "✓";
+   }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');

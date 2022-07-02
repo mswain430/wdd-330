@@ -1,23 +1,41 @@
-function getJSON(url) {
-    return fetch(url)
-    .then(function(response){
-        if (!response.ok) {
-            throw Error(response.statusText);
-        } else {
-            return response.json();
+export class Errors{
+    constructor(errorElementId){
+        this.errorElement = document.getElementById(errorElementId);
+    }
+
+    handleError(error, callback){
+        //parse out the error code from the error string
+        const code = error.message.substring(0,3);
+        this.displayError(error);
+        // if it is something related to authentication then show the login
+        if(code == 500 || code == 401) {
+            callback();
         }
-    })
-    .catch(function(error){
-       console.log(error);
-    });
+        console.log(code);
+    }
+
+    displayError(error){
+        this.errorElement.innerHTML = error.message;
+        this.errorElement.classList.remove('hidden');
+    }
+
+    clearError(){
+        this.errorElement.innerHTML = '';
+        this.errorElement.classList.add('hidden')
+    }
 }
 
 //Server address
-const baseURL = 'http://127.0.0.1:3000/';
+const baseURL = 'http://127.0.0.1:5500/';
 //helper function to make an https request with fetch
 // returns a json object
 
-export async function makeRequest(url, method = 'Get', body = null, token = null) {
+export async function makeRequest(
+    url,
+    method = 'Get',
+    body = null,
+    token = null
+    ) {
     //we will need to set some custom options for the fetch call
     let options = {
         method: method,
@@ -46,15 +64,9 @@ export async function makeRequest(url, method = 'Get', body = null, token = null
         // response.ok would be false
         console.log(response);
         throw new Error(`${data.status}: ${data.message}`);
-    } else return data;
-
+    } else {
+        return data;
+    }
     // not catching the error here... so need to catch it later
 }
 
-export class Errors {
-    constructor(errorElementId) {
-        this.errorElement = document.getElementById(errorElementId);
-    }
-}
-
-export {getJSON, makeRequest}
