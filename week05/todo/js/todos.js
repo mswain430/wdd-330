@@ -6,10 +6,10 @@ loadTodos();
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
-//document.querySelector('#deleteBtn').onclick = deleteTodo;
-//document.querySelector('#add').onclick = applyFilter;
-//document.querySelector('#active').onclick = applyFilter;
-//document.querySelector('#completed').onclick = applyFilter;
+document.querySelector('#deleteBtn').onclick = deleteTodo;
+document.querySelector('#allFilter').onclick = applyFilter;
+document.querySelector('#activeFilter').onclick = applyFilter;
+document.querySelector('#completedFilter').onclick = applyFilter;
 //get input
 const input = document.querySelector('#todoInput');
 
@@ -47,16 +47,22 @@ function createTodoItem(todo) {
 
     //completeBtn
     const completeBtn = document.createElement('button')
-    completeBtn.setAttribute('data-id', todo.id);
+    completeBtn.setAttribute('id', todo.id);
     completeBtn.classList.add('complete-btn')
-    completeBtn.innerText = "✓"
-    completeBtn.onclick = toggleComplete;
+
+
+   // completeBtn.onclick = toggleComplete;
 
 
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
     todoContent.classList.add('todoContent');
+
+    if (todo.completed){
+        completeBtn.innerText = "✓"
+        todoContent.classList.add('completed')
+    }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
@@ -96,25 +102,13 @@ function loadTodos() {
 function deleteTodo(e) {
     const btn = e.currentTarget;
     ls.deleteTodo(btn.getAttribute('data-id'));
-    document.querySelector('#todos').innerHTML = '✓';
+   // document.querySelector('#todos').innerHTML = '✓';
 
     loadTodos();
 }
 
 function toggleComplete(e) {
  // div.todoContent.classList.add('.completed');
-}
-
-function addFilter(add) {
-
-}
-
-function activeFilter(active) {
-
-}
-
-function completedFilter() {
-
 }
 
 function applyFilter(e){
@@ -137,18 +131,3 @@ function applyFilter(e){
         addToList(el)
     })
 }
-
-/* filterBtnCollection.forEach(filterBtn => {
-    filterBtn.addEventListener('click', (event) => {
-     const filter = event.target.dataset.filter || 'all';
-
-     removeAllChildNodesFrom(todoList);
-     switch(filter) {
-       case 'completed': filteredToDos(todos, todoItem, (todo) => todo.complete);
-         break;
-       case 'active': filteredToDos(todos, todoItem, (todo) => !todo.complete);
-         break;
-       default: filteredToDos(todos, todoItem, (todo) => todo);
-       }
-    });
-}); */

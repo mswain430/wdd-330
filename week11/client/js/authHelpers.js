@@ -13,11 +13,11 @@ function getJSON(url) {
 }
 
 //Server address
-const baseURL = 'http://127.0.0.1:5500/';
+const baseURL = 'http://127.0.0.1:3000/';
 //helper function to make an https request with fetch
 // returns a json object
 
-async function makeRequest(url, method = 'Get', body = null, token = null) {
+export async function makeRequest(url, method = 'Get', body = null, token = null) {
     //we will need to set some custom options for the fetch call
     let options = {
         method: method,
@@ -56,4 +56,5 @@ export class Errors {
         this.errorElement = document.getElementById(errorElementId);
     }
 }
+
 export {getJSON, makeRequest}
