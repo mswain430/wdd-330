@@ -102,7 +102,7 @@ footer {
   background-color: rgb(243, 163, 43);
 }
 
-.completed .todo-content  {
+.completed {
     text-decoration: line-through;
     color: rgb(15, 236, 15);
 }

@@ -41,17 +41,16 @@ function createTodoItem(todo) {
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
 
-   // completeBtn.clicked.classList.add('completed')
+    completeBtn.onclick = completeTodo;
 
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
     todoContent.classList.add('todo-content');
 
-  if (todo.completed){
+    if (todo.completed){
      todoContent.classList.add('completed');
-     completeBtn.innerText = "✓";
-   }
+    }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
@@ -92,6 +91,12 @@ function deleteTodo(e) {
     document.querySelector('#todos').innerHTML = '';
     loadTodos();
 }
+function completeTodo(e) {
+    const btn = e.currentTarget;
+    ls.toggle(btn.getAttribute('data-id'));
+    document.querySelector('#todos').innerHTML = '';
+    loadTodos();
+}
 
 function applyFilter(e){
     //clear the list
@@ -106,6 +111,8 @@ function applyFilter(e){
         filteredTodos = utils.activeFilter(allTodos)
     } else if (e.currentTarget.id == 'allFilter'){
         filteredTodos = allTodos;
+    }  else if (e.currentTarget.id == 'completedFilter'){
+        filteredTodos = utils.completedFilter(allTodos)
     }
     //draw the list
     filteredTodos.forEach(todo => {

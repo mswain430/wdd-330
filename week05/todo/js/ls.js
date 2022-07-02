@@ -27,9 +27,23 @@ function deleteTodo(id) {
     localStorage.setItem(TODO_LIST, JSON.stringify(updatedList));
 }
 
+function toggle(id) {
+    const todoList = getTodoList();
+
+    let updatedList = todoList.map(todo => {
+        if (todo.id == id){
+           todo.completed = !todo.completed;
+        }
+        return todo;
+    });
+
+
+    localStorage.setItem(TODO_LIST, JSON.stringify(updatedList));
+}
 export default {
     saveTodo,
     deleteTodo,
-    getTodoList
+    getTodoList,
+    toggle
 }
 

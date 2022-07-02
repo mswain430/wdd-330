@@ -3,6 +3,12 @@ function activeFilter(todos) {
         return !todo.completed
     });
 }
+function completedFilter(todos){
+    return todos.filter(todo => {
+        return todo.completed
+    });
+}
 export default {
-    activeFilter
+    activeFilter,
+    completedFilter
 }
