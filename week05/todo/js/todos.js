@@ -25,7 +25,7 @@ loadTodos();
 function addNewTodo(e) {
     const todo = { id: Date.now(), content: input.value, completed: false};
     //reset the input field
-    input.value = "";
+    input.value = '';
 
     //add the Ul
     const todoItem = createTodoItem(todo);
