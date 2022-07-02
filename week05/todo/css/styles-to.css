@@ -30,6 +30,15 @@ main {
     max-width: 500px;
 }
 
+.todo {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    border: 0px solid red;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px 8px;
+}
 
 footer {
     background-color: cornflowerblue;
@@ -66,15 +75,7 @@ footer {
    color: #333;
 } */
 
-.todo {
-    display:flex;
-    align-items: center;
-    width: 100%;
-    border: 0px solid red;
-    padding: 0px;
-    box-sizing: border-box;
-    margin: 0px 8px;
-}
+
 .add-todo-wrapper {
     height: 100%;
     display: flex;
@@ -100,13 +101,13 @@ footer {
 .complete-btn:hover {
   background-color: rgb(243, 163, 43);
 }
-.completed  {
+.completed .todo-content  {
     text-decoration: line-through;
     color: rgb(235, 104, 104);
     color: rgb(15, 236, 15);
 }
 
-.todoContent{
+.todo-content{
     height: 40px;
     min-width: 250px;
     max-width: 100%;

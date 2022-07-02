@@ -19,11 +19,6 @@ input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
 
-//document.querySelector('#deleteBtn').onclick = deleteTodo;
-
-// step 1
-//function newTodo() { }
-
 function addNewTodo(e) {
     const todo = {id: Date.now(), content: input.value, completed: false};
     //reset the input field
@@ -51,13 +46,13 @@ function createTodoItem(todo) {
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
-    todoContent.classList.add('todoContent');
+    todoContent.classList.add('todo-content');
 
-    if (todo.completed){
+   /* if (todo.completed){
         completeBtn.onclick.classList.add('completed')
         todoContent.classList.add('completed');
         completeBtn.innerText = "✓";
-    }
+    } */
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
@@ -83,7 +78,6 @@ function addToList(todoDiv) {
 function loadTodos() {
     document.querySelector('#todos').innerHTML = '';
     const todoList = ls.getTodoList();
-
     //debugging
     console.log(todoList);
 
@@ -113,13 +107,13 @@ function applyFilter(e){
     if(e.currentTarget.id == 'activeFilter') {
         filteredTodos = utils.activeFilter(allTodos)
     } else if (e.currentTarget.id == 'allFilter'){
-        filterdTodallTodos = allTodos;
+        filteredTodos = allTodos;
     }
-
     //draw the list
     filteredTodos.forEach(todo => {
         const el = createTodoItem(todo)
-        addToList(el)
-    })
+        //addToList(el)
+        getTodoList
+    });
 
 }
