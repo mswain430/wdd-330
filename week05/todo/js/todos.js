@@ -6,6 +6,8 @@ loadTodos();
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
+//document.querySelector('#deleteBtn').onclick = deleteTodo;
+document.querySelector('#completeBtn').onclick = completeTodo;
 //get input
 const input = document.querySelector('#todoInput');
 document.querySelector('#allFilter').onclick = applyFilter;
@@ -23,7 +25,7 @@ input.addEventListener('keypress', e => {
 //function newTodo() { }
 
 function addNewTodo(e) {
-    const todo = { id: Date.now(), content: input.value, completed: false};
+    const todo = {id: Date.now(), content: input.value, completed: false};
     //reset the input field
     input.value = '';
 
@@ -119,4 +121,5 @@ function applyFilter(e){
         const el = createTodoElement(todo)
         addToList(el)
     })
+
 }

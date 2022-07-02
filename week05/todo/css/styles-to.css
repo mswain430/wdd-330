@@ -30,6 +30,7 @@ main {
     max-width: 500px;
 }
 
+
 footer {
     background-color: cornflowerblue;
     font-size: 1.3em;
@@ -60,14 +61,23 @@ footer {
    border-bottom: 1px solid #000;
 }
 
-#todos div:hover {
+/*#todos div:hover {
    background: rgb(216, 234, 157);
    color: #333;
-}
+} */
 
+.todo {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    border: 0px solid red;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px 8px;
+}
 .add-todo-wrapper {
-    height: 40px;
-    padding: 5px;
+    height: 100%;
+    display: flex;
 }
 
 .todo-delete-btn {
@@ -77,22 +87,26 @@ footer {
     font-weight: 600;
     align-self: flex-end;
     background-color: #333;
-
 }
+
 .complete-btn {
     width: 30px;
     height: 40px;
     padding-right: 5px;
     align-self: flex-start;
     background-color: #333;
-    color: aliceblue;
+    color: rgb(15, 236, 15);
 }
-.completed .todoContent {
+.complete-btn:hover {
+  background-color: rgb(243, 163, 43);
+}
+.completed  {
     text-decoration: line-through;
     color: rgb(235, 104, 104);
+    color: rgb(15, 236, 15);
 }
 
-.todoContent, div#todo {
+.todoContent{
     height: 40px;
     min-width: 250px;
     max-width: 100%;
@@ -103,6 +117,7 @@ footer {
     color: aliceblue;
 
 }
+
 .todo-delete-btn:hover {
    background: rgb(216, 234, 157);
    color: #333;
