@@ -36,10 +36,6 @@ function addNewTodo(e) {
     loadTodos();
 }
 // step 2
-//function createTodo() { }
-
-// step 3 same as 44?
-
 function createTodoItem(todo) {
     //todo div
     const todoDiv = document.createElement('div');
@@ -50,23 +46,19 @@ function createTodoItem(todo) {
     completeBtn.setAttribute('id', todo.id);
     completeBtn.classList.add('complete-btn')
 
-
-   // completeBtn.onclick = toggleComplete;
-
-
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
+    completeBtn.innerText = "✓"
     todoContent.classList.add('todoContent');
 
     if (todo.completed){
-        completeBtn.innerText = "✓"
         todoContent.classList.add('completed')
     }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
-    deleteBtn.setAttribute('data-id', todo.id);
+    deleteBtn.setAttribute('id', todo.id);
     deleteBtn.classList.add('todo-delete-btn');
     deleteBtn.innerText = "X";
     deleteBtn.onclick = deleteTodo;
@@ -101,14 +93,10 @@ function loadTodos() {
 //Events
 function deleteTodo(e) {
     const btn = e.currentTarget;
-    ls.deleteTodo(btn.getAttribute('data-id'));
+    ls.deleteTodo(btn.getAttribute('id'));
    // document.querySelector('#todos').innerHTML = '✓';
 
     loadTodos();
-}
-
-function toggleComplete(e) {
- // div.todoContent.classList.add('.completed');
 }
 
 function applyFilter(e){
