@@ -8,9 +8,7 @@ function getTodoList() {
     if (todoListString) {
         todoList = JSON.parse(todoListString);
     }
-
     return todoList;
-
 }
 
 function saveTodo(todo) {
@@ -23,6 +21,7 @@ function saveTodo(todo) {
 
 function deleteTodo(id) {
     const todoList = getTodoList();
+
     let updatedList = todoList.filter(todo => todo.id != id);
 
     localStorage.setItem(TODO_LIST, JSON.stringify(updatedList));

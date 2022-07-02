@@ -1,15 +1,8 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-//load the list
-loadTodos();
-
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
-document.querySelector('#deleteBtn').onclick = deleteTodo;
-document.querySelector('#allFilter').onclick = applyFilter;
-document.querySelector('#activeFilter').onclick = applyFilter;
-document.querySelector('#completedFilter').onclick = applyFilter;
 //get input
 const input = document.querySelector('#todoInput');
 
@@ -18,6 +11,13 @@ input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
 
+document.querySelector('#deleteBtn').onclick = deleteTodo;
+document.querySelector('#allFilter').onclick = applyFilter;
+document.querySelector('#activeFilter').onclick = applyFilter;
+document.querySelector('#completedFilter').onclick = applyFilter;
+
+//load the list
+loadTodos();
 
 // step 1
 //function newTodo() { }
@@ -43,7 +43,7 @@ function createTodoItem(todo) {
 
     //completeBtn
     const completeBtn = document.createElement('button')
-    completeBtn.setAttribute('id', todo.id);
+    completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
 
     //todo content
@@ -58,7 +58,7 @@ function createTodoItem(todo) {
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
-    deleteBtn.setAttribute('id', todo.id);
+    deleteBtn.setAttribute('data-id', todo.id);
     deleteBtn.classList.add('todo-delete-btn');
     deleteBtn.innerText = "X";
     deleteBtn.onclick = deleteTodo;
@@ -78,7 +78,7 @@ function addToList(todoDiv) {
 
 // step 0
 function loadTodos() {
-    document.querySelector('#todos').innerHTML = " ";
+    document.querySelector('#todos').innerHTML = '';
     const todoList = ls.getTodoList();
 
     //debugging

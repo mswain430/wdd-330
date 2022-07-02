@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
-<script type="module" src="js/todos.js"></script>
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/styles-to.css">
+    <script type="module" src="js/todos.js"></script>
 </head>
-<body>
+<body><main><h1>To Do List Project</h1>
     <div class="container">
-        <h1>To Do List Project</h1>
          <div class="todos-wrapper">
-               <div id="todos">todos</div>
-               <div class="todo-filters"></div>
-         </div>
-        <div class="add-todo-wrapper">
-             <input id="todoInput" type="text">
-             <button id="addBtn">Add</button>
-         </div>
+            <div id="todos">
+               </div>
+            </div>
+            <div class="todo-filters">
+                  <button id="allFilter" >All</button>
+                  <button id="activeFilter" >Active</button>
+                  <button id="completedFilter" >Completed</button>
+               </div>
+            <div class="add-todo-wrapper">
+              <form id="form1"> <input id="todoInput" type="text" placeholder="Add a task here..." max-width="250">
+                <button id="addBtn">Add</button></form>
+           </div>
     </div>
+    <div>&nbsp;</div>
+    </main>
     <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
 </body>
 </html>

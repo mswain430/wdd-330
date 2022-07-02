@@ -41,7 +41,7 @@ footer {
 .todos-wrapper {
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: repeat(auto, 50px);
+    grid-template-rows: repeat(auto, 40px);
 
 }
 #todos div {
@@ -93,6 +93,7 @@ footer {
 }
 
 .todoContent, div#todo {
+    height: 40px;
     min-width: 250px;
     max-width: 100%;
     padding: 10px;
