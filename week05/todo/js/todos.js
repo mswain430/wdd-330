@@ -6,7 +6,6 @@ loadTodos();
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
-//document.querySelector('#deleteBtn').onclick = deleteTodo;
 //document.querySelector('#completeBtn').onclick = completeTodo;
 //get input
 const input = document.querySelector('#todoInput');
@@ -26,10 +25,8 @@ function addNewTodo(e) {
 
     //add the Ul
     const todoItem = createTodoItem(todo);
-
     //save to localStorage
     ls.saveTodo(todo);
-
     loadTodos();
 }
 // step 2
@@ -42,17 +39,17 @@ function createTodoItem(todo) {
     const completeBtn = document.createElement('button')
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
-    completeBtn.clicked.classList.add('completed')
+   // completeBtn.clicked.classList.add('completed')
 
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
     todoContent.classList.add('todo-content');
 
-  if (todo.completed){
-        todoContent.classList.add('completed');
-        completeBtn.innerText = "✓";
-    }
+  //if (todo.completed){
+  //      todoContent.classList.add('completed');
+  //      completeBtn.innerText = "✓";
+ //   }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
@@ -74,7 +71,6 @@ function addToList(todoDiv) {
     document.querySelector('#todos').appendChild(todoDiv);
 }
 
-// step 0
 function loadTodos() {
     document.querySelector('#todos').innerHTML = '';
     const todoList = ls.getTodoList();
@@ -114,5 +110,4 @@ function applyFilter(e){
         const el = createTodoItem(todo)
         addToList(el)
     });
-
 }
