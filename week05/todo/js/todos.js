@@ -7,7 +7,7 @@ loadTodos();
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
 //document.querySelector('#deleteBtn').onclick = deleteTodo;
-document.querySelector('#completeBtn').onclick = completeTodo;
+//document.querySelector('#completeBtn').onclick = completeTodo;
 //get input
 const input = document.querySelector('#todoInput');
 document.querySelector('#allFilter').onclick = applyFilter;
@@ -51,11 +51,12 @@ function createTodoItem(todo) {
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
-    completeBtn.innerText = "✓"
     todoContent.classList.add('todoContent');
 
     if (todo.completed){
-        todoContent.classList.add('completed')
+        completeBtn.onclick.classList.add('completed')
+        todoContent.classList.add('completed');
+        completeBtn.innerText = "✓";
     }
 
     //deletebtn
@@ -109,8 +110,7 @@ function applyFilter(e){
     const allTodos = ls.getTodoList();
 
     //check which filter to apply
-    if (e.currentTarget.id == 'activeFilter') {
-        //apply active
+    if(e.currentTarget.id == 'activeFilter') {
         filteredTodos = utils.activeFilter(allTodos)
     } else if (e.currentTarget.id == 'allFilter'){
         filterdTodallTodos = allTodos;
@@ -118,7 +118,7 @@ function applyFilter(e){
 
     //draw the list
     filteredTodos.forEach(todo => {
-        const el = createTodoElement(todo)
+        const el = createTodoItem(todo)
         addToList(el)
     })
 
