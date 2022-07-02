@@ -75,7 +75,6 @@ footer {
    color: #333;
 } */
 
-
 .add-todo-wrapper {
     height: 100%;
     display: flex;
@@ -98,12 +97,13 @@ footer {
     background-color: #333;
     color: rgb(15, 236, 15);
 }
+
 .complete-btn:hover {
   background-color: rgb(243, 163, 43);
 }
+
 .completed .todo-content  {
     text-decoration: line-through;
-    color: rgb(235, 104, 104);
     color: rgb(15, 236, 15);
 }
 
@@ -116,7 +116,6 @@ footer {
     text-align: left;
     background-color: #333;
     color: aliceblue;
-
 }
 
 .todo-delete-btn:hover {

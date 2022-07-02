@@ -42,17 +42,17 @@ function createTodoItem(todo) {
     const completeBtn = document.createElement('button')
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.classList.add('complete-btn')
+    completeBtn.clicked.classList.add('completed')
 
     //todo content
     const todoContent = document.createElement('div');
     todoContent.innerText = todo.content
     todoContent.classList.add('todo-content');
 
-   /* if (todo.completed){
-        completeBtn.onclick.classList.add('completed')
+  if (todo.completed){
         todoContent.classList.add('completed');
         completeBtn.innerText = "✓";
-    } */
+    }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
@@ -112,8 +112,7 @@ function applyFilter(e){
     //draw the list
     filteredTodos.forEach(todo => {
         const el = createTodoItem(todo)
-        //addToList(el)
-        getTodoList
+        addToList(el)
     });
 
 }
