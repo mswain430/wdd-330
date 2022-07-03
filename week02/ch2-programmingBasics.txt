@@ -1,0 +1,125 @@
+CHAPTER 2 Summary - Programming Basics :
+There are six primitive data types: strings, symbols, numbers, Booleans, undefined and null. typeof
+
+using const means you can't reassign the variable to another value. That means that if a variable is assigned to a primitive data type, then the value can't be changed, and will result in an error, you should try to use const to declare most variables. (Code more predictable)
+
+SCOPE local - inside block using let or const, Global Scope not recommended
+
+Non-primitive data types, such as arrays, functions and objects, all have a type of 'object'.
+
+Strings: .length, indexOf(),lastIndexOf(), includes(), charAt(),toLowerCase(),toUpperCase(), concat(), trim(), endsWith(),startsWith(), \' single quotes,\" double quotes, \r return, \t'tab \n (line) String literal: `Hello ${ name }!` Template literal: `Hello!`
+
+constructor new String("String"), new Number(3) << Number: 3
+
+arithmetic +,-, *,/,%
+
+toExponential() method uses two dotes or space
+
+toFixed() method rounds to (3)
+
+numbers starting with 0x considered hexadecimal
+
+23%6; // the same as asking 'what is the remainder when 13 is divided by 6' << 5
+
+Changing values shortcut is using += or -=
+
+Incrementing values ++ or -- before or after the variable, evaluates before or after the variable
+
+let points = 5; points ++ << 6
+
+best way to convert Number to string Number('23')
+
+String() or .toString() perferred way to convert number to string
+
+parseInt() and parseFloat() converts string to number
+
+Variables point to values stored in memory and are declared using the const or let keywords.
+
+Values are assigned to variables using the = operator.
+
+NULL = no value, undefined -- NaN (if variable isn't assigned a value will show as undefined)
+
+Symbols are unique, immutable values. const uniqueID = Symbol('this is a unique ID');
+
+Placing the ! operator in front of a value will convert it to a Boolean and return the opposite value.
+
+What is Bitwise? NOT ~ remember lazy evaluation - stops after first condition met, AND (&&) OR || XOR ^ eXclusive OR [one but not both]
+
+^ is NOT exponent USE ** instead
+
+The bitwise shift operators, << and >>, will move the binary representation a given number of places to the right or left, which effectively multiplies or divides the number by powers of two:
+
+Boolean values are either true or false. equal to ===, Inequality: !==, !=, Use Number.isNaN() Comes out true or false not NaN
+
+[Boolean('hello'); << true]
+[Boolean(42); << true]
+[Boolean(0); << false]
+
+There are only seven values that are false in JavaScript and these are known as 'falsy' values.
+
+[" " == 0; << true]
+[ " "== "0"; << false]
+[ " == true; << true]
+[ "2" == true; << false]
+["true" == true; << false]
+[ null == undefined; << true]
+
+[!!''; << false]
+[!!"hello";<< true]
+[!!3;<< true]
+[!!NaN;<< false]
+[!!"false";<< true]
+[!!'0';<< true]
+
+Data types can be converted into other data types.
+
+Type coercion is when JavaScript tries to convert a value into another data type in order to perform an operation.
+
+CHAPTER 3 Summary - Arrays, Logic, and Loops
+Arrays are an ordered list of values
+
+Multidimensional arrays are arrays that contain other arrays
+
+Arrays have lots of methods that can be used to manipulate items in the array
+
+Sets are new in ES6 and are ordered lists of non-duplicate values
+
+Maps are new in ES6 and are ordered lists of key-value pairs
+
+We can use an if and else statement to control the flow of code
+
+The switch statement can be used instead of multiple if and else statements
+
+A while loop and do ... while loop can be used to repeat a block of code while a condition is still true
+
+A for loop works in a similar way to a while loop, but has a different syntax
+
+A for-of loop can be used to iterate over an array
+
+Sets and maps are enumerable, so can also be looped over using a for-of loop
+
+Chapter 4 Summary - Functions
+Functions are first-class objects that behave the same way as other values.
+
+Function literals can be defined using the function declaration, or by creating a function expression by assigning an anonymous function to a variable.
+
+All functions return a value. If this is not explicitly stated, the function will return undefined.
+
+A parameter is a value that is written in the parentheses of a function declaration and can be used like a variable inside the function’s body.
+
+An argument is a value that is provided to a function when it is invoked.
+
+The arguments variable is an array-like object that allows access to each argument provided to the function using index notation.
+
+The rest operator can be used to access multiple arguments as an array.
+
+Default arguments can be supplied to a function by assigning them to the parameters.
+
+Arrow functions are a new shorthand notation that can used for writing anonymous functions in ES6.
+
+Function declarations can be invoked before they are defined because they are hoisted to the top of the scope, but function expressions cannot be invoked until after they are defined.
+
+A callback is a function that is provided as an argument to another function.
+
+Everything that isn't a primitive data type in JavaScript is an object ― which is the topic of our next chapter.
+

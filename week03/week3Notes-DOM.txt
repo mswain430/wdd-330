@@ -1,0 +1,190 @@
+Notes from Week 3
+Functions declaration:
+
+function logMessage(){
+console.log('in a function');
+}
+
+logMessage(); //calls the function
+
+function expression:
+
+let fn = function loggingFunction() {
+console.log('here is a message')
+}
+
+fn(); //calls the function
+PASSING INFORMATION
+function showMessage(message, anotherMessage) {
+console.log(message, anotherMessage);
+}
+showMessage('first message', 'second Message');
+let myFunction = function loggingFunction(message, firstName) {
+console.log(message);
+console.log(firstName);
+} myFunction('hello') // undefined
+myFunction(); //undefined
+FUNCTION RETURN VALUE
+function getSecretCode(value) {
+let code = value * 42;
+return code;
+} showMessage(getSecretCode(2)); OR
+let secretCode = getSecretCode(2);
+console.log(getSecretCode(2) ); //84
+
+FUNCTION SCOPE
+
+let key = 42;
+function getSecretCode(value) {
+let keyGenerator = function keygen() {
+let key = 12;
+console.log('in keyGenerator: ', key);
+return key;
+}
+let code = value * keyGenerator(); // 12
+console.log(' in getSecretCode: ', key);
+return code;
+
+let secretCode = getSecretCode(2); // 42
+showMessage( secretCode);
+
+function showMessage(message) {
+document.getElementById('message').textContent = message;
+}
+
+SUMMARY:
+FUNCTIONS
+function name(){...}
+let fn = function() {...}
+
+PASSING INFORMATION TO FUNCTIONS
+myFunction(a,b,c);
+FUNCTION RETURN VALUES
+return value;
+
+FUNCTION SCOPE
+
+OBJECTS AND THE DOM
+Object Properties, object methods
+let person = {}; //empty object
+let person = {
+name: "john",
+age: 32,
+partTime: false;
+};
+
+person.age = 33;
+or person['age'] = 44;
+
+showMessage(person.name);
+showMessage(person.age);
+
+SYMBOLS
+let mySymbol = Symbol();
+let person = {
+name: 'John',
+age: 32,
+partTime: false,
+[mySymbol]: 'secretInformation'
+};
+
+METHODS
+let person = {
+name: 'John',
+age: 32,
+partTime: false,
+[mySymbol]: 'secretInformation'
+showInfo: function(realAge){
+showMessage('this.name + 'is ' + realAge');
+}
+};
+person.showInfo(); OR
+showMessage(typeof person.showInfo);
+
+Passing Objects to Functions
+let person = {
+name: 'John',
+age: 32,
+partTime: false
+};
+
+function incrementAge(person) {
+person.age++;
+}
+incrementAge(person); //32
+showMessage(person.age); //33
+
+When we pass values in an object these can be modified
+When we pass data by values in a primitive objects like string, boolean -- modifications lost
+
+Standard Built-in Objects
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+Built in objects
+date objects
+
+new Date();
+new Date(value);
+Date.prototype.getMinutes();
+
+let now = new Date();
+showMessage(now.toDateString()); Math.PI
+Math.random();
+MATH.round();
+
+showMessage(Math.abs(-42);
+showMessage(Math.random());
+
+STRING
+.length()
+let s='Hello';
+showMessage( s.charAt(0) ); //H
+showMessage( s.charAt(1) ); //E
+
+NUMBER
+.NaN
+.isNaN()
+.parseInt()
+.parseFloat()
+.toPrecision()
+.toString()
+.toFixed()
+
+DOM
+Styling DOM elements
+element.style.cssProp = 'value' // css property has a hyphen, eliminate this - Use camelcase
+overwriting css properties
+const header = document.getElementById('message');
+header.style.fontWeight = '800';
+
+
+Detecting Button Clicks
+element.addEventListener(event,fn)
+HTML See Review
+JS const button = document.getElementById('see-review');
+
+button.addEventListener('click', function() {
+console.log('click');
+// call functions or { ); Showing and hiding DOM elements element.classList.add(className) element.classList.remove(className) element.classList.contains(className) //toggle button HTML See Review HTML
+Review Title
+Review text ...
+
+JS
+const button = document.getElementById('see-review');
+button.addEventListener('click', function() {
+const review = document.getElementById('review')
+if (review.classList.contains('d-none')) {
+review.classList.remove('d-none');
+button.textContent = "CLOSE REVIEW";
+}
+else {
+review.classList.add('d-none');
+button.textContent = "SEE REVIEW";
+}
+
+} );
+
+Element
+
+ARRAYS
+See array built in functions on mdn...
+MDN resources on Arrays
