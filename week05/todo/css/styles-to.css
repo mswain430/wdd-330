@@ -95,16 +95,11 @@ footer {
     padding-right: 5px;
     align-self: flex-start;
     background-color: #333;
-    color: rgb(15, 236, 15);
+    color: rgb(236, 85, 15);
 }
 
 .complete-btn:hover {
-  background-color: rgb(243, 163, 43);
-}
-
-.completed {
-    text-decoration: line-through;
-    color: rgb(15, 236, 15);
+  background-color: rgb(161, 147, 132);
 }
 
 .todo-content{
@@ -117,7 +112,10 @@ footer {
     background-color: #333;
     color: aliceblue;
 }
-
+.completed {
+    text-decoration: line-through;
+    color: rgb(15, 236, 15);
+}
 .todo-delete-btn:hover {
    background: rgb(216, 234, 157);
    color: #333;

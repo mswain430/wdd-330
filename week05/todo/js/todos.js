@@ -111,7 +111,7 @@ function applyFilter(e){
         filteredTodos = utils.activeFilter(allTodos)
     } else if (e.currentTarget.id == 'allFilter'){
         filteredTodos = allTodos;
-    }  else if (e.currentTarget.id == 'completedFilter'){
+    } else if (e.currentTarget.id == 'completedFilter'){
         filteredTodos = utils.completedFilter(allTodos)
     }
     //draw the list
