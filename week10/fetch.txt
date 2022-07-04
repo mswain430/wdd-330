@@ -1,0 +1,8 @@
+The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses. 
+
+The basic fetch requests looks like this:
+fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
