@@ -19,13 +19,13 @@ input.addEventListener('keypress', e => {
 });
 
 fetch("articlesOfFaith.json")
-  .then(data.json())
+  .then(data => data.json())
   .then(articlesOfFaith => {
         const randomNum = Math.floor(Math.random() * articlesOfFaith.length);
         const inspiration = articlesOfFaith(randomNum);
-        document.querySelector("#article").innerText =  ' + inspiration.article';
-        document.querySelector('#verse').innerText = 'inspiration.verse';
-        document.querySelector('#reference').innerText = 'inspiration.reference';
+        document.querySelector("#article").innerText =  inspiration.article;
+        document.querySelector('#verse').innerText = inspiration.verse;
+        document.querySelector('#reference').innerText = inspiration.reference;
 })
 
 loadTodos();
