@@ -18,14 +18,14 @@ input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
 
-fetch("articlesOfFaith.json")
+fetch("quotes.json")
   .then(data => data.json())
-  .then(articlesOfFaith => {
-        const randomNum = Math.floor(Math.random() * articlesOfFaith.length);
+  .then(quotes => {
+        const randomNum = Math.floor(Math.random() * quotes.length);
         const inspiration = articlesOfFaith(randomNum);
-        document.querySelector("#article").innerText =  inspiration.article;
-        document.querySelector('#verse').innerText = inspiration.verse;
-        document.querySelector('#reference').innerText = inspiration.reference;
+
+        document.querySelector('#verse').innerText = '"' + inspiration.verse + '"';
+        document.querySelector('#author').innerText = '~' + inspiration.reference;
 })
 
 loadTodos();
