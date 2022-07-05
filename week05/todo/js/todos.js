@@ -35,7 +35,7 @@ fetch("articlesOfFaith.json")
         const inspiration = articlesOfFaith[randomNum];
 
         document.querySelector('#reference').innerText = '"' + inspiration.article + '"';
-        document.querySelector('#article').innerText = '~' + inspiration.verse;
+        document.querySelector('#article').innerText = inspiration.verse;
         document.querySelector('#verse').innerText = '~' + inspiration.reference;
 })
 loadTodos();
