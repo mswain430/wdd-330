@@ -22,7 +22,7 @@ fetch("quotes.json")
   .then(data => data.json())
   .then(quotes => {
         const randomNum = Math.floor(Math.random() * quotes.length);
-        const inspiration = quotes(randomNum);
+        const inspiration = quotes[randomNum];
 
         document.querySelector('#verse').innerText = '"' + inspiration.verse + '"';
         document.querySelector('#author').innerText = '~' + inspiration.reference;
