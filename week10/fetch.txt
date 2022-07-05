@@ -1,13 +1,6 @@
-The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses.
-
-The basic fetch requests looks like this:
-fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
 FETCH:
 
-The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses.
+The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses. 
 
 The basic fetch requests looks like this:
 fetch('http://example.com/movies.json')
@@ -19,12 +12,12 @@ fetch has response and request methods.
 The promise resolves to Response. It only rejects when there is a network error.
 The then() handler checks the response.ok and/or response.status.
 
-The fetch() medthod utilizes the Window or workerglobalscope and is available.
+The fetch() medthod utilizes the Window or workerglobalscope and is available. 
 fetch(resource)
 fetch(resource, init)
 
 resource:
-Defines the resource you want to fetch. It can be either a string with a stringifier - including a URL object that provides the resource you want to fetch.
+Defines the resource you want to fetch. It can be either a string with a stringifier - including a URL object that provides the resource you want to fetch. 
 OR
 A Request object.
 
@@ -47,7 +40,7 @@ fetch(myRequest)
   });
 --------------------------
 
-FETCH WITH INIT:
+FETCH WITH INIT: 
 
 const myImage = document.querySelector('img');
 
@@ -69,14 +62,14 @@ fetch(myRequest, myInit)
   });
 
 ______________________________
-The request method uses either GET or POST.
+The request method uses either GET or POST. 
 Options for the body of the fetch include:
 Blob, arrayBuffer, typedArray, dataView, FormData, URLSearchParams or ReadableStream.
 
 Mode: cors, no-cors, or same-origin.
 
 
-Return value is a promise that resolves to a response object.
+Return value is a promise that resolves to a response object. 
 
 PROMISE:
 
@@ -176,4 +169,3 @@ The ok read-only property of the Response interface contains a Boolean stating w
     const myBlob = new Blob();
     const options = { status: 200, statusText: "SuperSmashingGreat!" };
     const myResponse = new Response(myBlob, options);
-

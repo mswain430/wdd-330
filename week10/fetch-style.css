@@ -11,17 +11,17 @@ article {
   width: 400px;
   min-height: 480px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   background-image: repeating-linear-gradient(
       to bottom,
       transparent 1px,
       transparent 20px,
-      rgb(0, 0, 150) 21px
+      rgb(135, 135, 146) 21px
     ),
     linear-gradient(to bottom right, white, #ccc);
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-  line-height: 1.8;
+  line-height: 1.4em;
 }
 
 ul {

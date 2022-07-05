@@ -2,7 +2,7 @@ import utils from './utils.js';
 import ls from './ls.js';
 
 //load the list
-loadTodos();
+
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
@@ -17,6 +17,18 @@ document.querySelector('#completedFilter').onclick = applyFilter;
 input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewTodo();
 });
+
+fetch("articlesOfFaith.json")
+  .then(data.json())
+  .then(articlesOfFaith => {
+        const randomNum = Math.floor(Math.random() * articlesOfFaith.length);
+        const inspiration = articlesOfFaith(randomNum);
+        document.querySelector("#article").innerText =  ' + inspiration.article';
+        document.querySelector('#verse').innerText = 'inspiration.verse';
+        document.querySelector('#reference').innerText = 'inspiration.reference';
+})
+
+loadTodos();
 
 function addNewTodo(e) {
     const todo = {id: Date.now(), content: input.value, completed: false};

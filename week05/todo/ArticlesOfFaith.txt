@@ -1,0 +1,67 @@
+[ 
+{
+"reference": "The Articles of Faith, CH 1:1"
+"article": "First Article of Faith"
+"verse": "We believe in God, the Eternal Father, and in His Son, Jesus Christ, and in the Holy Ghost."
+}, 
+ {
+"reference": "The Articles of Faith, CH 1:2"
+"article": "Second Article of Faith"
+"verse": "We believe that men will be apunished for their bown sins, and not for cAdam’s transgression."
+},
+ {
+"reference": "The Articles of Faith, CH 1:3"
+"article": "Third Article of Faith"
+"verse": "We believe that through the aAtonement of Christ, all bmankind may be csaved, by obedience to the laws and ordinances of the Gospel."
+},
+ {
+"reference": "The Articles of Faith, CH 1:4"
+"article": "Fourth Article of Faith"
+"verse": "We believe that the first principles and aordinances of the Gospel are: first, bFaith in the Lord Jesus Christ; second, cRepentance; third, dBaptism by eimmersion for the fremission of sins; fourth, Laying on of ghands for the hgift of the Holy Ghost.."
+},
+ {
+"reference": "The Articles of Faith, CH 1:5"
+"article": "Fifth Article of Faith"
+"verse": "We believe that a man must be acalled of God, by bprophecy, and by the laying on of chands by those who are in dauthority, to epreach the Gospel and administer in the fordinances thereof."
+},
+ {
+"reference": "The Articles of Faith, CH 1:6"
+"article": "Sixth Article of Faith"
+verse: "We believe in the same aorganization that existed in the Primitive Church, namely, apostles, bprophets, cpastors, dteachers, eevangelists, and so forth."
+},
+ {
+"reference": "The Articles of Faith, CH 1:7"
+"article": "Seventh Article of Faith"
+"verse": "We believe in the agift of btongues, cprophecy, drevelation, evisions, fhealing, ginterpretation of tongues, and so forth."
+},
+ {
+"reference": "The Articles of Faith, CH 1:8"
+"article": "Eighth Article of Faith"
+"verse": "We believe the aBible to be the bword of God as far as it is translated ccorrectly; we also believe the dBook of Mormon to be the word of God."
+},
+ {
+"reference": "The Articles of Faith, CH 1:9"
+"article": "Ninth Article of Faith"
+"verse": "We believe all that God has revealed, all that He does now reveal, and we believe that He will yet reveal many great and important things pertaining to the Kingdom of God."
+},
+ {
+"reference": "The Articles of Faith, CH 1:10"
+"article": "Tenth Article of Faith"
+"verse": "We believe in the literal gathering of Israel and in the restoration of the Ten Tribes; that Zion (the New Jerusalem) will be built upon the American continent; that Christ will reign personally upon the earth; and, that the earth will be erenewed and receive its paradisiacal gglory."
+},
+ {
+"reference": "The Articles of Faith, CH 1:11"
+"article": "Eleventh Article of Faith"
+"verse": "We claim the privilege of worshiping Almighty God according to the dictates of our own cconscience, and allow all men the same privilege, let them worship how, where, or what they may."
+},
+ {
+"reference": "The Articles of Faith, CH 1:12"
+"article": "Twelth Article of Faith"
+"verse": "We believe in being subject to kings, presidents, rulers, and magistrates, in cobeying, honoring, and sustaining the law."
+},
+ {
+"reference": "The Articles of Faith, CH 1:13"
+"article": "Thirteenth Article of Faith"
+"verse": "13 We believe in being honest, true, chaste, benevolent, virtuous, and in doing egood to all men; indeed, we may say that we follow the admonition of Paul—We believe all things, we hope all things, we have endured many things, and hope to be able to gendure all things. If there is anything virtuous, lovely, or of good report or praiseworthy, we seek after these things."
+}
+]

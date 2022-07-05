@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/header-footer.css" />
+    <script type="module" src="../web-components/my-footer.js"></script>
+
+    <script>
+      let listEl;
+      let listItems = [];
+
+      function init() {
+        listEl = document.getElementById("itemList");
+        const storedList = localStorage.getItem("list");
+        if (storedList) {
+          listItems = JSON.parse(storedList);
+          loadList(listItems);
+        }
+      }
+
+      function loadList(list) {
+        list.forEach(function(item) {
+          const li = document.createElement("li");
+          li.id = item.id;
+          li.textContent = item.text;
+          li.addEventListener("click", remove);
+          listEl.appendChild(li);
+        });
+      }
+
+      function add(e) {
+        e.preventDefault();
+
+        const input = document.getElementById("itemText");
+        const item = input.value;
+        input.value = "";
+        const uid = Date.now();
+        listItems.push({ id: uid, text: item });
+        localStorage.setItem("list", JSON.stringify(listItems));
+
+        const li = document.createElement("li");
+        li.textContent = item;
+        li.id = uid;
+        li.addEventListener("click", remove);
+        listEl.appendChild(li);
+      }
+
+      function remove(e) {
+        listEl.removeChild(e.target);
+
+        for (let i = 0; i < listItems.length; i++) {
+          if (listItems[i].id == e.target.id) {
+            listItems.splice(i, 1);
+          }
+        }
+
+        localStorage.setItem("list", JSON.stringify(listItems));
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="hero">
+        <h1>Simple To Do List</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="img-wrapper">
+        <a href="../../index.html">
+          <img src="/assets/images/standing_on_chair.JPG" alt="" />
+        </a>
+      </div>
+
+      <main>
+        <form onsubmit="add(event)">
+          <input
+            id="itemText"
+            type="text"
+            placeholder="New item"
+            autocomplete="off"
+          />
+          <input type="submit" value="Add" />
+        </form>
+
+        <div>
+          <ul id="itemList"></ul>
+        </div>
+      </main>
+    </div>
+    <my-footer></my-footer>
+  </body>
+</html>
