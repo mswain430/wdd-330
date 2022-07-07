@@ -35,3 +35,31 @@ mainImg.onclick = () => {
     thumb.className = "thumb";
   }
 };
+
+let flowers = [];
+function showDetails(){
+
+ if (showDetails) {
+        h1.innerText = flower.type;
+        const desc = document.createElement('div');
+        desc.innerHTML = `<h2>Description</h2>
+                            ${flower.desc}`;
+
+        const loc = document.createElement('div');
+        loc.innerHTML = `<h2>Location</h2>
+                            ${flower.location}`;
+
+
+        div.appendChild(img);
+        div.appendChild(desc);
+        div.appendChild(loc);
+    } else {
+        const h2 = document.createElement('h2');
+        h2.innerText = flower.type;
+
+        div.appendChild(h2);
+        div.appendChild(img);
+    }
+
+    return div;
+  }

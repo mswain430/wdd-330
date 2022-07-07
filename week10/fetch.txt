@@ -1,6 +1,6 @@
 FETCH:
 
-The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses. 
+The Fetch API provides a javaScript interface for accessing and manipulating parts of the HTML pipeline such as requests and responses.
 
 The basic fetch requests looks like this:
 fetch('http://example.com/movies.json')
@@ -12,12 +12,12 @@ fetch has response and request methods.
 The promise resolves to Response. It only rejects when there is a network error.
 The then() handler checks the response.ok and/or response.status.
 
-The fetch() medthod utilizes the Window or workerglobalscope and is available. 
+The fetch() medthod utilizes the Window or workerglobalscope and is available.
 fetch(resource)
 fetch(resource, init)
 
 resource:
-Defines the resource you want to fetch. It can be either a string with a stringifier - including a URL object that provides the resource you want to fetch. 
+Defines the resource you want to fetch. It can be either a string with a stringifier - including a URL object that provides the resource you want to fetch.
 OR
 A Request object.
 
@@ -40,7 +40,7 @@ fetch(myRequest)
   });
 --------------------------
 
-FETCH WITH INIT: 
+FETCH WITH INIT:
 
 const myImage = document.querySelector('img');
 
@@ -62,14 +62,14 @@ fetch(myRequest, myInit)
   });
 
 ______________________________
-The request method uses either GET or POST. 
+The request method uses either GET or POST.
 Options for the body of the fetch include:
 Blob, arrayBuffer, typedArray, dataView, FormData, URLSearchParams or ReadableStream.
 
 Mode: cors, no-cors, or same-origin.
 
 
-Return value is a promise that resolves to a response object. 
+Return value is a promise that resolves to a response object.
 
 PROMISE:
 
@@ -169,3 +169,127 @@ The ok read-only property of the Response interface contains a Boolean stating w
     const myBlob = new Blob();
     const options = { status: 200, statusText: "SuperSmashingGreat!" };
     const myResponse = new Response(myBlob, options);
+
+
+MORE ABOUT FETCH
+Basic fetch:
+fetch('https://example.com/data')
+.then( // code that handles the response )
+.catch( // code that runs if the server returns an error )
+___________________________
+
+const url = 'https:example.com/data';
+
+fetch(url)
+.then((response) => {
+    if(response.ok) {
+        return response;
+    }
+    throw Error(response.statusText);
+})
+.then( response => // do something with response )
+.catch( error => console.log('There was an error!') )
+
+Redirectio method redirects to another URL. It creates a new promise that resolves to the response from the redirected URL
+
+fetch(url)
+.then( response => response.redirect(newURL)); // redirects to another URL
+.then( // do something else )
+.catch( error => console.log('There was an error: ', error))
+NOT SUPPORTED
+_______________________________
+
+The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript.
+
+fetch(url)
+.then( response => response.text() ); // transforms the text stream into a JavaScript string
+.then( text => console.log(text) )
+.catch( error => console.log('There was an error: ', error))
+
+________________________________
+
+In this example, once the promise has been resolved, we use the string() method to return a promise that resolves with a string representation of the text that was returned. In the next statement, we take the result of the promise and use console.log() to display the text in the console.
+
+fetch(url)
+.then( response => response.blob() ); // transforms the data into a blob object
+.then( blob => console.log(blob.type) )
+.catch( error => console.log('There was an error: ', error))
+__________________________________
+
+JSON Responses
+
+JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.
+
+fetch(url)
+.then( response => response.json() ); // transforms the JSON data into a JavaScript object
+.then( data => console.log(Object.entries(data)) )
+.catch( error => console.log('There was an error: ', error))
+___________________________________
+
+Creating response objects:
+
+const response = new Response( 'Hello!', {
+    ok: true,
+    status: 200,
+    statusText: 'OK',
+    type: 'cors',
+    url: '/api'
+});
+
+___________________________
+
+A constructor function is used to create a new Request object. An example is shown below:
+
+const request = new Request('https://example.com/data', {
+    method: 'GET',
+    mode: 'cors',
+    redirect: 'follow',
+    cache: 'no-cache'
+});
+fetch(request)
+.then( // do something with the response )
+.catch( // handle any errors)
+
+OR
+
+fetch('https://example.com/data', {
+    method: 'GET',
+    mode: 'cors',
+    redirect: 'follow',
+    cache: 'no-cache'
+})
+.then( // do something with the response )
+.catch( // handle any errors)
+___________________________________
+
+Header Interface
+HTTP headers are used to pass on any additional information about a request or response.
+
+const headers = new Headers();
+
+const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+
+headers.has('Content-Type');
+<< true
+
+headers.get('Content-Type');
+<< 'text/plain'
+
+__________________________________
+
+const url = 'https:example.com/data';
+const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+
+const request = (url,{
+    headers: headers
+})
+
+fetch(request)
+.then( function(response) {
+    if(response.ok) {
+        return response;
+    }
+    throw Error(response.statusText);
+})
+.then( response => // do something with response )
+.catch( error => console.log('There was an error!') )

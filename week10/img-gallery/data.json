@@ -1,0 +1,143 @@
+ [
+    {
+    "type": "Discover",
+    "img": "img/pic1.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic2.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+         {
+    "type": "Discover",
+    "img": "img/pic3.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic4.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+         {
+    "type": "Discover",
+    "img": "img/pic5.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic6.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic7.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic8.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic9.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic10.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic11.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic12.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic13.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic14.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     }
+,
+     {
+    "type": "Discover",
+    "img": "img/pic15.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic16.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic17.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic18.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     },
+     {
+    "type": "Discover",
+    "img": "img/pic19.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+    },
+    {
+    "type": "Discover",
+    "img": "img/pic20.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "range": "long-lat"
+     }
+]

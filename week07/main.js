@@ -1,4 +1,4 @@
-// for the todo.html file in Ajax chapter
+
 const form = document.forms['todo'];
 form.addEventListener('submit', addTask, false);
 
