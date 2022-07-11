@@ -16,7 +16,7 @@
     "droughtTolerent": "no"
      },
          {
-    "type": "Hydrangia",
+    "type": "Hydrangea",
     "img": "img/pic3.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -80,7 +80,7 @@
     "droughtTolerent": "yes"
      },
      {
-    "type": "Hydrangia",
+    "type": "Hydrangea",
     "img": "img/pic11.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -88,7 +88,7 @@
     "droughtTolerent": "no"
     },
     {
-    "type": "Hydrangia",
+    "type": "Hydrangea",
     "img": "img/pic12.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
