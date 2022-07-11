@@ -1,21 +1,6 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-//load the list
-// onclick handler for button // Add event listeners
-document.querySelector('#addBtn').onclick = addNewFlower;
-
-//get input
-const input = document.querySelector('#flowerInput');
-document.querySelector('#allFilter').onclick = applyFilter;
-document.querySelector('#activeFilter').onclick = applyFilter;
-document.querySelector('#completedFilter').onclick = applyFilter;
-
-//add on enter
-input.addEventListener('keypress', e => {
-    if(e.keyCode == '13') addNewFlower();
-});
-
 fetch('flowerquotes.json')
   .then(data => data.json())
   .then(flowerquotes => {
@@ -36,7 +21,30 @@ fetch('flowerquotes.json')
         document.querySelector('#article').innerText = inspiration.verse;
         document.querySelector('#verse').innerText = '~' + inspiration.reference;
 })*/
-loadFlowers();
+
+/*export default class flowersListing {
+  constructor(elementId) {
+    this.parentElement = document.getElementById(elementId);
+  }
+  // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. I can just change this method to the new source and everything will still work if I only access the data through this getter.
+ */
+ loadFlowers();
+  // onclick handler for button // Add event listeners
+  document.querySelector('#addBtn').onclick = addNewFlower;
+
+    //get input
+    const input = document.querySelector('#flowerInput');
+    document.querySelector('#allFilter').onclick = applyFilter;
+    document.querySelector('#activeFilter').onclick = applyFilter;
+    document.querySelector('#completedFilter').onclick = applyFilter;
+
+//add on enter
+input.addEventListener('keypress', e => {
+    if(e.keyCode == '13') addNewFlower();
+});
+
+
+
 
 function addNewFlower(e) {
     const flower = {id: Date.now(), content: input.value, completed: false};
