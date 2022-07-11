@@ -6,7 +6,7 @@ function getFlowerList() {
     let flowerList = [];
 
     if (flowerListString) {
-        flowerList = JSON.parse(todoListString);
+        flowerList = JSON.parse(flowerListString);
     }
     return flowerList;
 }
