@@ -4,3 +4,17 @@ week11/skilled-fluency.html
 week11/snake.html
 week11/apps.js
 week11/working-fluency.html
+quiz/package-lock.json
+quiz/package.json
+quiz/webpack.config.js
+quiz/Dist/index.html
+quiz/Dist/styles.css
+quiz/src/main.js
+quiz/src/quiz.js
+quiz/src/utilities.js
+quiz-Ninja/index.html
+quiz-Ninja/main_old.js
+quiz-Ninja/main.js
+quiz-Ninja/quiz.js
+quiz-Ninja/styles.css
+quiz-Ninja/utilities.js

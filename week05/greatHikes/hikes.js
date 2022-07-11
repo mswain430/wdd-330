@@ -36,8 +36,9 @@ const hikeList = [
   }
 ];
 
-const imgBasePath = "//byui-cit.github.io/cit261/examples/";
+const imgBasePath = "https://byui-cit.github.io/cit261/examples/";
 //on load grab the array and insert it into the page on load
+
 export default class Hikes {
   constructor(elementId) {
     this.parentElement = document.getElementById(elementId);
@@ -82,7 +83,7 @@ export default class Hikes {
   }
   buildBackButton() {
     const backButton = document.createElement('button');
-    backButton.innerHTML = '&lt;- All Hikes';
+    backButton.innerHTML = '&lt;&lt; All Hikes';
     backButton.addEventListener('touchend', () => {
       this.showHikeList();
     });
@@ -90,7 +91,20 @@ export default class Hikes {
     this.parentElement.before(backButton);
     return backButton;
   }
+
+  builddetailsButton() {
+    const detailsButton = document.createElement('button');
+    detailsButton.innerHTML = 'details Button';
+    detailsButton.addEventListener('touchend', () => {
+      this.renderOneHikeFull();
+    });
+    detailsButton.classList.add('detailsBtn');
+    this.parentElement.after(detailsButton);
+    return detailsButton;
+  }
 }
+
+
 // End of Hikes class
 // methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, they cannot be called outside the module...they become private.
 function renderHikeList(parent, hikes) {
@@ -102,6 +116,8 @@ function renderOneHikeLight(hike) {
   const item = document.createElement("li");
     item.classList.add('light');
   // setting this to make getting the details for a specific hike easier later.
+  //   this.detailsButton = this.detailsButton();
+  //  this.detailsButton.classList.add('detailsBtn');
     item.setAttribute('data-name', hike.name);
   item.innerHTML = ` <h2>${hike.name}</h2>
   <div class="image">
@@ -115,7 +131,8 @@ function renderOneHikeLight(hike) {
         <h3>Difficulty</h3>
         <p>${hike.difficulty}</p>
     </div>
-  </div>`;
+  </div>
+  `;
   return item;
 }
 function renderOneHikeFull(hike) {

@@ -6,7 +6,7 @@ import ls from './ls.js';
 
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewTodo;
-//document.querySelector('#completeBtn').onclick = completeTodo;
+
 //get input
 const input = document.querySelector('#todoInput');
 document.querySelector('#allFilter').onclick = applyFilter;
@@ -25,7 +25,7 @@ fetch("quotes.json")
         const inspiration = quotes[randomNum];
 
         document.querySelector('#quote').innerText = '"' + inspiration.quote + '"';
-        document.querySelector('#author').innerText = '~' + inspiration.author;
+        document.querySelector('#author').innerText = `~ ${inspiration.author}`;
 })
 
 fetch("articlesOfFaith.json")
@@ -34,7 +34,7 @@ fetch("articlesOfFaith.json")
         const randomNum = Math.floor(Math.random() * articlesOfFaith.length);
         const inspiration = articlesOfFaith[randomNum];
 
-        document.querySelector('#reference').innerText = '"' + inspiration.article + '"';
+        document.querySelector('#reference').innerText =  inspiration.article ;
         document.querySelector('#article').innerText = inspiration.verse;
         document.querySelector('#verse').innerText = '~' + inspiration.reference;
 })
