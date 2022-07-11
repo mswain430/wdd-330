@@ -44,7 +44,7 @@ function addNewFlower(e) {
     input.value = '';
 
     //add the Ul
-    const todoItem = createFlowerItem(flower);
+    const flowerItem = createFlowerItem(flower);
     //save to localStorage
     ls.saveFlower(flower);
     loadFlowers();
