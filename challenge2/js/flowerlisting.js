@@ -1,15 +1,15 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-fetch('flowerquotes.json')
+fetch("flowerquotes.json")
   .then(data => data.json())
   .then(flowerquotes => {
         const randomNum = Math.floor(Math.random() * flowerquotes.length);
         const inspiration = flowerquotes[randomNum];
 
         document.querySelector('#quote').innerText = '"' + inspiration.quote + '"';
-        document.querySelector('#author').innerText = `~ ${inspiration.author}`;
-})
+        document.querySelector('#author').innerText = '~' + inspiration.author;
+});
 
 /* fetch("articlesOfFaith.json")
   .then(data => data.json())
@@ -26,8 +26,7 @@ fetch('flowerquotes.json')
   constructor(elementId) {
     this.parentElement = document.getElementById(elementId);
   }
-  // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. I can just change this method to the new source and everything will still work if I only access the data through this getter.
- */
+   */
  loadFlowers();
   // onclick handler for button // Add event listeners
   document.querySelector('#addBtn').onclick = addNewFlower;
