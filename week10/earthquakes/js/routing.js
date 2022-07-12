@@ -4,17 +4,23 @@ const routes = [
     {
         controller: new QuakesController('#quakeList'),
         file: 'view/quakeList.html',
-        label: 'Local Quakes'
+        label: 'Local Quakes',
+        longitute: '',
+        latitude: ''
     },
     {
         controller: new QuakesController('#quakeList'),
         file: 'view/quakeList.html',
-        label: 'Yellowstone Quakes'
+        label: 'Yellowstone Quakes',
+        longitude: '37.8651° N',
+        latitude: '119.5383° W'
     },
     {
         controller: new QuakesController('#quakeList'),
         file: 'view/quakeList.html',
-        label: 'San Diego Quakes'
+        label: 'San Diego Quakes',
+        longitute: '32.7157° N',
+        latitude: '117.1611° W'
     }
 ];
 
