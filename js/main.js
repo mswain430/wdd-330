@@ -47,6 +47,14 @@ const links = [
     label: "Week12 notes",
     url: "week12/index.html",
 },
+{
+    label: "Challenge 1 - Todo",
+    url: "week05/todo/index.html",
+},
+{
+    label: "Challenge 2 - App",
+    url: "challenge2/gardenApp.html",
+},
 
 ]
 

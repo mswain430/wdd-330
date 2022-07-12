@@ -11,18 +11,8 @@ fetch("flowerquotes.json")
         document.querySelector('#author').innerText = '~' + inspiration.author;
 });
 
-/* fetch("articlesOfFaith.json")
-  .then(data => data.json())
-  .then(articlesOfFaith => {
-        const randomNum = Math.floor(Math.random() * articlesOfFaith.length);
-        const inspiration = articlesOfFaith[randomNum];
 
-        document.querySelector('#reference').innerText =  inspiration.article ;
-        document.querySelector('#article').innerText = inspiration.verse;
-        document.querySelector('#verse').innerText = '~' + inspiration.reference;
-})*/
-
-/*export default class flowersListing {
+/*export default class Flowers {
   constructor(elementId) {
     this.parentElement = document.getElementById(elementId);
   }
@@ -41,9 +31,6 @@ fetch("flowerquotes.json")
 input.addEventListener('keypress', e => {
     if(e.keyCode == '13') addNewFlower();
 });
-
-
-
 
 function addNewFlower(e) {
     const flower = {id: Date.now(), content: input.value, completed: false};
