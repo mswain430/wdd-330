@@ -30,7 +30,7 @@
     <div class="details">more here</div>
     <div>
       <form id="preferences">
-      <label for="flowers">Tell us your flower preverence</label>
+      <label for="flowers">Flower preverences</label>
       <br>
         <select id="flowers" name="flowers" width="200">
          <option value="#">-----</option>
@@ -41,14 +41,15 @@
           <option value="rose">Roses</option>
          <option value="succulent">Succulents</option>
        </select>
-       <br>
+       <br><br>
        <button id="preference">Name your Preference</button>
+       <div class="preference"></div>
     </form>
     <div>&nbsp;</div>
     <div class="container">
-       <h3 class="moreflowers">What other flowers would you like to see? Please list them here:</h3>
+       <h3 class="mflowers">What other flowers would you like to see? Please list them here:</h3>
           <div class="flowers-wrapper">
-            <div id="flowers">
+            <div id="listing">
                </div>
             </div>
             <div class="flower-filters">
@@ -57,7 +58,7 @@
                   <button id="completedFilter" >Completed</button>
                </div>
             <div class="add-flower-wrapper">
-               <input id="flowerInput" type="text" max-width="250">
+               <input id="listInput" type="text" max-width="250">
                 <button id="addBtn">Add</button>
            </div>
     </div>

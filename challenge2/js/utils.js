@@ -1,11 +1,11 @@
-function activeFilter(flowers) {
-    return flowers.filter(flower => {
-        return !flower.completed
+function activeFilter(listing) {
+    return listing.filter(listing => {
+        return !listing.completed
     });
 }
-function completedFilter(flowers){
-    return flowers.filter(flower => {
-        return flower.completed
+function completedFilter(listing){
+    return listing.filter(listing => {
+        return listing.completed
     });
 }
 export default {

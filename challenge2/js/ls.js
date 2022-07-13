@@ -1,48 +1,48 @@
-const FLOWER_LIST = "flowerList";
+const SUGGESTION_LIST = "SuggestionList";
 // show a list of tasks
-function getFlowerList() {
-    let flowerListString = localStorage.getItem(FLOWER_LIST);
+function getSuggestionList() {
+    let suggestionListString = localStorage.getItem(SUGGESTION_LIST);
 
-    let flowerList = [];
+    let suggestionList = [];
 
-    if (flowerListString) {
-        flowerList = JSON.parse(flowerListString);
+    if (suggestionListString) {
+        suggestionList = JSON.parse(suggestionListString);
     }
-    return flowerList;
+    return suggestionList;
 }
 
-function saveFlower(flower) {
-    let flowerList = getFlowerList();
+function saveList(flower) {
+    let suggestionList = getSuggestionList();
 
-    flowerList.push(flower);
+    suggestionList.push(list);
 
-    localStorage.setItem(FLOWER_LIST, JSON.stringify(flowerList));
+    localStorage.setItem(SUGGESTION_LIST, JSON.stringify(suggestionList));
 }
 
-function deleteFlower(id) {
-    const flowerList = getFlowerList();
+function deleteList(id) {
+    const suggestionList = getSuggestionList();
 
-    let updatedList = flowerList.filter(flower => flower.id != id);
+    let updatedList = suggestionList.filter(listing => suggestionListString.id != id);
 
-    localStorage.setItem(FLOWER_LIST, JSON.stringify(updatedList));
+    localStorage.setItem(SUGGESTION_LIST, JSON.stringify(updatedList));
 }
 
 function toggle(id) {
-    const flowerList = getFlowerList();
+    const suggestionList = getSuggestionList();
 
-    let updatedList = flowerList.map(flower => {
-        if (flower.id == id){
-           flower.completed = !flower.completed;
+    let updatedList = suggestionList.map(listing => {
+        if (listing.id == id){
+           listing.completed = !listing.completed;
         }
-        return flower;
+        return listing;
     });
 
 
-    localStorage.setItem(FLOWER_LIST, JSON.stringify(updatedList));
+    localStorage.setItem(SUGGESTION_LIST, JSON.stringify(updatedList));
 }
 export default {
-    saveFlower,
-    deleteFlower,
-    getFlowerList,
+    saveList,
+    deleteList,
+    getSuggestionList,
     toggle
 }

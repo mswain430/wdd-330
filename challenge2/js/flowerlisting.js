@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-fetch("flowerquotes.json")
+fetch('flowerquotes.json')
   .then(data => data.json())
   .then(flowerquotes => {
         const randomNum = Math.floor(Math.random() * flowerquotes.length);
@@ -17,120 +17,119 @@ fetch("flowerquotes.json")
     this.parentElement = document.getElementById(elementId);
   }
    */
- loadFlowers();
+ loadListing();
   // onclick handler for button // Add event listeners
-  document.querySelector('#addBtn').onclick = addNewFlower;
+  document.querySelector('#addBtn').onclick = addNewListing;
 
     //get input
-    const input = document.querySelector('#flowerInput');
+    const input = document.querySelector('#listInput');
     document.querySelector('#allFilter').onclick = applyFilter;
     document.querySelector('#activeFilter').onclick = applyFilter;
     document.querySelector('#completedFilter').onclick = applyFilter;
 
 //add on enter
 input.addEventListener('keypress', e => {
-    if(e.keyCode == '13') addNewFlower();
+    if(e.keyCode == '13') addNewListing();
 });
 
-function addNewFlower(e) {
-    const flower = {id: Date.now(), content: input.value, completed: false};
+function addNewListing(e) {
+    const listing = {id: Date.now(), content: input.value, completed: false};
     //reset the input field
     input.value = '';
 
     //add the Ul
-    const flowerItem = createFlowerItem(flower);
+    const listItem = createListItem(listing);
     //save to localStorage
-    ls.saveFlower(flower);
-    loadFlowers();
+    ls.saveList(listing);
+    loadListing();
 }
 // step 2
-function createFlowerItem(flower) {
-    //flower div
-    const flowerDiv = document.createElement('div');
-    flowerDiv.classList.add('flower');
+function createListItem(listing) {
+    //list div
+    const listDiv = document.createElement('div');
+    listDiv.classList.add('listing');
 
     //completeBtn
     const completeBtn = document.createElement('button')
     completeBtn.innerHTML = `✓`
-    completeBtn.setAttribute('data-id', flower.id);
+    completeBtn.setAttribute('data-id', listing.id);
     completeBtn.classList.add('complete-btn')
 
-    completeBtn.onclick = completeFlower;
+    completeBtn.onclick = completeList;
 
     //flower content
-    const flowerContent = document.createElement('div');
-    flowerContent.innerText = flower.content
-    flowerContent.classList.add('flower-content');
+    const listContent = document.createElement('div');
+    listContent.innerText = listing.content
+    listContent.classList.add('list-content');
 
-    if (flower.completed){
-     flowerContent.classList.add('completed');
+    if (listing.completed){
+     listContent.classList.add('completed');
     }
 
     //deletebtn
     const  deleteBtn = document.createElement('button');
-    deleteBtn.setAttribute('data-id', flower.id);
-    deleteBtn.classList.add('flower-delete-btn');
+    deleteBtn.setAttribute('data-id', listing.id);
+    deleteBtn.classList.add('list-delete-btn');
     deleteBtn.innerText = "X";
-    deleteBtn.onclick = deleteFlower;
+    deleteBtn.onclick = deleteList;
 
     flowerDiv.appendChild(completeBtn);
-    flowerDiv.appendChild(flowerContent);
+    flowerDiv.appendChild(listContent);
     flowerDiv.appendChild(deleteBtn);
 
-    return flowerDiv;
+    return listDiv;
 }
 
 // step 4
-function addToList(flowerDiv) {
+function addToList(listDiv) {
     //add to the document
-    document.querySelector('#flowers').appendChild(flowerDiv);
+    document.querySelector('#list').appendChild(listDiv);
 }
 
-function loadFlowers() {
-    document.querySelector('#flowers').innerHTML = '';
-    const flowerList = ls.getFlowerList();
-    //debugging
-    console.log(flowerList);
+function loadListing() {
+    document.querySelector('#list').innerHTML = '';
+    const suggestionList = ls.getSuggestionList();
+    console.log(suggestionList);
 
-    flowerList.forEach(flower => {
-        const el = createFlowerItem(flower);
+    suggestionList.forEach(listing => {
+        const el = createListItem(listing);
         addToList(el);
     });
 }
 
 //Events
-function deleteFlower(e) {
+function deleteList(e) {
     const btn = e.currentTarget;
-    ls.deleteFlower(btn.getAttribute('data-id'));
-    document.querySelector('#flowers').innerHTML = '';
-    loadFlowers();
+    ls.deleteList(btn.getAttribute('data-id'));
+    document.querySelector('#listing').innerHTML = '';
+    loadListing();
 }
-function completeFlower(e) {
+function completeList(e) {
     const btn = e.currentTarget;
     ls.toggle(btn.getAttribute('data-id'));
-    document.querySelector('#flowers').innerHTML = '';
-    loadFlowers();
+    document.querySelector('#listing').innerHTML = '';
+    loadListing();
 }
 
 function applyFilter(e){
     //clear the list
-    document.querySelector('#flowers').innerHTML = '';
+    document.querySelector('#listing').innerHTML = '';
 
     // declare the variables
-    let filteredFlowers = [];
-    const allFlowers = ls.getFlowerList();
+    let filteredListing = [];
+    const allListing = ls.getSuggestionList();
 
     //check which filter to apply
     if(e.currentTarget.id == 'activeFilter') {
-        filteredFlowers = utils.activeFilter(allFlowers)
+        filteredListing = utils.activeFilter(allListing)
     } else if (e.currentTarget.id == 'allFilter'){
-        filteredTodosFlowers = allFlowers;
+        filteredListing = allListing;
     } else if (e.currentTarget.id == 'completedFilter'){
-        filteredFlowers = utils.completedFilter(allFlowers)
+        filteredListing = utils.completedFilter(allListing)
     }
     //draw the list
-    filteredFlowers.forEach(flower => {
-        const el = createFlowerItem(flower)
+    filteredListing.forEach(listing => {
+        const el = createListItem(listing)
         addToList(el)
     });
 }
