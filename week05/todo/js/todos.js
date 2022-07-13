@@ -108,7 +108,6 @@ function loadTodos() {
 
 //Events
 function deleteTodo(e) {
-   // const  deleteBtn = document.createElement('button');
     const btn = e.currentTarget;
     ls.deleteTodo(btn.getAttribute('data-id'));
     document.querySelector('#todos').innerHTML = '';
