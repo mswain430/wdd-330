@@ -1,11 +1,11 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-fetch('flowerquotes.json')
+fetch('quotes.json')
   .then(data => data.json())
-  .then(flowerquotes => {
-        const randomNum = Math.floor(Math.random() * flowerquotes.length);
-        const inspiration = flowerquotes[randomNum];
+  .then(quotes => {
+        const randomNum = Math.floor(Math.random() * quotes.length);
+        const inspiration = quotes[randomNum];
 
         document.querySelector('#quote').innerText = '"' + inspiration.quote + '"';
         document.querySelector('#author').innerText = '~' + inspiration.author;
