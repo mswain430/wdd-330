@@ -75,7 +75,7 @@ function createTodoItem(todo) {
     }
 
     //deletebtn
-    const  deleteBtn = document.createElement('button');
+    const deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('data-id', todo.id);
     deleteBtn.classList.add('todo-delete-btn');
     deleteBtn.innerText = "X";
