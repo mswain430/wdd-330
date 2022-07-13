@@ -1,6 +1,6 @@
 import utils from './utils.js';
 import ls from './ls.js';
-const quoteURL = 'https://wdd330/challenge2/js/quotes.json';
+const quoteURL = 'https://github.com/wdd330/challenge2/js/quotes.json';
 fetch('quoteURL')
   .then(data => data.json())
   .then(quotes => {
