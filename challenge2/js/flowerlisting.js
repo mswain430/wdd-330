@@ -133,3 +133,75 @@ function applyFilter(e){
         addToList(el)
     });
 }
+
+window.addEventListener('load', loadData);
+
+function loadData() {
+    // when coming from details
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    app.scrollTo(0,0);
+    document.querySelector('#pageTitle').innerText = "flowers & friends";
+
+    // hide back button
+    document.querySelector('#backButton').hidden = true;
+
+    flowerdataData.forEach( (flower, i) => {
+        const flowerNode = createFlowerNode(flower, i);
+        flowerNode.addEventListener('click', viewFlower);
+
+        app.appendChild(flowerNode);
+    })
+}
+
+function createFlowerNode(flower, i, showDetails = false) {
+    const div = document.createElement('div');
+    const h1 = document.getElementById('pageTitle');
+    const img = document.createElement('img');
+
+    div.classList.add('flower');
+    div.id = i;
+    img.src = flowers.img;
+
+
+    if (showDetails) {
+        h1.innerText = flower.type;
+        const desc = document.createElement('div');
+        desc.innerHTML = `<h2>Description</h2>
+                            ${flowers.desc}`;
+
+        const loc = document.createElement('div');
+        loc.innerHTML = `<h2>location</h2>
+                            ${flowers.location}`;
+
+
+        div.appendChild(img);
+        div.appendChild(desc);
+        div.appendChild(loc);
+    } else {
+        const h2 = document.createElement('h2');
+        h2.innerText = flowers.type;
+
+        div.appendChild(h2);
+        div.appendChild(img);
+    }
+
+    return div;
+}
+
+function viewFlower(event) {
+    // Clear the screen and scroll to the top
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    app.scrollTo(0, 0);
+
+    // Pull id out of the event
+    const id = event.currentTarget.id;
+
+    // Get Flower node
+    const flowerDetails = createFlowerNode(flowerData[id], id, true);
+    app.appendChild(flowerDetails);
+
+    // Show back button
+    document.querySelector('#backButton').hidden = false;
+}
