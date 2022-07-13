@@ -131,6 +131,7 @@ function renderOneHikeLight(hike) {
         <h3>Difficulty</h3>
         <p>${hike.difficulty}</p>
     </div>
+
   </div>
   `;
   return item;

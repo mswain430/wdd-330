@@ -1,7 +1,8 @@
-body {font-family: 'Roboto', sans-serif;font-size: 1rem;background-color:rgb(225, 229, 250);margin: 0;padding: 0}
+body {font-family: 'Roboto', sans-serif;font-size: 1rem;background-color:aliceblue;margin: 0;padding: 0}
 header {background-color:rgb(29, 107, 223); border-radius: 0px; width: 100%;text-align:center;margin: -10px auto 0 auto;padding: 0 }
 main {margin: auto;margin-top: 20px;border:2px solid #fbfafa;padding: auto 20px;}
-main .maingrid{ display: grid; grid-template-columns: 1fr;grid-template-rows: 1fr 1fr 1fr ;justify-content: center;text-align: center;margin:auto; padding: 20px}
+main .maingrid{ display: grid; grid-template-columns: 1fr;grid-template-rows: 1fr 1fr 1fr ;justify-content: center;text-align: center;margin:auto; }
+.container {padding: 20px}
 .listing {padding:20px}
 header h1, header h2 {color: aliceblue;padding: 5px;max-width: fit-content;font-family: 'Bitter', serif;margin:10px auto; text-align: center}
 h2, h3 {font-family: 'Bitter', serif;}

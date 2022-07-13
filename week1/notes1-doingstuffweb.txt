@@ -1,0 +1,54 @@
+Think, Design, Test
+
+function functionName(whatgoesin){then do this}
+
+document.getElementById() or document.querySelector()
+
+When to use value, when to use innerHTML
+
+Key Value Pairs - local storage
+
+The standard for loop parts when working with an array:
+1. the 'for' keyword
+2. a variable to keep track of the location you are at in the array
+3. a check to see if the loop should continue
+4. an update that increases the location tracking variable by one
+5. the lines of code to execute every time you go around the loop
+(1)for ((2)const i = 0; (3)i < 7; (4)i++){(5)Do this}
+
+Associative Array:
+let aName = {
+attributeType: attributeName,
+attributeType: attributeName
+}
+example: "name":"millie",
+"age": "34",
+"hair_color": "brown"
+Key-value pairs
+
+EXAMPLE:
+Odd_even loop
+
+   function checkNumber(){
+         let numberAsText = document.getElementById("number_input").value;
+         let aNumber = parseInt(numberAsText);
+         if (numberAsText != '' && !isNaN(aNumber)){
+            let remainder = aNumber % 2;
+            if(aNumber != 0 && remainder == 0){
+                document.getElementById("result_display").innerHTML =
+                    aNumber + " is even.";
+            }
+            else if(aNumber != 0 && remainder >= 1){
+                document.getElementById('result_display').innerHTML =
+                aNumber + " is odd.";
+            }
+            else{
+                document.getElementById('result_display').innerHTML =
+                `0 is neither even nor odd.`;
+                }
+        }
+       else{
+         document.getElementById('result_display').innerHTML =
+         `Please enter a number.`
+         }
+       }
