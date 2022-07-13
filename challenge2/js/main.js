@@ -1,7 +1,7 @@
 
 fetch('quotes.json')
   .then(data => data.json())
-  .then(flowerquotes => {
+  .then(quotes => {
     const randomNum = Math.floor(Math.random() * quotes.length);
     const inspiration = quotes[randomNum];
 
