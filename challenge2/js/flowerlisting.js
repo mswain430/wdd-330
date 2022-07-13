@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
-
-fetch('quotes.json')
+const quoteURL = 'https://wdd330/challenge2/js/quotes.json';
+fetch('quoteURL')
   .then(data => data.json())
   .then(quotes => {
         const randomNum = Math.floor(Math.random() * quotes.length);
