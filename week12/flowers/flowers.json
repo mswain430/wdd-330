@@ -1,0 +1,222 @@
+ [
+    {
+     "flowerName": "Geranium",
+    "type": "Geranium",
+    "img": "img/pic1.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "year around",
+    "exposure": "full sun"
+    },
+    {
+    "flowerName": "Patunia",
+    "type": "Patunia",
+    "img": "img/pic2.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Springtime after frost",
+    "exposure": "full sun"
+     },
+     {
+    "flowerName": "Hydrangea",
+    "type": "Hydrangea",
+    "img": "img/pic3.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Springtime after frost",
+    "exposure": "partial shade"
+    },
+    {
+     "flowerName": "Iceplant",
+    "type": "Iceplant",
+    "img": "img/pic4.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "late winter, early spring",
+    "exposure": "full sun"
+     },
+     {
+    "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic5.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "dorment during winter",
+    "exposure": "full sun"
+    },
+    {
+     "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic6.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "dorment during winter",
+    "exposure": "full sun"
+     },
+     {
+    "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic7.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "dorment during winter",
+    "exposure": "full sun"
+    },
+    {
+    "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic8.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "dorment during winter",
+    "exposure": "full sun"
+     },
+     {
+     "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic9.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "dorment during winter",
+    "exposure": "full sun"
+    },
+    {
+     "flowerName": "African Daisy",
+    "type": "African Daisy",
+    "img": "img/pic10.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "Early Spring",
+    "exposure": "full sun"
+     },
+     {
+     "flowerName": "Hydrangea",
+    "type": "Hydrangea",
+    "img": "img/pic11.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Springtime",
+    "exposure": "full sun"
+    },
+    {
+    "flowerName": "Hydrangea",
+    "type": "Hydrangea",
+    "img": "img/pic12.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Springtime",
+    "exposure": "full sun"
+     },
+     {
+     "flowerName": "Begonia",
+    "type": "Begonia",
+    "img": "img/pic13.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "avoid freezing temps",
+    "exposure": "full sun/partial shade"
+    },
+    {
+      "flowerName": "African Daisy",
+    "type": "African Daisy",
+    "img": "img/pic14.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "Early Spring",
+    "exposure": "full sun"
+     },
+     {
+     "flowerName": "Snap Dragon",
+    "type": "Snap Dragon",
+    "img": "img/pic15.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Springtime",
+    "exposure": "full sun"
+    },
+    {
+    "flowerName": "Rose",
+    "type": "Rose",
+    "img": "img/pic16.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "no",
+    "bloomTime": "Dorment during winter",
+    "exposure": "full sun"
+     },
+     {
+     "flowerName": "Succulent",
+    "type": "Succulent",
+    "img": "img/pic17.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "year around",
+    "exposure": "full sun/partial shade"
+    },
+    {
+    "flowerName": "Geranium",
+    "type": "Geranium",
+    "img": "img/pic18.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "year around",
+    "exposure": "full sun"
+     },
+     {
+    "flowerName": "Iceplant",
+    "type": "Iceplant",
+    "img": "img/pic19.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "Early Spring",
+    "exposure": "full sun"
+    },
+    {
+    "flowerName": "African Daisy",
+    "type": "African Daisy",
+    "img": "img/pic20.jpg",
+    "desc": "Description here",
+    "location": "San Diego, California",
+    "zone": "long-lat",
+    "droughtTolerent": "yes",
+    "bloomTime": "Early Spring",
+    "exposure": "full sun"
+     }
+]
