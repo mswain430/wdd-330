@@ -1,5 +1,20 @@
 import utils from './utils.js';
 import ls from './ls.js';
+
+// menu system responsive
+const hambutton = document.querySelector('.hamburger');
+const mainnav = document.querySelector('.navigation');
+
+hambutton.addEventListener('click', () => {
+  mainnav.classList.toggle('responsive')},
+  false);
+
+// mid resizing issue
+window.oneresize = () => { if(window.innerWidth > 760)
+{ mainnav.classList.remove('responsive')}};
+
+// end menu system responsive
+
 const quoteURL = 'https://github.com/wdd330/challenge2/js/quotes.json';
 fetch('quoteURL')
   .then(data => data.json())
