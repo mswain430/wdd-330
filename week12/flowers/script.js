@@ -48,6 +48,7 @@ const output = (flowers) => {
           article.appendChild(zone);
           article.appendChild(exposure);
           article.appendChild(bloomTime);
+          article.appendChild(facts);
           facts.appendChild(document.createTextNode( "facts"));
           //article.appendChild(map);
           //map.appendChild(document.createTextNode( "map"));
@@ -57,10 +58,10 @@ const output = (flowers) => {
         }
     );
  }
- //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
+ //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowerList.json"
 
 
-const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
+const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowerList.json"
 fetch (url)
 .then(response => response.json())
 .then(flowers => {
