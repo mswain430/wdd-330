@@ -1,3 +1,18 @@
+
+// menu system responsive
+const hambutton = document.querySelector('.hamburger');
+const mainnav = document.querySelector('.navigation');
+
+hambutton.addEventListener('click', () => {
+  mainnav.classList.toggle('responsive')},
+  false);
+
+// mid resizing issue
+window.oneresize = () => { if(window.innerWidth > 760)
+{ mainnav.classList.remove('responsive')}};
+
+// end menu system responsive
+
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of flowers
 let flowersList = [];
