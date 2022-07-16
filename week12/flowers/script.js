@@ -13,7 +13,10 @@ const output = (flowers) => {
           img.setAttribute('class', 'img img-responsive');
           img.setAttribute('loading', 'lazy');
 
-          let type = document.createElement('h4');
+          let flowerName = document.createElement('h4');
+          flowerName.textContent = flower.flowerName;
+
+          let type = document.createElement('p');
           type.textContent = flower.type;
 
           let desc = document.createElement('p');
