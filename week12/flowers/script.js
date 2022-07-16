@@ -35,7 +35,7 @@ const output = (flowers) => {
           bloomTime.textContent = 'Bloom Time: ' + flower.bloomTime;
 
           let facts = document.createElement('a');
-          facts.setAttribute('href', flower.facts);
+          facts.setAttribute('href', `https://en.wikipedia.org/wiki/${flowers.flowerName}`);
           facts.setAttribute('target', '_blank');
 
           let para = document.createElement('p')
@@ -57,39 +57,17 @@ const output = (flowers) => {
         }
     );
  }
- const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
- function getJSON(url) {
-    return fetch(url)
-    .then(function(response){
-        if (!response.ok) {
-            throw Error(response.statusText);
-        } else {
-            return response.json();
-        }
-    })
-    .catch(function(error){
-       console.log(error);
-    });
-}
+ //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
 
-function getJSON(url){
-    const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
-    fetch (url)
-    .then(function(response){
-    if (!response.ok) {
-        throw Error(response.statusText);
-    } else {
-        return response.json();
-    }
-    })
-    .then(flowers => {
-        flowerList = flowers;
-        output(flowerList);
-    })
-    .catch(function(error){
-       console.log(error);
-    });
-}
+
+const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowers.json"
+fetch (url)
+.then(response => response.json())
+.then(flowers => {
+    flowerList = flowers;
+    output(flowerList);
+})
+
 
 const reset = () => {
     document.querySelector('#flowers').innerHTML = '';
