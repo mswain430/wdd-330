@@ -22,8 +22,8 @@ const output = (flowers) => {
           let location = document.createElement('p');
           location.textContent = 'Location: ' + flower.location;
 
-          let zone = document.createElement('p');
-          zone.textContent = 'Zone: ' + flower.zone;
+          //let zone = document.createElement('p');
+          //zone.textContent = 'Zone: ' + flower.zone;
 
           let droughtTolerant = document.createElement('p');
           droughtTolerant.textContent = 'Drought Tolerant: ' + flower.droughtTolerant;
@@ -45,7 +45,7 @@ const output = (flowers) => {
           article.appendChild(type);
           article.appendChild(desc);
           article.appendChild(location);
-          article.appendChild(zone);
+          //article.appendChild(zone);
           article.appendChild(exposure);
           article.appendChild(bloomTime);
           article.appendChild(facts);
