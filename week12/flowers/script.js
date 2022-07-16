@@ -1,6 +1,6 @@
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of flowers
-let flowerList = [];
+let flowersList = [];
 
 const output = (flowers) => {
     flowers.forEach(
@@ -58,15 +58,15 @@ const output = (flowers) => {
         }
     );
  }
- //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowerList.json"
+ //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
 
 
-const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowerList.json"
+const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
 fetch (url)
 .then(response => response.json())
 .then(flowers => {
-    flowerList = flowers;
-    output(flowerList);
+    flowersList = flowers;
+    output(flowersList);
 })
 
 
@@ -81,7 +81,7 @@ const sortBy = () => {
 
     switch(filter) {
         case 'flowerNameAscending':
-            output(flowerList.sort(
+            output(flowersList.sort(
                 (flower1, flower2) => {
                     let flowerName1 = flower1.flowerName.toLowerCase();
                     let flowerName2 = flower2.flowerName.toLowerCase();
@@ -91,7 +91,7 @@ const sortBy = () => {
                 }));
             break;
         case 'flowerNameDescending':
-            output(flowerList.sort(
+            output(flowersList.sort(
                 (flower1, flower2) => {
                     let flowerName1 = flower1.flowerName.toLowerCase();
                     let flowerName2 = flower2.flowerName.toLowerCase();
@@ -101,7 +101,7 @@ const sortBy = () => {
                 }));
             break;
         default:
-            output(flowerList.sort(
+            output(flowersList.sort(
               (flower1, flower2) =>
               flower1.flowerName.toLowerCase() > flower2.flowerName.toLowerCase() ? 1 :
               flower2.flowerName.toLowerCase() > flower1.flowerName.toLowerCase() ? -1 : 0));
