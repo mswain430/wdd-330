@@ -9,7 +9,7 @@ const output = (flowers) => {
 
           let img = document.createElement('img');
           img.setAttribute('src', flower.img);
-          img.setAttribute('alt', flower.flowerType);
+          img.setAttribute('alt', flower.flowerName);
           img.setAttribute('class', 'img img-responsive');
           img.setAttribute('loading', 'lazy');
 
