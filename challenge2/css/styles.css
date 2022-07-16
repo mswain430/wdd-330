@@ -29,3 +29,109 @@ h4 {
 form #preferences {
   width: 250px;
 }
+header{
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+   max-width: 100%;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  letter-spacing: 1.2pt;
+}
+
+.logo img {
+  margin: 0 .25rem 0 1rem;
+  width: 64px;
+  height: auto;
+}
+.hamburger {
+  text-decoration: none;
+  font-size: 1.5rem
+}
+
+nav {
+  margin: 0 2rem;
+  flex: 1 1 25%;
+  position: relative;
+  text-align: right;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  overflow: hidden;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+  color: navy;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: tomato;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.navigation a.nohover:hover {
+  text-decoration: none;
+}
+
+.responsive li {
+  display: block;
+  width: 150px;
+}
+
+.responsive a {
+  font-size: 1.3rem
+}
+
+.responsive {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: tomato;
+  box-shadow: 0 0 15px #333;
+}
+
+.responsive a, .responsive a:visited {
+  color: white;
+}
+
+@media only screen and (min-width: 760px) {
+
+.hamburger {
+    display: none;
+}
+
+.navigation {
+  display: flex
+}
+
+.navigation li {
+  display: block;
+  flex: 1 1 100%;
+}
+
+.navigation a {
+  text-align: center;
+}
+
+.navigation li:first-child {
+  display:none;
+}
+}
