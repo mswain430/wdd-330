@@ -11,10 +11,10 @@
 #flowers article  {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 3.2em 2.8em 1.8em 2.5em 1.5em 1.5em 1.5em 1.5em;
+    grid-template-rows: auto;
 
     border: 1px solid rgb(241, 239, 239);
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 8px 8px;
     padding: 5px;
 
 }
@@ -35,7 +35,7 @@ article h4 {font-weight: bold}
 
     #flowers {
         display:grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         margin: 5px;
     }
 }
@@ -43,7 +43,7 @@ article h4 {font-weight: bold}
 
 @media only screen and (min-width: 38em) {
     #flowers {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media only screen and (min-width: 64em) {
@@ -53,7 +53,7 @@ article h4 {font-weight: bold}
 }
 @media only screen and (min-width: 72em) {
     #flowers {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 </style>
