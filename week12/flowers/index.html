@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -18,14 +19,20 @@
         <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
         <ul class="navigation">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a class="nohover" href="#">search icon </a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="nohover" href="#"><span class="material-symbols-outlined">
+search
+</span></a></li>
         </ul>
     </nav>
   </header>
  <main>
      <h1 style="text-align: center;">Flower Gardens of Poway</h1>
+    <div id="flowerquote">
+         <p> <em id="quote"> </em><small id="author"></small>
+        </p>
+    </div>
+
     <p style="text-align: center;">Sort by: <select id="sortBy"><option value="none">---</option><option value="flowerNameAscending">Flower Name Ascending</option><option value="flowerNameDescending">Flower Name Descending</option> </select></p>
     <hr />
 <div id="flowers"></div>

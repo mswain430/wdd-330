@@ -1,8 +1,8 @@
  [
     {
     "flowerName": "Geranium",
-    "type": "Geranium",
-    "img": "img/pic1.jpg",
+    "family": "Geranium",
+    "img": "img/pic1.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -12,8 +12,8 @@
     },
     {
     "flowerName": "Patunia",
-    "type": "Patunia",
-    "img": "img/pic2.jpg",
+    "family": "Patunia",
+    "img": "img/pic2.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -23,8 +23,8 @@
      },
      {
     "flowerName": "Hydrangea",
-    "type": "Hydrangea",
-    "img": "img/pic3.jpg",
+    "family": "Hydrangea",
+    "img": "img/pic3.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -34,8 +34,8 @@
     },
     {
      "flowerName": "Iceplant",
-    "type": "Iceplant",
-    "img": "img/pic4.jpg",
+    "family": "Iceplant",
+    "img": "img/pic4.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -45,8 +45,8 @@
      },
      {
     "flowerName": "Rose",
-    "type": "Rose",
-    "img": "img/pic5.jpg",
+    "family": "Rose",
+    "img": "img/pic5.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -56,8 +56,8 @@
     },
     {
      "flowerName": "Rose",
-    "type": "Rose",
-    "img": "img/pic6.jpg",
+    "family": "Rose",
+    "img": "img/pic6.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -67,8 +67,8 @@
      },
      {
     "flowerName": "Rose",
-    "type": "Rose",
-    "img": "img/pic7.jpg",
+    "family": "Rose",
+    "img": "img/pic7.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -78,8 +78,8 @@
     },
     {
     "flowerName": "Rose",
-    "type": "Rose",
-    "img": "img/pic8.jpg",
+    "family": "Rose",
+    "img": "img/pic8.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -89,8 +89,8 @@
      },
      {
      "flowerName": "Rose",
-    "type": "Rose",
-    "img": "img/pic9.jpg",
+    "family": "Rose",
+    "img": "img/pic9.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -100,8 +100,8 @@
     },
     {
      "flowerName": "African Daisy",
-    "type": "African Daisy",
-    "img": "img/pic10.jpg",
+    "family": "African Daisy",
+    "img": "img/pic10.webp",
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -111,7 +111,7 @@
      },
      {
      "flowerName": "Hydrangea",
-    "type": "Hydrangea",
+    "family": "Hydrangea",
     "img": "img/pic11.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -122,7 +122,7 @@
     },
     {
     "flowerName": "Hydrangea",
-    "type": "Hydrangea",
+    "family": "Hydrangea",
     "img": "img/pic12.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -133,7 +133,7 @@
      },
      {
      "flowerName": "Begonia",
-    "type": "Begonia",
+    "family": "Begonia",
     "img": "img/pic13.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -144,7 +144,7 @@
     },
     {
       "flowerName": "African Daisy",
-    "type": "African Daisy",
+    "family": "African Daisy",
     "img": "img/pic14.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -155,7 +155,7 @@
      },
      {
      "flowerName": "Snap Dragon",
-    "type": "Snap Dragon",
+    "family": "Snap Dragon",
     "img": "img/pic15.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -166,7 +166,7 @@
     },
     {
     "flowerName": "Rose",
-    "type": "Rose",
+    "family": "Rose",
     "img": "img/pic16.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -177,7 +177,7 @@
      },
      {
      "flowerName": "Succulent",
-    "type": "Succulent",
+    "family": "Succulent",
     "img": "img/pic17.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -188,7 +188,7 @@
     },
     {
     "flowerName": "Geranium",
-    "type": "Geranium",
+    "family": "Geranium",
     "img": "img/pic18.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -199,7 +199,7 @@
      },
      {
     "flowerName": "Iceplant",
-    "type": "Iceplant",
+    "family": "Iceplant",
     "img": "img/pic19.jpg",
     "desc": "Description here",
     "location": "San Diego, California",
@@ -210,7 +210,7 @@
     },
     {
     "flowerName": "African Daisy",
-    "type": "African Daisy",
+    "family": "African Daisy",
     "img": "img/pic20.jpg",
     "desc": "Description here",
     "location": "San Diego, California",

@@ -1,5 +1,6 @@
 const thumbs = document.querySelectorAll(".thumb");
 const mainImg = document.querySelector(".main");
+const lgImg = document.querySelector(".gallery");
 const details = document.querySelector(".details");
 
 thumbs.forEach((thumb, index) => {
@@ -23,16 +24,17 @@ function displayImage(currentThumb, blob) {
   currentThumb.setAttribute("src", objectURL);
 
   currentThumb.onclick = () => {
-    mainImg.setAttribute("src", objectURL);
-    mainImg.className = "blowup";
+    lgImg.setAttribute("src", objectURL);
+    lgImg.className = "blowup";
     for (const thumb of thumbs) {
       thumb.className = "thumb darken";
     }
   };
 }
 
-mainImg.onclick = () => {
-  mainImg.className = "main";
+lgImg.onclick = () => {
+ // mainImg.className = "main";
+  lgImg.className = "gallery";
   for (const thumb of thumbs) {
     thumb.className = "thumb";
   }

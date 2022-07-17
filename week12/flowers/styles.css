@@ -33,7 +33,7 @@ header{
   margin: 1rem auto;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 0px solid #ccc;
    max-width: 100%;
 }
 
@@ -56,7 +56,7 @@ h1{
 
 nav {
   margin: 0 2rem;
-  flex: 1 1 25%;
+  flex: 1 1 33%;
   position: relative;
   text-align: right;
 }
@@ -69,8 +69,7 @@ nav {
   top: 50px;
   right: 0;
   overflow: hidden;
-  border: 1px solid green;
-  border-radius: 8px 8px 8px 8px;
+
 }
 
 .material-symbols-outlined {
@@ -95,14 +94,16 @@ nav {
 .navigation a:hover {
   color: rgb(174, 245, 146);
   font-weight: 700;
-  text-decoration: underline;
-  background-color:rgb(67, 176, 8);
-  color:rgb(241, 239, 239);
+  text-decoration: none;
+  background-color:rgb(161, 230, 124);
+  color:rgb(34, 29, 29);
+  border-radius: 4px 4px;
 }
 
 .navigation a.nohover:hover {
   text-decoration: none;
 }
+
 
 .responsive li {
   display: block;
@@ -117,12 +118,14 @@ nav {
   position: absolute;
   top: 45px;
   right: 0;
-  background-color: rgb(115, 126, 109);
+  background-color: rgb(202, 243, 180);
   box-shadow: 0 0 12px #333;
+  border: 1px solid green;
+  border-radius: 8px 8px 8px 8px;
 }
 
 .responsive a, .responsive a:visited {
-  color: white;
+  color: rgb(104, 108, 103);
 }
 
 @media only screen and (min-width: 760px) {
@@ -149,7 +152,9 @@ nav {
 }
 }
 /* HTML Selectors */
-
+#flowerquote {
+  text-align: center;
+}
 #flowers article  {
     display: grid;
     grid-template-columns: 1fr;
@@ -157,18 +162,30 @@ nav {
 
     border: 2px solid rgb(241, 239, 239);
     border-radius: 8px 8px 8px 8px;
-    padding: 0px;
+    padding: 20px;
 
 }
+.grow {
+      transition: all .2s ease-in-out
+      scale(1.5)
+      }
+
 article img {
-    margin:auto;
+    margin:0;
     align-self: stretch;
-    min-width: 320px;
+    min-width: 100%;
     max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    /* transition: all .6s ease-in-out;
+    scale: cubic-bezier(1, 0, 0, 1); */
     border-radius: 8px 8px 0px 0px;
-    padding: 0px;
+    padding: -20px;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
 }
-article h4 {font-size: 2.4em;font-weight: bold}
+
+article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding:5px}
+article p {padding: 0px 10px;margin:0;font-weight: 400}
 #flowers {
     display: grid;
     grid-template-columns: 1fr;
@@ -199,4 +216,36 @@ article h4 {font-size: 2.4em;font-weight: bold}
     #flowers {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+.btnFacts {
+  background-color: rgb(199, 239, 199);
+  color:rgb(48, 48, 29);
+  padding: 0px 5px;
+  transition-delay: 6ms;
+  text-decoration-line: none;
+  max-width: 5rem;
+  border: 1px solid rgb(199, 239, 199);
+  border-radius: 4px;
+  text-align: left;
+  margin: 5px 10px ;
+}
+.btnFacts:hover {
+  background-color: rgb(240, 239, 139);
+  color:rgb(12, 12, 11);
+}
+.blowup {
+  display: block;
+  position: absolute;
+  object-fit: contain;
+  object-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+
+.darken {
+  opacity: 0.4;
 }

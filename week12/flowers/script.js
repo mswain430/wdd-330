@@ -1,4 +1,20 @@
 
+const flowerquote =  document.querySelector("#flowerquote");
+fetch("flowerquotes.json")
+  .then(data => data.json())
+  .then(flowerquotes => {
+        const randomNum = Math.floor(Math.random() * flowerquotes.length);
+        const inspiration = flowerquotes[randomNum];
+   //     document.querySelector('#flowerquote').innerHTML = `
+   //     <p><span class="quote">"${inspiration.quote}"</span <br><span class="author">~ ${inspiration.author}</span> </p>
+   //     `
+    document.querySelector('#quote').innerText = '"' + inspiration.quote + '"';
+    document.querySelector('#author').innerText = ` ~ ${inspiration.author}`;
+});
+//const flowerImg = document.querySelector(img);
+//flowerImg.addEventListener('touchend', () => {
+// img.classList.toggle('.blowup')},
+ // false);
 // menu system responsive
 const hambutton = document.querySelector('.hamburger');
 const mainnav = document.querySelector('.navigation');
@@ -8,8 +24,9 @@ hambutton.addEventListener('click', () => {
   false);
 
 // mid resizing issue
-window.oneresize = () => { if(window.innerWidth > 760)
-{ mainnav.classList.remove('responsive')}};
+window.onresize = () => { if(window.innerWidth > 760)
+  { mainnav.classList.remove('responsive')
+}};
 
 // end menu system responsive
 
@@ -31,11 +48,11 @@ const output = (flowers) => {
           let flowerName = document.createElement('h4');
           flowerName.textContent = flower.flowerName;
 
-          let type = document.createElement('p');
-          type.textContent = flower.type;
+          let family = document.createElement('p');
+          type.textContent = 'Family: ' + flower.family;
 
           let desc = document.createElement('p');
-          desc.textContent = flower.desc;
+          desc.textContent = 'Description: ' + flower.desc;
 
           let location = document.createElement('p');
           location.textContent = 'Location: ' + flower.location;
@@ -53,21 +70,22 @@ const output = (flowers) => {
           bloomTime.textContent = 'Bloom Time: ' + flower.bloomTime;
 
           let facts = document.createElement('a');
-          facts.setAttribute('href', `https://en.wikipedia.org/wiki/${flowers.flowerName}`);
+          facts.setAttribute('href', `https://en.wikipedia.org/wiki/${flower.flowerName}`);
+          facts.setAttribute('class', 'btnFacts');
           facts.setAttribute('target', '_blank');
 
           let para = document.createElement('p')
 
           article.appendChild(img);
           article.appendChild(flowerName);
-          article.appendChild(type);
+          article.appendChild(family);
           article.appendChild(desc);
           article.appendChild(location);
           //article.appendChild(zone);
           article.appendChild(exposure);
           article.appendChild(bloomTime);
           article.appendChild(facts);
-          facts.appendChild(document.createTextNode( "facts"));
+          facts.appendChild(document.createTextNode( "More facts >>"));
           //article.appendChild(map);
           //map.appendChild(document.createTextNode( "map"));
           article.appendChild(para);
@@ -76,7 +94,7 @@ const output = (flowers) => {
         }
     );
  }
- //let url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
+
 
 
 const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
@@ -127,9 +145,18 @@ const sortBy = () => {
     }
 }
 
+img.onclick = () => {
+    img.setAttribute("src", flower.img);
+    img.className = "blowup";
+    for (const flower of flowers) {
+      img.className = "darken";
+    }
+  };
 
 // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 document.querySelector('#sortBy').addEventListener('change', sortBy);
+
+
 
 
 
