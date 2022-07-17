@@ -222,20 +222,24 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
   background-color: rgb(199, 239, 199);
   color:rgb(48, 48, 29);
   padding: 0px 5px;
-  transition-delay: 6ms;
   text-decoration-line: none;
-  max-width: 6rem;
-  font-size: .9em;
+  max-width: 8rem;
+  font-size: .85em;
+  font-weight: 400;
   border: 1px solid rgb(199, 239, 199);
   border-radius: 4px;
   text-align: left;
   margin: 5px 10px ;
+
 }
 .btnFacts:hover {
   background-color: rgb(240, 239, 139);
   color:rgb(12, 12, 11);
-  box-shadow:1px 12px rgb(104, 108, 103);
-}
+  box-shadow:1px 2px 8px rgb(157, 162, 155);
+  transition: margin-right 3s ease-in-out;
+  transition-duration: 2s;
+  transition-property: margin-right, color;
+  }
 .blowup {
   display: block;
   position: absolute;
