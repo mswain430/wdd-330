@@ -49,7 +49,7 @@ const output = (flowers) => {
           flowerName.textContent = flower.flowerName;
 
           let family = document.createElement('p');
-          type.textContent = 'Family: ' + flower.family;
+          family.textContent = 'Family: ' + flower.family;
 
           let desc = document.createElement('p');
           desc.textContent = 'Description: ' + flower.desc;
@@ -145,13 +145,13 @@ const sortBy = () => {
     }
 }
 
-img.onclick = () => {
+/* img.onclick = () => {
     img.setAttribute("src", flower.img);
     img.className = "blowup";
     for (const flower of flowers) {
       img.className = "darken";
     }
-  };
+  }; */
 
 // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 document.querySelector('#sortBy').addEventListener('change', sortBy);
