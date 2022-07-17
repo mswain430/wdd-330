@@ -97,8 +97,8 @@ const output = (flowers) => {
 
 
 
-const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
-fetch (url)
+//const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
+fetch ("https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json")
 .then(response => response.json())
 .then(flowers => {
     flowersList = flowers;
