@@ -53,7 +53,7 @@ const links = [
 },
 {
     label: "Challenge 2 - App",
-    url: "challenge2/gardenApp.html",
+    url: "week12/flowers/",
 },
 
 ]
