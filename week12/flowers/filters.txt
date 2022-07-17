@@ -1,0 +1,7 @@
+$([
+  {"name":"Lenovo Thinkpad 41A4298","website":"google222"},
+  {"name":"Lenovo Thinkpad 41A2222","website":"google"}
+  ])
+    .filter(function (i,n){
+        return n.website==='google';
+    });

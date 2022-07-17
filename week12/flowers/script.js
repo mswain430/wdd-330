@@ -114,6 +114,8 @@ const sortBy = () => {
     reset();
 
     let filter = document.querySelector('#sortBy').value;
+   // let filter2 = document.querySelector('#sortByName').value;
+
 
     switch(filter) {
         case 'flowerNameAscending':
