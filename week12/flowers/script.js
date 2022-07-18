@@ -1,4 +1,5 @@
-
+// Flower quotes fetch
+// can I make this a function and in utils add a onload call?
 const flowerquote =  document.querySelector("#flowerquote");
 fetch("flowerquotes.json")
   .then(data => data.json())
@@ -16,10 +17,15 @@ fetch("flowerquotes.json")
 //flowerImg.addEventListener('touchend', () => {
 // img.classList.toggle('.blowup')},
  // false);
+
 // menu system responsive
 const hambutton = document.querySelector('.hamburger');
 const mainnav = document.querySelector('.navigation');
-
+// Add touch end for event Listener for mobile
+hambutton.addEventListener('touchend', () => {
+  mainnav.classList.toggle('responsive')},
+  false);
+//add click for pc
 hambutton.addEventListener('click', () => {
   mainnav.classList.toggle('responsive')},
   false);

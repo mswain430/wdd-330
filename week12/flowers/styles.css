@@ -116,7 +116,6 @@ nav {
   text-decoration: none;
 }
 
-
 .responsive li {
   display: block;
   width: 150px;
@@ -169,13 +168,18 @@ nav {
   margin: 20px auto 10px auto;
   width: 90%;
   max-width: 90%;
+  background-color: rgba(255, 192, 203,.6);
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
 #flowerquote p{
   justify-content: center;
   text-align: center;
   font-size: 1rem;
   padding: 10px;
-  background-color: rgba(202, 243, 180, .4);
   border-radius: 4px;
 }
 .zoom-effect-container {
@@ -332,16 +336,16 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
    list-style-type: none;
    font-size: 1em;
    transition: .2s;
-   background-color:  rgba(255, 192, 203,.2);
+   background-color:  rgba(255, 192, 203,.1);
    width: 100%;
    border-top: 0px solid rgb(190, 136, 190);
    border-bottom: 1px solid rgb(198, 146, 189);
 }
 
-/*#suggestions div:hover {
-   background: rgb(216, 234, 157);
+#suggestions div:focus {
    color: #333;
-} */
+   border: 1px solid rgb(154, 35, 124)
+}
 
 .add-suggestion-wrapper {
     height: 100%;
@@ -387,7 +391,12 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 }
 .completed {
     text-decoration: line-through;
-    color: rgb(67, 15, 67);;
+    animation: fadeIn 5s;
+    color: rgb(67, 15, 67);
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% { opacity: 1;}
 }
 .suggestion-delete-btn:hover {
    background: rgb(244, 89, 205);
