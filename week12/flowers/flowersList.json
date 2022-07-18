@@ -77,17 +77,6 @@
     "exposure": "full sun"
     },
     {
-    "flowerName": "Rose",
-    "family": "Rosaceae",
-    "img": "img/pic8(1).jpg",
-    "desc": "Roses are best known as ornamental plants grown for their flowers in the garden and sometimes indoors.(wiki)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "no",
-    "bloomTime": "dorment during winter",
-    "exposure": "full sun"
-     },
-     {
      "flowerName": "Rose",
     "family": "Rosaceae",
     "img": "img/pic9(1).jpg",
@@ -121,17 +110,6 @@
     "exposure": "full sun"
     },
     {
-    "flowerName": "Hydrangea",
-    "family": "Hydrangea",
-    "img": "img/pic12.webp",
-    "desc": "Hydrangea flowers are produced from early spring to late autumn; they grow in flowerheads (corymbs or panicles) most often at the ends of the stems. Typically the flowerheads contain two types of flowers: small non-showy fertile flowers in the center or interior of the flowerhead, and large, sterile showy flowers with large colorful sepals (tepals).(wiki)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "no",
-    "bloomTime": "Springtime",
-    "exposure": "full sun"
-     },
-     {
      "flowerName": "Begonia",
     "family": "Begonia",
     "img": "img/pic13.webp",
