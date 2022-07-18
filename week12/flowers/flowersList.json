@@ -43,32 +43,10 @@
     "bloomTime": "late winter, early spring",
     "exposure": "full sun"
      },
-     {
-    "flowerName": "Rose",
-    "family": "Rosaceae",
-    "img": "img/pic5.webp",
-    "desc": "Roses are best known as ornamental plants grown for their flowers in the garden and sometimes indoors./(wiki/)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "no",
-    "bloomTime": "year around",
-    "exposure": "full sun"
-    },
     {
     "flowerName": "Rose",
     "family": "Rosaceae",
     "img": "img/pic7.webp",
-    "desc": "Roses are best known as ornamental plants grown for their flowers in the garden and sometimes indoors.(wiki)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "no",
-    "bloomTime": "dorment during winter",
-    "exposure": "full sun"
-    },
-    {
-     "flowerName": "Rose",
-    "family": "Rosaceae",
-    "img": "img/pic9(1).jpg",
     "desc": "Roses are best known as ornamental plants grown for their flowers in the garden and sometimes indoors.(wiki)",
     "location": "San Diego, California",
     "zone": "long-lat",
@@ -87,17 +65,6 @@
     "bloomTime": "Early Spring",
     "exposure": "full sun"
      },
-     {
-     "flowerName": "Hydrangea",
-    "family": "Hydrangea",
-    "img": "img/pic11.webp",
-    "desc": "Hydrangea flowers are produced from early spring to late autumn/(wiki/)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "no",
-    "bloomTime": "Springtime",
-    "exposure": "full sun"
-    },
     {
      "flowerName": "Begonia",
     "family": "Begonia",
@@ -110,17 +77,6 @@
     "exposure": "full sun/partial shade"
     },
     {
-    "flowerName": "Osteospermum",
-    "family": "Asteraceae",
-    "img": "img/pic14.webp",
-    "desc": "Plants prefer a warm and sunny position and rich soil, although they tolerate poor soil, salt or drought well./(wiki/)",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "yes",
-    "bloomTime": "Early Spring",
-    "exposure": "full sun"
-     },
-     {
      "flowerName": "Snap Dragon",
     "family": "Snap Dragon",
     "img": "img/pic15.webp",
