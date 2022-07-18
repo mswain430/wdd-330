@@ -6,7 +6,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "year around",
     "exposure": "full sun"
     },
@@ -17,7 +17,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Springtime after frost",
     "exposure": "full sun"
      },
@@ -28,7 +28,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Springtime after frost",
     "exposure": "partial shade"
     },
@@ -39,7 +39,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "late winter, early spring",
     "exposure": "full sun"
      },
@@ -50,7 +50,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
     },
@@ -61,7 +61,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
      },
@@ -72,7 +72,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
     },
@@ -83,7 +83,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
      },
@@ -94,7 +94,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
     },
@@ -105,7 +105,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "Early Spring",
     "exposure": "full sun"
      },
@@ -116,7 +116,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Springtime",
     "exposure": "full sun"
     },
@@ -127,7 +127,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Springtime",
     "exposure": "full sun"
      },
@@ -138,7 +138,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "avoid freezing temps",
     "exposure": "full sun/partial shade"
     },
@@ -149,7 +149,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "Early Spring",
     "exposure": "full sun"
      },
@@ -160,7 +160,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Springtime",
     "exposure": "full sun"
     },
@@ -171,7 +171,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "no",
+    "droughtTolerant": "no",
     "bloomTime": "Dorment during winter",
     "exposure": "full sun"
      },
@@ -182,7 +182,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "year around",
     "exposure": "full sun/partial shade"
     },
@@ -193,7 +193,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "year around",
     "exposure": "full sun"
      },
@@ -204,7 +204,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "Early Spring",
     "exposure": "full sun"
     },
@@ -215,7 +215,7 @@
     "desc": "Description here",
     "location": "San Diego, California",
     "zone": "long-lat",
-    "droughtTolerent": "yes",
+    "droughtTolerant": "yes",
     "bloomTime": "Early Spring",
     "exposure": "full sun"
      }

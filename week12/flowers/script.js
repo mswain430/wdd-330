@@ -38,11 +38,12 @@ const output = (flowers) => {
     flowers.forEach(
         flower => {
           let article = document.createElement('article');
+          article.setAttribute('class', 'fade-in-img');
 
           let img = document.createElement('img');
           img.setAttribute('src', flower.img);
           img.setAttribute('alt', flower.flowerName);
-          img.setAttribute('class', 'img img-responsive');
+          img.setAttribute('class', 'img-responsive');
           img.setAttribute('loading', 'lazy');
 
           let flowerName = document.createElement('h4');
@@ -138,6 +139,10 @@ const sortBy = () => {
                     else return 0;
                 }));
             break;
+        case 'Drought Tolerant':
+            output(function(i,n){
+              return n.droughtTolerant==='yes';
+            })
         default:
             output(flowersList.sort(
               (flower1, flower2) =>

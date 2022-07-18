@@ -1,6 +1,6 @@
 /* family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400 */
 body {
-   font-size: 1.2em;
+   font-size: 1em;
    font-weight: 300;
    font-family: 'Open Sans', sans-serif;
 }
@@ -59,7 +59,7 @@ h1{
 nav {
   height: 50px;
   margin: 0 1rem;
-  flex: 1 1 33%;
+  flex: 1 1 50%;
   position: relative;
   text-align: right;
 }
@@ -120,12 +120,12 @@ nav {
 }
 
 .responsive a {
-  font-size: 1.2rem
+  font-size: 1rem
 }
 
 .responsive {
   position: absolute;
-  top: 45px;
+  top: 20%;
   right: 0;
   background-color: rgb(202, 243, 180);
   box-shadow: 0 0 12px #333;
@@ -164,11 +164,39 @@ nav {
 #flowerquote p{
   justify-content: center;
   text-align: center;
-  font-size: .9rem;
+  font-size: 1rem;
+  width: 90%;
   max-width: 90%;
-  margin:auto;
-  border:1px solid red;
+  padding: 5px;
+  margin: 40px auto 10px auto;
+
 }
+p.quotelines {
+  position: relative;
+  top: 10px;
+  /* color: orangered; */
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: left;
+  overflow:hidden;
+
+  transform: translateY(-50%);
+}
+
+.anim-typewriter{
+  animation: typewriter 8s steps(44) 2s 1 normal both,
+     blinkTextCursor 500ms steps(44) infinite normal;
+ }
+ @keyframes typewriter {
+     from{width: 20em}
+     to{width: 48em;}
+  }
+  @keyframes blinkTextCursor {
+    from{border-right-color: rgb(255,255,255,.75)}
+    to{border-right-color: transparent}
+  }
+
+
 #flowers article  {
     display: grid;
     grid-template-columns: 1fr;
@@ -196,10 +224,18 @@ article img {
     border-radius: 8px 8px 0px 0px;
     padding: -20px;
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+
 }
 
 article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding:5px}
 article p {padding: 0px 10px;margin:0;font-weight: 400}
+.fade-in-img {
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  30% {opacity: .3;}
+  100% {opacity: 1;}
+}
 #flowers {
     display: grid;
     grid-template-columns: 1fr;
