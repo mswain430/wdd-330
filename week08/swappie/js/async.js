@@ -77,7 +77,7 @@ async function showShips(url = "https://swapi.dev/api/starships") {
     //enabling the next and prev buttons
     if(results.next){
         const next = document.getElementById("next");
-        // normally we would prefer add EventListern method, like element.onEvent = event_function can only hold one listener of the type.
+        // normally we would prefer add EventListener method, like element.onEvent = event_function can only hold one listener of the type.
         //In this case we thats good. Because we are not re-creating the buttons each time  we load a new batch. This avoids that.
       //  next.ontouchend = () =>{
           next.onclick = () =>{

@@ -1,5 +1,7 @@
 /* family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400 */
 body {
+  padding:0;
+  margin: 0;
    font-size: 1em;
    font-weight: 300;
    font-family: 'Open Sans', sans-serif;
@@ -11,11 +13,11 @@ h1, h2, h3, h4 {
     font-family: 'Lato', sans-serif;
 }
 h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 300;
 }
 h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 300
 }
 h3 {
@@ -23,20 +25,22 @@ h3 {
     font-weight: 400;
 }
 h4 {
-    font-size: .8em;
+    font-size: .9em;
 }
 
 form #preferences {
   width: 250px;
 }
 header{
-  margin: 5px auto;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 0px solid #ccc;
+  border-bottom: 0px solid rgb(162, 183, 138);
    max-width: 100%;
-   min-height: 50px;
+   min-height: 45px;
+   background-color: rgb(202, 243, 180);
 }
 
 h1{
@@ -57,8 +61,8 @@ h1{
 }
 
 nav {
-  height: 50px;
-  margin: 0 1rem;
+  height: 40px;
+  margin: 1rem;
   flex: 1 1 50%;
   position: relative;
   text-align: right;
@@ -77,7 +81,6 @@ nav {
 .navigation {
   top: 0px;
   right: -20px;
-  transition: all 1s ease-out;
   transition: all 1s ease-in;
 }
 
@@ -117,6 +120,7 @@ nav {
 .responsive li {
   display: block;
   width: 150px;
+  border-bottom:1px solid rgb(176, 209, 176);
 }
 
 .responsive a {
@@ -125,7 +129,7 @@ nav {
 
 .responsive {
   position: absolute;
-  top: 20%;
+  top: 25px;
   right: 0;
   background-color: rgb(202, 243, 180);
   box-shadow: 0 0 12px #333;
@@ -134,7 +138,7 @@ nav {
 }
 
 .responsive a, .responsive a:visited {
-  color: rgb(104, 108, 103);
+  color: rgb(56, 58, 55);
 }
 
 @media only screen and (min-width: 760px) {
@@ -161,56 +165,35 @@ nav {
 }
 }
 /* HTML Selectors */
+#flowerquote{
+  margin: 20px auto 10px auto;
+  width: 90%;
+  max-width: 90%;
+}
 #flowerquote p{
   justify-content: center;
   text-align: center;
   font-size: 1rem;
-  width: 90%;
-  max-width: 90%;
-  padding: 5px;
-  margin: 40px auto 10px auto;
-
+  padding: 10px;
+  background-color: rgba(202, 243, 180, .4);
+  border-radius: 4px;
 }
-p.quotelines {
+.zoom-effect-container {
   position: relative;
-  top: 10px;
-  /* color: orangered; */
-  border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 180%;
-  text-align: left;
-  overflow:hidden;
-
-  transform: translateY(-50%);
+  width: 100%;
+  max-height: 800px;
+  margin: 0 auto;
+  overflow: hidden
 }
-
-.anim-typewriter{
-  animation: typewriter 8s steps(44) 2s 1 normal both,
-     blinkTextCursor 500ms steps(44) infinite normal;
- }
- @keyframes typewriter {
-     from{width: 20em}
-     to{width: 48em;}
-  }
-  @keyframes blinkTextCursor {
-    from{border-right-color: rgb(255,255,255,.75)}
-    to{border-right-color: transparent}
-  }
-
 
 #flowers article  {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-
     border: 2px solid rgb(241, 239, 239);
     border-radius: 8px 8px 8px 8px;
     padding: 20px;
-
 }
-.grow {
-      transition: all .2s ease-in-out
-      scale(1.5)
-      }
 
 article img {
     margin:0;
@@ -224,18 +207,24 @@ article img {
     border-radius: 8px 8px 0px 0px;
     padding: -20px;
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
-
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
 }
-
+.zoom-effect-container:hover .article img{
+  -webkit-transform: scale(1.08);
+  transform: scale(1.25%);
+}
 article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding:5px}
 article p {padding: 0px 10px;margin:0;font-weight: 400}
 .fade-in-img {
   animation: fadeIn 5s;
 }
 @keyframes fadeIn {
-  30% {opacity: .3;}
   100% {opacity: 1;}
+  20% {opacity: .2;}
 }
+
+
 #flowers {
     display: grid;
     grid-template-columns: 1fr;
@@ -274,11 +263,12 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
   padding: 0px 5px;
   text-decoration-line: none;
   max-width: 8rem;
-  font-size: .85em;
+  font-size: .9em;
   font-weight: 400;
   border: 1px solid rgb(199, 239, 199);
   border-radius: 4px;
-  text-align: left;
+  text-align: center;
+  padding: 5px;
   margin: 5px 10px ;
 
 }
@@ -304,4 +294,159 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 
 .darken {
   opacity: 0.4;
+}
+#container-suggestions {
+  max-width: 400px;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  flex-flow:column;
+  padding: 2vw;
+  padding: 2vh 4vh;
+  background-color: rgba(255, 192, 203,.4);
+  border: 1px solid pink;
+  border-radius: 4px;
+}
+.suggestion {
+    display:flex;
+    align-items: center;
+    max-width: 300px;
+    border: 0px solid red;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px 8px;
+}
+.suggestions-wrapper {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(auto, 30px);
+
+}
+#suggestions div {
+   grid-column: auto;
+   grid-row: auto;
+   cursor: pointer;
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+   font-size: 1em;
+   transition: .2s;
+   background-color:  rgba(255, 192, 203,.2);
+   width: 100%;
+   border-top: 0px solid rgb(190, 136, 190);
+   border-bottom: 1px solid rgb(198, 146, 189);
+}
+
+/*#suggestions div:hover {
+   background: rgb(216, 234, 157);
+   color: #333;
+} */
+
+.add-suggestion-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.suggestion-delete-btn {
+    width: 30px;
+    height: 40px;
+    color: rgba(198, 59, 156);
+    font-weight: 600;
+    align-self: flex-end;
+    background-color:  rgba(255, 192, 203,.4);
+    border:1px solid rgba(198, 59, 156);
+}
+
+.complete-btn {
+    width: 30px;
+    height: 40px;
+    padding-right: 5px;
+    align-self: flex-start;
+    background-color:  rgba(255, 192, 203,.4);
+    color: rgb(204, 111, 211);
+    border:1px solid rgba(198, 59, 156);
+}
+
+.complete-btn:hover {
+  background-color:  rgb(244, 89, 205);;
+  color:rgb(15, 236, 15);
+  font-size: larger;
+}
+
+.suggestion-content{
+    height: 40px;
+    min-width: 250px;
+    /* max-width: 100%; */
+    padding: 10px;
+    margin: 0 3px;
+    font-size: 1.1em;
+    text-align: left;
+    background-color: rgb(249, 213, 249);
+    color: rgb(72, 8, 65);
+}
+.completed {
+    text-decoration: line-through;
+    color: rgb(67, 15, 67);;
+}
+.suggestion-delete-btn:hover {
+   background: rgb(244, 89, 205);
+   color:  rgb(67, 15, 67);
+}
+
+#allFilter, #activeFilter,#completedFilter {
+  background: rgb(197, 234, 142);
+  color: rgb(68, 101, 58);
+  padding: 10px 10px;
+  font-size: 1.1em;
+  height: 40px;
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
+#allFilter:hover, #activeFilter:hover,#completedFilter:hover {
+  background: rgb(200, 242, 63);
+  color: #333;
+}
+
+#addBtn {
+    padding: 5px 5px;
+    min-width: 50px;
+    font-size: 1.1em;
+    background-color: rgb(247, 74, 229);
+    color: rgb(249, 236, 247);
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 0 4px 4px 0;
+    border:1px solid rgb(248, 142, 243);
+    border-left: 1px solid rgb(248, 142, 243);
+    height: 40px;
+    margin: 5px 0;
+}
+
+#addbtn:hover {
+    background-color: rgb(246, 183, 231);
+    color: black;
+}
+
+input#suggestionInput {
+    padding: 5px;
+    width: 75%;
+    min-width: 220px;
+    height: 40px;
+    float: left;
+    border: 1px solid rgb(252, 106, 230);
+    border-radius: 4px 0 0 4px;
+    margin: 5px 0;
+}
+input#suggestionInput:hover {border: 1px solid rgb(252, 106, 230);box-shadow:2px 5px 4px 2px rgb(242, 184, 236);}
+
+.suggestion-filters {margin: 10px auto;}
+.suggestion-filters::after{
+    clear:both;
+}
+footer:before {
+    clear:both;
 }

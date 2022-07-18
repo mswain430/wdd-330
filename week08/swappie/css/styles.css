@@ -76,6 +76,8 @@ main h2 {
 }
 
 #detailsbox {
+    position: absolute;
+    top: 30px;
     flex: 1 0 15em;
     padding: 5px;
     text-align: center;

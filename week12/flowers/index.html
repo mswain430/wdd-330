@@ -10,7 +10,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="styles.css">
-
+   <script type="module" src="suggestions.js"></script>
 </head>
 <body>
   <header>
@@ -19,8 +19,11 @@
         <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
         <ul class="navigation">
             <li><a href="#">Home</a></li>
+            <li><a href="#container-suggestions">Suggestions</a></li>
+            <li><a href="#fav">Favorites</a></li>
             <li><a href="#survey">Survey</a></li>
-            <li><a href="#fav">List Favorites</a></li>
+
+
             <li><a class="nohover" href="#"><span class="material-symbols-outlined">
 search
 </span></a></li>
@@ -41,9 +44,32 @@ search
     <option value="DroughtTolerant">Drought Tolerant</option>
    </select></p>
     <hr />
-<div id="flowers"></div>
+   <div id="flowers"> </div>
+  <div class="container" id="container-suggestions">
+      <h3 class="mflowers">What other flowers would you like to see?
+      <br>Please add your suggestions here:</h3>
+      <div class="suggestions-wrapper">
+        <div id="suggestions">
+
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="add-flower-wrapper">
+            <input id="suggestionInput" type="text" max-width="250">
+            <button id="addBtn">Add</button>
+        </div>
+        <div>&nbsp;</div>
+        <div class="suggestion-filters">
+              <button id="allFilter" >All</button>
+              <button id="activeFilter" >Active</button>
+              <button id="completedFilter" >Completed</button>
+            </div>
+
+    <div>&nbsp;</div>
+    </div>
 </main>
 <script src="script.js" type="text/javascript"></script>
+
 </body>
 </html>
 

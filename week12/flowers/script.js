@@ -11,6 +11,7 @@ fetch("flowerquotes.json")
     document.querySelector('#quote').innerText = '"' + inspiration.quote + '"';
     document.querySelector('#author').innerText = ` ~ ${inspiration.author}`;
 });
+
 //const flowerImg = document.querySelector(img);
 //flowerImg.addEventListener('touchend', () => {
 // img.classList.toggle('.blowup')},
@@ -85,6 +86,7 @@ const output = (flowers) => {
           //article.appendChild(zone);
           article.appendChild(exposure);
           article.appendChild(bloomTime);
+          article.appendChild(droughtTolerant);
           article.appendChild(facts);
           facts.appendChild(document.createTextNode( "More facts >>"));
           //article.appendChild(map);
@@ -140,9 +142,19 @@ const sortBy = () => {
                 }));
             break;
         case 'Drought Tolerant':
-            output(function(i,n){
-              return n.droughtTolerant==='yes';
-            })
+            if (flowersList.droughtTolerant==='yes'){
+              output(flowersList.sort(
+                (flower1, flower2) => {
+                    let flowerName1 = flower1.flowerName.toLowerCase();
+                    let flowerName2 = flower2.flowerName.toLowerCase();
+                    if (flowerName1 > flowerName2) return -1;
+                    else if (flowerName1 < flowerName2) return 1;
+                    else return 0;
+                  }));
+            }else{
+              return 0;
+                }
+            break;
         default:
             output(flowersList.sort(
               (flower1, flower2) =>
