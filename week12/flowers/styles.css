@@ -314,7 +314,7 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 .suggestion {
     display:flex;
     align-items: center;
-    max-width: 300px;
+    max-width: 310px;
     border: 0px solid red;
     padding: 0px;
     box-sizing: border-box;
@@ -323,7 +323,7 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 .suggestions-wrapper {
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: repeat(auto, 30px);
+    grid-template-rows: repeat(auto, 25px);
 
 }
 #suggestions div {
@@ -336,7 +336,7 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
    list-style-type: none;
    font-size: 1em;
    transition: .2s;
-   background-color:  rgba(255, 192, 203,.1);
+   background-color:  rgb(254, 254, 254);
    width: 100%;
    border-top: 0px solid rgb(190, 136, 190);
    border-bottom: 1px solid rgb(198, 146, 189);
@@ -355,10 +355,10 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 .suggestion-delete-btn {
     width: 30px;
     height: 40px;
-    color: rgba(198, 59, 156);
+    color: rgb(106, 8, 113);
     font-weight: 600;
     align-self: flex-end;
-    background-color:  rgba(255, 192, 203,.4);
+    background-color:  rgba(249, 157, 219, 0.7);
     border:1px solid rgba(198, 59, 156);
 }
 
@@ -367,8 +367,8 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
     height: 40px;
     padding-right: 5px;
     align-self: flex-start;
-    background-color:  rgba(255, 192, 203,.4);
-    color: rgb(204, 111, 211);
+    background-color:  rgba(249, 157, 219, 0.7);
+    color: rgb(106, 8, 113);
     border:1px solid rgba(198, 59, 156);
 }
 
@@ -386,7 +386,7 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
     margin: 0 3px;
     font-size: 1.1em;
     text-align: left;
-    background-color: rgb(249, 213, 249);
+    background-color: rgb(255, 253, 255);
     color: rgb(72, 8, 65);
 }
 .completed {
@@ -404,12 +404,12 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
 }
 
 #allFilter, #activeFilter,#completedFilter {
-  background: rgb(197, 234, 142);
+  background:  rgb(199, 239, 199);
   color: rgb(68, 101, 58);
   padding: 10px 10px;
   font-size: 1.1em;
   height: 40px;
-  border: 1px solid green;
+  border: 1px solid rgb(140, 245, 140);
   border-radius: 4px;
 }
 
