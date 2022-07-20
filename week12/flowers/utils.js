@@ -1,3 +1,4 @@
+/* Suggestions */
 function activeFilter(suggestions) {
     return suggestions.filter(suggestion => {
         return !suggestion.completed

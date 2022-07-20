@@ -1,8 +1,6 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-
-
 // onclick handler for button // Add event listeners
 document.querySelector('#addBtn').onclick = addNewSuggestion;
 

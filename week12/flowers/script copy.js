@@ -9,25 +9,20 @@ fetch("flowerquotes.json")
 });
 }
 loadquotes();
-
 //const flowerImg = document.querySelector(img);
 //flowerImg.addEventListener('touchend', () => {
 // img.classList.toggle('.blowup')},
  // false);
 
 // menu system responsive
-function setupMenuToggle() {
 const hambutton = document.querySelector('.hamburger');
 const mainnav = document.querySelector('.navigation');
-
-//add click for pc  If you experience toggling not working
-// keep an eye on this statement.
-hambutton.addEventListener('click', () => {
-  mainnav.classList.toggle('responsive')},
-  false);
-
 // Add touch end for event Listener for mobile
 hambutton.addEventListener('touchend', () => {
+  mainnav.classList.toggle('responsive')},
+  false);
+//add click for pc
+hambutton.addEventListener('click', () => {
   mainnav.classList.toggle('responsive')},
   false);
 
@@ -36,23 +31,11 @@ window.onresize = () => { if(window.innerWidth > 760)
   { mainnav.classList.remove('responsive')
 }};
 
-}
-setupMenuToggle();
 // end menu system responsive
 
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of flowers
 let flowersList = [];
-
-function loadFlowerList(){
-fetch ("https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json")
-.then(response => response.json())
-.then(flowers => {
-    flowersList = flowers;
-    output(flowersList);
-})
-}
-loadFlowerList();
 
 const output = (flowers) => {
     flowers.forEach(
@@ -117,58 +100,71 @@ const output = (flowers) => {
     );
  }
 
+
+
+//const url = "https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json"
+fetch ("https://mswain430.github.io/wdd-330/week12/flowers/flowersList.json")
+.then(response => response.json())
+.then(flowers => {
+    flowersList = flowers;
+    output(flowersList);
+})
+
+
 const reset = () => {
     document.querySelector('#flowers').innerHTML = '';
 }
 
 const sortBy = () => {
-  reset();
-  let filter = document.querySelector('#sortBy').value;
-   // let filter2 = document.querySelector('#sortByName').value;
-  switch(filter) {
-      case 'flowerNameAscending':
-          output(flowersList.sort(
-              (flower1, flower2) => {
-                  let flowerName1 = flower1.flowerName.toLowerCase();
-                  let flowerName2 = flower2.flowerName.toLowerCase();
-                  if (flowerName1 < flowerName2) return -1;
-                  else if (flowerName1 > flowerName2) return 1;
-                  else return 0;
-              }));
-          break;
-      case 'flowerNameDescending':
-          output(flowersList.sort(
-              (flower1, flower2) => {
-                  let flowerName1 = flower1.flowerName.toLowerCase();
-                  let flowerName2 = flower2.flowerName.toLowerCase();
-                  if (flowerName1 > flowerName2) return -1;
-                  else if (flowerName1 < flowerName2) return 1;
-                  else return 0;
-              }));
-          break;
-      case 'Drought Tolerant':
-          if (flowersList.droughtTolerant==='yes'){
-            output(flowersList.sort(
-              (flower1, flower2) => {
-                  let flowerName1 = flower1.flowerName.toLowerCase();
-                  let flowerName2 = flower2.flowerName.toLowerCase();
-                  if (flowerName1 > flowerName2) return -1;
-                  else if (flowerName1 < flowerName2) return 1;
-                  else return 0;
-                }));
-          }else{
-            return 0;
-              }
-          break;
-      default:
-          output(flowersList.sort(
-            (flower1, flower2) =>
-            flower1.flowerName.toLowerCase() > flower2.flowerName.toLowerCase() ? 1 :
-            flower2.flowerName.toLowerCase() > flower1.flowerName.toLowerCase() ? -1 : 0));
-          break;
-  }
-}
+    reset();
 
+    let filter = document.querySelector('#sortBy').value;
+   // let filter2 = document.querySelector('#sortByName').value;
+
+
+    switch(filter) {
+        case 'flowerNameAscending':
+            output(flowersList.sort(
+                (flower1, flower2) => {
+                    let flowerName1 = flower1.flowerName.toLowerCase();
+                    let flowerName2 = flower2.flowerName.toLowerCase();
+                    if (flowerName1 < flowerName2) return -1;
+                    else if (flowerName1 > flowerName2) return 1;
+                    else return 0;
+                }));
+            break;
+        case 'flowerNameDescending':
+            output(flowersList.sort(
+                (flower1, flower2) => {
+                    let flowerName1 = flower1.flowerName.toLowerCase();
+                    let flowerName2 = flower2.flowerName.toLowerCase();
+                    if (flowerName1 > flowerName2) return -1;
+                    else if (flowerName1 < flowerName2) return 1;
+                    else return 0;
+                }));
+            break;
+        case 'Drought Tolerant':
+            if (flowersList.droughtTolerant==='yes'){
+              output(flowersList.sort(
+                (flower1, flower2) => {
+                    let flowerName1 = flower1.flowerName.toLowerCase();
+                    let flowerName2 = flower2.flowerName.toLowerCase();
+                    if (flowerName1 > flowerName2) return -1;
+                    else if (flowerName1 < flowerName2) return 1;
+                    else return 0;
+                  }));
+            }else{
+              return 0;
+                }
+            break;
+        default:
+            output(flowersList.sort(
+              (flower1, flower2) =>
+              flower1.flowerName.toLowerCase() > flower2.flowerName.toLowerCase() ? 1 :
+              flower2.flowerName.toLowerCase() > flower1.flowerName.toLowerCase() ? -1 : 0));
+            break;
+    }
+}
 
 /* img.onclick = () => {
     img.setAttribute("src", flower.img);
