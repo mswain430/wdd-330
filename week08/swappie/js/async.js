@@ -50,9 +50,12 @@ function renderShipDetails(shipData) {
     detail.innerHTML = "";
     detail.classList.remove('hidden');
     const h2 = document.createElement('h2');
+    const button = document.createElement('button')
+    button.classList.add('close')
     h2.innerText = `Starship Details`;
     const dl = document.createElement("dl");
     dl.innerHTML = `
+        <button class='close'> </button>
         <dt>Name:</dt>
         <dd class="name">${shipData.name}</dd>
         <dt>Model:</dt>
@@ -63,8 +66,10 @@ function renderShipDetails(shipData) {
         <dd class="movies">${shipData.manufacturer}</dd>
     `
     detail.appendChild(h2);
+    detail.appendChild(button)
     detail.appendChild(dl);
 }
+
 
 // controller code
 async function showShips(url = "https://swapi.dev/api/starships") {
@@ -99,6 +104,22 @@ async function getShipDetails(url) {
     //call getJSON functions for the provided url
     const ship = await getShips(url);
     renderShipDetails(ship);
+
     //with the results populate the elements in the #detailsbox
+
 }
 showShips();
+
+function toggleMenu() {
+   document.getElementById("#detailsbox").classList.toggle("open");
+   console.log("It worked!")
+}
+const x = document.getElementById("#detailsbox");
+x.onclick = toggleMenu;
+
+window.onload = () => {
+    document.getElementById('close').onclick = function() {
+        this.parentNode.remove()
+        return false;
+    };
+};
