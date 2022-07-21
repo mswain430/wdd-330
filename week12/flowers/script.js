@@ -170,6 +170,7 @@ const sortBy = () => {
 }
 
 
+
 /* img.onclick = () => {
     img.setAttribute("src", flower.img);
     img.className = "blowup";
@@ -181,6 +182,9 @@ const sortBy = () => {
 // Step 10: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 document.querySelector('#sortBy').addEventListener('change', sortBy);
 
+/* *************** Form submit **************** */
+document.getElementById("emailus").submit();
+document.getElementById("emailus").reset();
 
 
 

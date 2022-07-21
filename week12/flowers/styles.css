@@ -480,3 +480,17 @@ input#suggestionInput:hover {border: 1px solid rgb(252, 106, 230);box-shadow:2px
 footer:before {
     clear:both;
 }
+
+/* **************************** form ********************** */
+
+form#emailus {
+   text-align: left;
+
+}
+
+form#emailus button {
+  padding: 5px; margin: 5px;
+  background-color:rgb(246, 146, 221);
+  border: 1px solid rgb(111, 29, 105);
+  border-radius: 4px;
+}
