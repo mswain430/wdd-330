@@ -192,6 +192,22 @@ nav {
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
+#flowerquote p:first-child {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 #flowerquote:hover {
   box-shadow: 1px 8px 8px rgba(243, 186, 196, 0.7);
 }
@@ -245,6 +261,24 @@ article img {
   transform: scale(1.25%);
 }
 article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding: 10px 0 5px 20px}
+
+h4 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 5%;
+    width: 100%;
+  }
+}
+
 article p {padding: 0px 20px;margin:0;font-weight: 400}
 .fade-in-img {
   animation: fadeIn 5s;
