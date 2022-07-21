@@ -209,7 +209,8 @@ nav {
     grid-template-rows: auto;
     border: 2px solid rgb(241, 239, 239);
     border-radius: 8px 8px 8px 8px;
-    padding: -20px;
+    padding: 0;
+    margin: 0;
 
 }
 #flowers article:hover {
@@ -217,6 +218,7 @@ nav {
 }
 article img {
     margin:0;
+    padding: -20px;
     align-self: stretch;
     min-width: 100%;
     max-width: 100%;
@@ -225,7 +227,7 @@ article img {
     /* transition: all .6s ease-in-out;
     scale: cubic-bezier(1, 0, 0, 1); */
     border-radius: 8px 8px 0px 0px;
-    padding: -20px;
+    padding: 0px;
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
     -webkit-transition: .4s ease;
     transition: .4s ease;
@@ -234,8 +236,8 @@ article img {
   -webkit-transform: scale(1.08);
   transform: scale(1.25%);
 }
-article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding:5px}
-article p {padding: 0px 10px;margin:0;font-weight: 400}
+article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding: 10px 0 5px 20px}
+article p {padding: 0px 20px;margin:0;font-weight: 400}
 .fade-in-img {
   animation: fadeIn 5s;
 }
