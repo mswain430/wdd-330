@@ -111,9 +111,10 @@ nav {
 
 .navigation a {
   display: block;
-  color: navy;
   padding: 0.5rem 1rem;
   text-decoration: none;
+  color:rgb(12, 12, 11);
+  font-weight: 400;
 }
 
 .navigation a:hover {
@@ -181,17 +182,24 @@ nav {
   margin: 20px auto 10px auto;
   width: 90%;
   max-width: 90%;
-  background-color: rgba(255, 192, 203,.6);
+  background-color: rgba(243, 186, 196, 0.4);
   animation: fadeIn 5s;
+  border:1px solid rgb(250, 132, 152);
+  border-radius: 5px 5px;
+
 }
 @keyframes fadeIn {
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
+#flowerquote:hover {
+  box-shadow: 1px 8px 8px rgba(243, 186, 196, 0.7);
+}
 #flowerquote p{
   justify-content: center;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
   padding: 10px;
   border-radius: 4px;
 }
@@ -260,6 +268,9 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
 .suggestion-filters button {
    margin: 10px;
 }
+.suggestion-filters button:hover {
+  box-shadow: 1px 2px 15px rgba(96, 199, 80, 0.3)
+}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
 
@@ -273,7 +284,7 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
 
 @media only screen and (min-width: 38em) {
     #flowers {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media only screen and (min-width: 64em) {

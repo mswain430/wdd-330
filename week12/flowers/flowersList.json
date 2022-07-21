@@ -53,19 +53,7 @@
     "droughtTolerant": "no",
     "bloomTime": "dorment during winter",
     "exposure": "full sun"
-    },
-    {
-     "flowerName": "Osteospermum",
-    "family": "Asteraceae",
-    "img": "img/pic10.webp",
-    "desc": "Description here",
-    "location": "San Diego, California",
-    "zone": "long-lat",
-    "droughtTolerant": "yes",
-    "bloomTime": "Early Spring",
-    "exposure": "full sun"
-     },
-    {
+    },    {
      "flowerName": "Begonia",
     "family": "Begonia",
     "img": "img/pic13.webp",
