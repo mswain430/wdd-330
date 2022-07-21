@@ -14,18 +14,23 @@
 </head>
 <body>
   <header>
-    <nav>
-        <a class="hamburger nohover" href="#"><span class="brand">Millie's Garden</span>
-        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
-        <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#container-suggestions">Suggestions</a></li>
-            <li><a href="#fav">Favorites</a></li>
-            <li><a href="#survey">Survey</a></li>
-            <li><a class="nohover" href="#"><span class="material-symbols-outlined">search
-</span></a></li>
-        </ul>
-    </nav>
+    <picture>
+          <source media="(min-width:650px)" srcset="img/flower-4617855_1.png">
+          <source media="(min-width:465px)" srcset="img/flower-4617855_2.png">
+          <img src="img/flower-4617855_2.png" class="logo" alt="Flowers" style="width: 60px;">
+        </picture>
+        <nav><span class="brand">Millie's Garden</span>
+          <a class="hamburger nohover" href="#">
+
+            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#container-suggestions">Suggestions</a></li>
+                <li><a href="#fav">Favorites</a></li>
+                <li><a href="#survey">Survey</a></li>
+                <li><a class="nohover" href="#"><span class="material-symbols-outlined">search</span></a></li>
+            </ul>
+           </nav>
   </header>
  <main>
      <h1 style="text-align: center;">Flower Gardens of Poway</h1>
@@ -57,12 +62,24 @@
         </div>
         <div>&nbsp;</div>
         <div class="suggestion-filters">
-              <button id="allFilter" >All</button>
-              <button id="activeFilter" >Active</button>
-              <button id="completedFilter" >Completed</button>
+              <button id="allFilter" >All My Suggestions</button>
+              <button id="activeFilter" >My Active Suggestions</button>
+              <button id="completedFilter" >My Suggestions Added</button>
             </div>
-
     <div>&nbsp;</div>
+    <form id="emailus" action="#">
+  <fieldset>
+    <legend>We want to hear from you:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br>
+    <label for="email">email:</label>
+    <input type="email" id="email"
+       pattern=".+@globex\.com" size="30" required><br>
+    <input type="submit" value="I want to join you">
+  </fieldset>
+</form>
     </div>
 </main>
 <script src="script.js" type="text/javascript"></script>

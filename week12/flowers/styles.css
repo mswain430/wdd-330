@@ -13,8 +13,8 @@ h1, h2, h3, h4 {
     font-family: 'Lato', sans-serif;
 }
 h1 {
-    font-size: 1.6em;
-    font-weight: 300;
+    font-size: 1.5em;
+    font-weight: 400;
 }
 h2 {
     font-size: 1.4em;
@@ -42,14 +42,27 @@ header{
    min-height: 45px;
    background-color: rgb(202, 243, 180);
 }
-
+picture {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  opacity: .8;
+}
 h1{
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: sans-serif;
   letter-spacing: 1.2pt;
 }
 /* responsive menu  */
-.brand {float: left;}
+.brand {
+  float: left;
+  padding-left: 70px;
+  font-size: 1.5rem;
+  letter-spacing: .02em;
+  font-weight: 400;
+  color: rgb(190, 23, 159);
+}
 .logo img {
   margin: 0 .25rem 0 1rem;
   width: 64px;
@@ -233,6 +246,14 @@ article p {padding: 0px 10px;margin:0;font-weight: 400}
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
+}
+
+.suggestion-filters {
+  text-align: left;
+  font-size: .9em;
+}
+.suggestion-filters button {
+   margin: 10px;
 }
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
