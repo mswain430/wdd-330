@@ -27,7 +27,7 @@ function renderShipList(ships, shipListElement) {
         // create elements for list
         let listItem = document.createElement("tr");
         listItem.innerHTML = `
-        <td><a href="${ship.url}">${ship.name}</a></td>
+         <td><a href="${ship.url}">${ship.name}</a></td>
         <td>${ship.length}</td>
         <td>${ship.crew}</td>
         `;
@@ -93,10 +93,13 @@ async function showShips(url = "https://swapi.dev/api/starships") {
     if(results.previous){
         const prev = document.getElementById("prev");
         // set the option on the lister
-        //prev.ontouchend = () =>{
         prev.onclick = () =>{
             showShips(results.previous);
         };
+        prev.ontouchend = () =>{
+            showShips(results.previous);
+        };
+
     }
 }
 
@@ -111,11 +114,11 @@ async function getShipDetails(url) {
 showShips();
 
 function toggleMenu() {
-   document.getElementById("#detailsbox").classList.toggle("open");
-   console.log("It worked!")
+ document.getElementById("button").classList.toggle("open");
+  console.log("It worked!")
 }
-const x = document.getElementById("#detailsbox");
-x.onclick = toggleMenu;
+// const x = document.getElementById("button");
+// x.onclick = toggleMenu();
 
 window.onload = () => {
     document.getElementById('close').onclick = function() {

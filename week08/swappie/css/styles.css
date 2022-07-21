@@ -77,8 +77,11 @@ main h2 {
 
 #detailsbox {
     position: absolute;
-    top: 30px;
+    top: 50px;
     flex: 1 0 15em;
+    background-color:rgb(95, 111, 137);
+    border:1px solid #333;
+    border-radius: 8px;
     padding: 5px;
     text-align: center;
     width: 320px;
