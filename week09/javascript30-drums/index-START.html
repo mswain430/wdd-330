@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millie's WDD-330 Portfolio Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      padding: 25px;
+    }
+  </style>
 </head>
 <body>
-
+<header>
+    <h1 class="title">WDD 330 Front-end Web Development II </h1>
+    <h2>Millie's Portfolio Site</h2>
+  </header>
+      <main class="maingrid">
+        <p><a href="../index.html" class="backto"><< Back</a></p>
 
   <div class="keys">
     <div data-key="65" class="key">
@@ -56,7 +72,7 @@
   <audio data-key="74" src="sounds/snare.wav"></audio>
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
-
+</main>
 <script>
 function playSound(e) {
     // console.log(e);
@@ -66,8 +82,8 @@ function playSound(e) {
    audio.currentTime = 0; // rewind to the start
    audio.play();
    key.classList.add('playing');
-   // key.classList.remove('playing');
-   // key.classList.toggle('playing');
+   key.classList.remove('remove_playing');
+   key.classList.toggle('toggle_playing');
 // console.log(key);
   document.querySelector(`audio[data-key="${e.keyCode}"]`).play();
 
@@ -91,7 +107,6 @@ const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
 </script>
-
 
 </body>
 </html>

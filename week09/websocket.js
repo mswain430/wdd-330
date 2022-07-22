@@ -45,7 +45,7 @@ if(window.Notification) {
 }
 const notification = new Notification('JavaScript: Novice to Ninja',{
     body: 'The new book from SitePoint',
-    icon: 'sitepointlogo.png'
+    icon: 'sitepoint-logo.png'
 });
 
 notification.close();
