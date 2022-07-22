@@ -15,44 +15,63 @@
 <body><div class="banner"><span id="dybanner"></span></div>
   <header>
     <picture>
-          <source media="(min-width:650px)" srcset="img/flower-4617855_1.png">
-          <source media="(min-width:465px)" srcset="img/flower-4617855_2.png">
-          <img src="img/flower-4617855_2.png" class="logo" alt="Flowers" style="width: 60px;">
-        </picture>
-        <nav><span class="brand">Millie's Garden</span>
-          <a class="hamburger nohover" href="#">
-            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#container-suggestions">Suggestions</a></li>
-                <li><a href="#fav">Favorites</a></li>
-                <li><a href="#survey">Survey</a></li>
-                <li><a class="nohover" href="#"><span class="material-symbols-outlined">search</span></a></li>
-            </ul>
-           </nav>
+      <source media="(min-width:650px)" srcset="img/flower-4617855_1.png">
+      <source media="(min-width:465px)" srcset="img/flower-4617855_2.png">
+      <img src="img/flower-4617855_2.png" class="logo" alt="Flowers" style="width: 60px;">
+      </picture>
+    <nav><span class="brand">Millie's Garden</span>
+      <a class="hamburger nohover" href="#">
+        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#container-suggestions">Suggestions</a></li>
+            <li><a href="#survey">Survey</a></li>
+            <li><a class="nohover" href="#"><span class="material-symbols-outlined">search</span></a></li>
+        </ul>
+    </nav>
   </header>
- <main>
-      <div class="daydate"><p class="time">Today is: <span id="currentdate">Thursday, July 21, 2022</span></p></div>
-      <div class="weather weather-grid">
-       <h3>Poway Weather: <div class="icon-pic"><span id="icon-src"></span></div></h3>
-       <div><figure><img src="images/sun.svg" alt="blandingweather" id="weathericon"/><figcaption></figcaption></figure>
-       <span>Temperature: <span id="current-temp"></span>&#8457;</span>
-      <span>Windspeed: <span id="windspeed"></span></span>
-      <span><span class="humidity"></span></span>
-      </div>
-     </div>
-     <h1 style="text-align: center;">Flower Gardens of Poway</h1>
-    <div id="flowerquote">
-         <p class="quotelines"> <em id="quote"> </em>
-          <br><small id="author"></small>
-        </p>
-    </div>
+  <main>
+  <div class="daydate"><p class="time">Today is: <span id="currentdate">Thursday, July 21, 2022</span></p></div>
+    <!-- Trigger/Open The Modal -->
+    <div class="weather">
+        <p>
+        <button id="myBtn">Check out today's Poway Weather</button>
+        </p></div>
+      <!-- The Modal -->
+    <div id="myModal" class="modal slide-in">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="weather">
+      <div class="weather-grid">
+          <div class="card"><h2>Current Weather Information for Poway</h2>
+          <span id="icon-src"> </span>
+          <figure><img src="img/10d@2x.png" alt="Poway Weather" id="weathericon" /><figcaption></figcaption></figure>
+          <p><span id="current-temp"></span>&#8457;<br/>
+          <span id="description"></span><br/>
+          <span id="humidity"></span><br/>
+          <span id="windspeed"></span></p>
+            </div>
+          </div>
+    <span id="weatherAlert"> </span>
+      <span id="event"> </span>
+      <p><span id="alert_descr"> </span></p>
+    </div> <!--  end weather Alert-->
+   </div> <!-- end modal content-->
+  </div> <!-- end modal -->
 
-    <p style="text-align: center;">Sort by: <select id="sortBy"><option value="none">---</option>
-      <option value="flowerNameAscending">Flower Name Ascending</option>
-      <option value="flowerNameDescending">Flower Name Descending</option>
-    <option value="DroughtTolerant">Drought Tolerant</option>
-   </select></p>
+  <h1 style="text-align: center;">Flower Gardens of Poway</h1>
+<div id="flowerquote">
+      <p class="quotelines"> <em id="quote"> </em>
+      <br><small id="author"></small>
+    </p>
+</div>
+
+  <p style="text-align: center;">Sort by: <select id="sortBy"><option value="none">---</option>
+    <option value="flowerNameAscending">Flower Name Ascending</option>
+    <option value="flowerNameDescending">Flower Name Descending</option>
+  <option value="DroughtTolerant">Drought Tolerant</option>
+  </select></p>
     <hr />
    <div id="flowers"> </div>
   <div class="container" id="container-suggestions">
@@ -75,7 +94,7 @@
               <button id="completedFilter" >My Suggestions Added</button>
             </div>
     <div>&nbsp;</div>
-  <!--  <form id="emailus" action="">
+   <form id="emailus" onsubmit="return false" action="">
   <fieldset>
     <legend>We want to hear from you:</legend>
     <label for="fname">First name:<br>
@@ -84,14 +103,15 @@
       <input type="text" id="lname" name="lname" value=""></label><br>
     <label for="email">email:<br>
     <input type="email" id="email" size="30" required></label>
-    <button type="submit" value="Let me join you">Let me join you</button>
+    <button type="submit" value="Let me join you" onclick="sendContact()">Let me join you</button>
   </fieldset>
-</form> -->
+</form>
     </div>
 </main>
 	</div>
-<footer><container>more here</container>
-  <div>more here</div>
+<footer><container><span class="sm_name"> Millie's Garden  </span></container>
+  <div class="copyright">&#169; <span id="year" class="year">  2022 </span>
+      <p class="api">Weather Data Source: <a class="credits" href="https://openweathermap.org/">OpenWeatherMap</a></p></div>
   <div class="social">
 		<a href="https://facebook.com"><svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g>

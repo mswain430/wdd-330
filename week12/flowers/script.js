@@ -188,7 +188,11 @@ document.querySelector('#sortBy').addEventListener('change', sortBy);
 /* *************** Form submit **************** */
 // document.getElementById("emailus").submit();
 // document.getElementById("emailus").reset();
+function sendContact(){
+  return "mailto: ms@flowers.com"
+}
 
+sendContact();
 
 
 

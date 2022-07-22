@@ -31,8 +31,9 @@ h4 {
 form #preferences {
   width: 250px;
 }
+/* ****************** footer ***************** */
 footer {
-  padding: 0 20px;
+  padding: 20px 20px;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 125px;
@@ -41,22 +42,31 @@ footer {
   min-height: 60px;
   background-color: rgb(202, 243, 180);
 }
-footer .container {
-
-  border: 1px solid red;
-}
 
 .social {
 	margin-right: 1.5rem;
   grid-column: 125px;
   -mx-flex-align: flex-end;
-  border: 1px solid green;
 }
 
 .social svg {
 	width: 25px;
 	height: auto;
 }
+
+@media only screen and (max-width: 48rem) {
+  footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  background-color: rgb(202, 243, 180);
+  }
+}
+
+/* ***************** header ***************** */
 header{
   margin: 0;
   padding: 0;
@@ -232,6 +242,106 @@ nav {
     font-size: .9em;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s;
+  box-shadow:1px 5px 5px #4f3a5a;
+  max-width: 100%;
+  height: auto;
+  border-radius:8px;
+  border: 1px solid rgb(246, 121, 187);
+  background: rgb(251, 183, 251);
+  margin: 5px 1% 5px 1%;
+  padding: 10px;
+  justify-self: center;
+}
+.card figcaption {
+  text-transform: capitalize;
+  font-size: 1.4em;
+  color:rgb(251, 119, 249);
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       1px 1px 0 #000;
+}
+.card button {max-width: 200px; margin: auto;}
+
+#myBtn {
+  background-color: rgb(199, 239, 199);
+  color:rgb(48, 48, 29);
+  padding: 0px 5px;
+  text-decoration-line: none;
+  max-width: 80%;
+  font-size: .9em;
+  font-weight: 400;
+  border: 1px solid rgb(199, 239, 199);
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 5px 10px ;
+
+}
+ #myBtn:hover {
+  background-color: rgb(240, 239, 139);
+  color:rgb(12, 12, 11);
+  box-shadow:1px 2px 8px rgb(157, 162, 155);
+  transition: margin-right 3s ease-in-out;
+  transition-duration: 2s;
+  transition-property: margin-right, color
+  }
+/* ********************** WEATHER ALERT ************************* */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+.slide-in {
+  animation: slide-in 1s ease;
+}
+@keyframes slide-in {
+  25% {
+    transform: scale(0.8);
+  }
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 25% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+button.myBtn{
+   padding: 5px;
+   background-color:rgb(5, 150, 39);
+}
 /* ***************** message output about Garden club ********** */
 .banner {
   text-align: center;
@@ -269,6 +379,7 @@ p.time {
     background-color:rgb(5, 150, 39);
     border:1px solid #026310;
 }
+
 /* ****  Quotes **************** */
 #flowerquote{
   margin: 20px auto 10px auto;
@@ -418,7 +529,7 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
   border: 1px solid rgb(199, 239, 199);
   border-radius: 4px;
   text-align: center;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px 10px ;
 
 }
@@ -447,10 +558,10 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
     display:flex;
     align-items: center;
     max-width: 310px;
-    border: 0px solid red;
     padding: 0px;
     box-sizing: border-box;
     margin: 0px 8px;
+    border: 1px solid rgb(198, 146, 189);
 }
 .suggestions-wrapper {
     display: grid;
@@ -469,8 +580,7 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
    transition: .2s;
    background-color:  rgb(254, 254, 254);
    width: 100%;
-   border-top: 0px solid rgb(190, 136, 190);
-   border-bottom: 1px solid rgb(198, 146, 189);
+
 }
 
 #suggestions div:focus {
