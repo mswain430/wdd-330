@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="utf-8" />
-        <title>Local Quakes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millie's WDD-330 Portfolio Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css"/>
+</head>
+</html>
     <body>
-        <header>
+       <main id="content">
+       <p><a href="../index.html" class="backto"><< Back</a></p>
+       <h1>Earthquakes by geolocation and earthquakes api </h1>
+           <h1>Quake List</h1>
             <nav>
                 <heading>
                     <nav><ul id="mainNav"></ul></nav>
                 </heading>
             </nav>
-        </header>
-        <main id="content">
-            <h1>Quake List</h1>
+
             <ul id="quakeList" class="quakeStyles"></ul>
-             <section id="quakes">
+        <section id="quakes">
            <h1>Local Quakes</h1>
            <ul id="quakeList"></ul>
+        </section>
         </main>
         <script src="js/index.js" type="module" ></script>
     </body>
