@@ -31,16 +31,43 @@ h4 {
 form #preferences {
   width: 250px;
 }
+footer {
+  padding: 0 20px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 125px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  background-color: rgb(202, 243, 180);
+}
+footer .container {
+
+  border: 1px solid red;
+}
+
+.social {
+	margin-right: 1.5rem;
+  grid-column: 125px;
+  -mx-flex-align: flex-end;
+  border: 1px solid green;
+}
+
+.social svg {
+	width: 25px;
+	height: auto;
+}
 header{
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 0px solid rgb(162, 183, 138);
+  border-bottom: 0px solid rgb(80, 105, 52);
    max-width: 100%;
    min-height: 45px;
    background-color: rgb(202, 243, 180);
+   box-shadow: 5px 0px 10px 0px #0a3f11;
 }
 picture {
   position: absolute;
@@ -61,7 +88,7 @@ h1{
   font-size: 1.5rem;
   letter-spacing: .02em;
   font-weight: 400;
-  color: rgb(190, 23, 159);
+  color: rgb(164, 71, 147);
 }
 .logo img {
   margin: 0 .25rem 0 1rem;
@@ -178,6 +205,71 @@ nav {
 }
 }
 /* HTML Selectors */
+
+/* ******** weather ********** */
+.weather-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color:transparent;
+  width: 100%;
+  padding: 10px 3px;
+  margin: 0;
+}
+.weather {
+  text-align: center;
+  max-width: 100%;
+  justify-content: center;
+  margin: auto;
+  padding: 5px;
+}
+.weather #icon-src {
+  display:none;
+}
+.weather-grid p {
+    padding: 10px 10px;
+    margin:0;
+    font-size: .9em;
+}
+
+/* ***************** message output about Garden club ********** */
+.banner {
+  text-align: center;
+  background-color:rgb(23, 147, 66);
+  width: 100%;
+  padding: 10px 3px;
+  margin: 0;
+}
+#dybanner {
+  color: rgb(248, 245, 64);;
+  font-size: .9em;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(106, 177, 93, 0.9);
+  width: 100%;
+  text-align:center;
+}
+/* ************** current date output ************* */
+div.daydate {
+    display:flex;
+    text-align: center;
+    color:rgb(255, 254, 255);
+    font-family: "Open Sans", sans-serif;
+    background-color:rgb(226, 156, 244);
+    border-bottom: 3px solid rgb(226, 156, 244);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+p.time {
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin:2px auto;
+    background-color:rgb(5, 150, 39);
+    border:1px solid #026310;
+}
+/* ****  Quotes **************** */
 #flowerquote{
   margin: 20px auto 10px auto;
   width: 90%;
@@ -193,7 +285,7 @@ nav {
   100%{opacity: 1;}
 }
 #flowerquote p:first-child {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
 }
 
@@ -219,6 +311,7 @@ nav {
   padding: 10px;
   border-radius: 4px;
 }
+/* ******************** flowerList ******************* */
 .zoom-effect-container {
   position: relative;
   width: 100%;
@@ -254,14 +347,10 @@ article img {
     -webkit-transition: .4s ease;
     transition: .4s ease;
 }
-article img:hover {
-  transition: all .6s ease-in-out;
-  scale: cubic-bezier(1, 0, 0, 1.5);
-}
-.zoom-effect-container:hover .article img{
+/*.zoom-effect-container:hover .article img{
   -webkit-transform: scale(1.08);
   transform: scale(1.25%);
-}
+}*/
 article h4 {font-size: 1.4em;font-weight: bold;margin:2px;padding: 10px 0 5px 20px
 }
 
@@ -341,6 +430,7 @@ article p {padding: 0px 20px;margin:0;font-weight: 400}
   transition-duration: 2s;
   transition-property: margin-right, color
   }
+  /* ****************** Suggestions ******************* */
 #container-suggestions {
   max-width: 400px;
   text-align: center;

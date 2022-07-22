@@ -1,3 +1,4 @@
+
 function loadquotes(){
 fetch("flowerquotes.json")
   .then(data => data.json())
@@ -185,8 +186,8 @@ const sortBy = () => {
 document.querySelector('#sortBy').addEventListener('change', sortBy);
 
 /* *************** Form submit **************** */
-document.getElementById("emailus").submit();
-document.getElementById("emailus").reset();
+// document.getElementById("emailus").submit();
+// document.getElementById("emailus").reset();
 
 
 
