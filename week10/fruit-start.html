@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-</body> <title>Favorite fruit start</title>
+    <title>Millie's WDD-330 Portfolio Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"/>
     <style>
      input:invalid {
   border: 2px dashed red;
@@ -21,15 +21,29 @@ input:invalid:required {
 input:valid {
   border: 2px solid black;
 }
+form {
+  padding: 50px;
+}
+main {
+  padding: 20px;
+}
     </style>
 </head>
-
 <body>
+  <header>
+    <h1 class="title">WDD 330 Front-end Web Development II </h1>
+    <h2>Millie's Portfolio Site</h2>
+  </header>
+      <main class="maingrid">
+        <p><a href="../index.html" class="backto"><< Back</a></p>
+          <h3 class="heading_title">Week 9 - Practice Exercises</h3>
     <form>
-      <label for="choose">Would you prefer a banana or a cherry?</label>
-      <input id="choose" name="i_like" required>
+      <label for="choose">Would you prefer a banana or a cherry?<br>
+      <input id="choose" name="i_like" required></label>
       <button>Submit</button>
     </form>
+    </main>
+    <script src="validate-min.js"></script>
 </body>
 
 </html>
