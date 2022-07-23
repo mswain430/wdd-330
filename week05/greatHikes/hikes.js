@@ -38,7 +38,6 @@ const hikeList = [
 
 const imgBasePath = "https://byui-cit.github.io/cit261/examples/";
 //on load grab the array and insert it into the page on load
-
 export default class Hikes {
   constructor(elementId) {
     this.parentElement = document.getElementById(elementId);
@@ -92,18 +91,18 @@ export default class Hikes {
     return backButton;
   }
 
-  builddetailsButton() {
+ builddetailsButton() {
     const detailsButton = document.createElement('button');
     detailsButton.innerHTML = 'details Button';
     detailsButton.addEventListener('touchend', () => {
       this.renderOneHikeFull();
     });
+
     detailsButton.classList.add('detailsBtn');
     this.parentElement.after(detailsButton);
     return detailsButton;
   }
 }
-
 
 // End of Hikes class
 // methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, they cannot be called outside the module...they become private.
@@ -122,6 +121,7 @@ function renderOneHikeLight(hike) {
   item.innerHTML = ` <h2>${hike.name}</h2>
   <div class="image">
     <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+     <button class="detailsButton" onclick="renderOneHikeFull()">See Details</button>
   <div class="details">
   <div>
         <h3>Distance</h3>
