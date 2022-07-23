@@ -90,7 +90,7 @@ export default class Hikes {
     this.parentElement.before(backButton);
     return backButton;
   }
-
+/*
  builddetailsButton() {
     const detailsButton = document.createElement('button');
     detailsButton.innerHTML = 'details Button';
@@ -101,7 +101,7 @@ export default class Hikes {
     detailsButton.classList.add('detailsBtn');
     this.parentElement.after(detailsButton);
     return detailsButton;
-  }
+  } */
 }
 
 // End of Hikes class
@@ -121,8 +121,7 @@ function renderOneHikeLight(hike) {
   item.innerHTML = ` <h2>${hike.name}</h2>
   <div class="image">
     <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
-     <button class="detailsButton" onclick="renderOneHikeFull()">See Details</button>
-  <div class="details">
+     <div class="details">
   <div>
         <h3>Distance</h3>
         <p>${hike.distance}</p>
