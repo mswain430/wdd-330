@@ -9,7 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css"/>
-    <script>
+    <style>
+		main {
+			padding: 25px;
+		}
+    </style>
+</head>
+<body onload="showAllCustomers()">
+        <header>
+            <h1 class="title">WDD 330 Front-end Web Development II </h1>
+            <h2>Millie's Portfolio Site</h2>
+        </header>
+        <main class="maingrid">
+            <p><a href="../index.html" class="backto"><< Back</a></p>
+            <h3 class="heading_title">Week 1 - Associative Arrays</h3>
+            <section class="customer_entry_area"><h3>Our Clothing Customers</h3>
+                <label for="name_input"><input id="name_input" placeholder="Name"></input></label>
+                <br/>
+                <label for="age_input"><input id="age_input" placeholder="Age"></input></label>
+                <br/>
+                <label for="inseam_input"><input id="inseam_input" placeholder="Inseam"></input></label>
+                <br/><button class="cus" onclick="addAndSaveCustomer()">Add Customer</button>
+            </section>
+            <section class="all_customers_display"></section>
+        </main>
+        <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
+        <script>
         function addAndSaveCustomer(){
             const aName = document.getElementById("name_input").value;
             const anAge = document.getElementById("age_input").value * 1;
@@ -53,25 +78,5 @@
   	    }
 
     </script>
-</head>
-<body onload="showAllCustomers()">
-        <header>
-            <h1 class="title">WDD 330 Front-end Web Development II </h1>
-            <h2>Millie's Portfolio Site</h2>
-        </header>
-        <main class="maingrid">
-            <p><a href="../index.html" class="backto"><< Back</a></p>
-            <h3 class="heading_title">Week 1 - Associative Arrays</h3>
-            <section class="customer_entry_area"><h3>Our Clothing Customers</h3>
-                <label for="name_input"><input id="name_input" placeholder="Name"></input></label>
-                <br/>
-                <label for="age_input"><input id="age_input" placeholder="Age"></input></label>
-                <br/>
-                <label for="inseam_input"><input id="inseam_input" placeholder="Inseam"></input></label>
-                <br/><button class="cus" onclick="addAndSaveCustomer()">Add Customer</button>
-            </section>
-            <section class="all_customers_display"></section>
-        </main>
-        <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
 </body>
 </html>
