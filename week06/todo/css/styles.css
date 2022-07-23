@@ -50,7 +50,7 @@ ul li.checked {
 
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
-  content: '';
+  content: '✓';
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -60,6 +60,7 @@ ul li.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
+  background-color:#555;
 }
 
 /* Style the close button */
