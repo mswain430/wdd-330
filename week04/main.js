@@ -22,7 +22,7 @@ for (let i=0; i < form.powers.length; i++) {
 hero.powers = [...form.powers].filter(box => box.checked).map(box => box.value);
 document.forms.hero.powers[0].checked = true;
 hero.category = form.category.value;
-[input, input, input, value: "Antihero"]
+[input, input, input, value, "Antihero"]
 form.type[2].checked = true;
 hero.age = form.age.value;
 form.city;
