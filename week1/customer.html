@@ -13,6 +13,9 @@
 		main {
 			padding: 25px;
 		}
+        .container {
+            padding: 50px;
+        }
     </style>
 </head>
 <body onload="showAllCustomers()">
@@ -21,6 +24,7 @@
             <h2>Millie's Portfolio Site</h2>
         </header>
         <main class="maingrid">
+            <div class="container">
             <p><a href="../index.html" class="backto"><< Back</a></p>
             <h3 class="heading_title">Week 1 - Associative Arrays</h3>
             <section class="customer_entry_area"><h3>Our Clothing Customers</h3>
@@ -32,6 +36,7 @@
                 <br/><button class="cus" onclick="addAndSaveCustomer()">Add Customer</button>
             </section>
             <section class="all_customers_display"></section>
+            </div>
         </main>
         <footer>Millie Swain, WDD 330 Web Front-end Development II</footer>
         <script>
