@@ -10,36 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css"/>
     <script>
-        function checkNumbers(){
-            let someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10];
-            for(let i = 0; i < 7; i++){
-                let numberAsText = someNumbers[i]
-                let aNumber = parseInt(numberAsText)
-                if(numberAsText != '' && !isNaN(aNumber)){
-                    let remainder = aNumber % 2;
-                    if(aNumber != 0 && remainder == 0){
-                        document.getElementById("result_display").innerHTML +=
-                            `<p>${aNumber} is even.</p>`;
-                    }
-                    else if(aNumber != 0 && remainder == 1){
-                        document.getElementById('result_display').innerHTML +=
-                        `<p>${aNumber} is odd.</p>`;
-                    }
-                    else{
-                        document.getElementById('result_display').innerHTML +=
-                        `<p>0 is neither even nor odd.</p>`;
-                        }
+     function checkNumbers(){
+        let someNumbers = [25,11,-2,14,"What?? This isn't a number!",-1,-10];
+        for(let i = 0; i < 7; i++){
+            let numberAsText = someNumbers[i]
+            let aNumber = parseInt(numberAsText)
+            if(numberAsText != '' && !isNaN(aNumber)){
+                let remainder = aNumber % 2;
+                if(aNumber != 0 && remainder == 0){
+                    document.getElementById("result_display").innerHTML +=
+                        `<p>${aNumber} is even.</p>`;
                 }
-            else{
-                document.getElementById('result_display').innerHTML +=
-                `<p>Please enter a number.</p>`
+                else if(aNumber != 0 && remainder == 1){
+                    document.getElementById('result_display').innerHTML +=
+                    `<p>${aNumber} is odd.</p>`;
                 }
+                else{
+                    document.getElementById('result_display').innerHTML +=
+                    `<p>0 is neither even nor odd.</p>`;
+                    }
+            }
+        else{
+            document.getElementById('result_display').innerHTML +=
+            `<p>Please enter a number.</p>`
             }
         }
+    }
     </script>
        <style>
         body{
         background-color: rgb(247, 196, 162);
+        }
+        main {
+            padding: 25px;
         }
         </style>
 </head>
@@ -53,7 +56,7 @@
 //and //5. the lines of code to execute every time you go around the loop -->
 <header>
     <h1 class="title">WDD 330 Front-end Web Development II </h1>
-    <h2>Millie's Portfolio Site</h2>  
+    <h2>Millie's Portfolio Site</h2>
   </header>
       <main class="maingrid">
         <p><a href="../index.html" class="backto"><< Back</a></p>
