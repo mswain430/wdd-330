@@ -11,33 +11,34 @@
  <h3>Form controls</h3>
  <form name='search' action='/search'>
         <input name='searchInput'>
-        <button type='submit'>Search</button>
-        <button type='reset'>Reset</button>
-         <input type='text' name='search-box' placeholder='Search Here'>
+          <button type='submit'>Search</button>
+          <button type='reset'>Reset</button>
+        <input type='text' name='search-box' placeholder='Search Here'>
     </form>
-<p>Accessing form elements</p>
+    <p>See Javascript to see options available when using forms</p>
+<p>1. Accessing form elements</p>
+// const form = document.getElementsByTagname('form')[0];
+<p>2. Form properties and methods</p>
 
-<p>Form properties and methods</p>
+<p>3. Form events</p>
 
-<p>Form events</p>
+<p>4. Submitting a form</p>
 
-<p>Submitting a form</p>
+<p>5. Retrieving and changing values from a form</p>
 
-<p>Retrieving and changing values from a form</p>
+<p>6. Form validation</p>
 
-<p>Form validation</p>
-
-<p>Our project ― add a form for answering the questions.</p>
+<p>7. Our project ― add a form for answering the questions.</p>
 <script>
-//const form = document.getElementsByTagname('form')[0];
-//const form = document.forms.search;
-//const form = document.forms['search'];
-//const [input,button] = form.elements;
-//const input = form.searchInput;
-//const input = form['searchInput']
-//<button type='submit'>Submit</button>
-//<input type='submit' value='Submit'>
-//<input type='image' src='button.png'>
+//2. const form = document.getElementsByTagname('form')[0];
+//2. const form = document.forms.search;
+//3. const form = document.forms['search'];
+//4. const [input,button] = form.elements;
+//5. const input = form.searchInput;
+//5. const input = form['searchInput']
+//6. <button type='submit'>Submit</button>
+//6. <input type='submit' value='Submit'>
+//6. <input type='image' src='button.png'>
 form.action = 'confirmation.html';
 const input = form.elements.searchInput;
 input.addEventListener('focus', () => alert('focused'), false);
